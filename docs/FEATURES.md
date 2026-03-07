@@ -59,9 +59,18 @@
 - **Description**: On-demand AI explanations with Google Search grounding and Chinese traffic law citations
 - **Entry Points**:
   - `src/lib/gemini.js:1-80` - Gemini API with Google Search grounding and caching
-  - `src/components/question/ExplanationPanel.jsx:1-54` - forwardRef explanation panel with imperative trigger
+  - `src/components/question/ExplanationPanel.jsx:1-93` - forwardRef explanation panel with save-to-favorites button
   - `src/data/trafficLaw.js:1-300` - Structured traffic law text with category mapping
 - **Dependencies**: Gemini 2.5 Pro API key, trafficLaw.js
+- **Added**: 2026-03-07 | **Modified**: 2026-03-07
+
+### Favorites
+- **Status**: Active
+- **Description**: Save questions with good explanations for later review
+- **Entry Points**:
+  - `src/pages/FavoritesPage.jsx:1-107` - Browse/expand/remove saved explanations
+  - `src/components/question/ExplanationPanel.jsx:33-50` - Save/unsave toggle button
+- **Dependencies**: localStorage favorites key, questions.js
 - **Added**: 2026-03-07
 
 ## UI

@@ -4,6 +4,7 @@ import { CategoryPage } from './pages/CategoryPage'
 import { TestSimulationPage } from './components/test/TestSimulation'
 import { AnalyticsDashboard } from './components/analytics/Dashboard'
 import { WeakAreasPage } from './pages/WeakAreasPage'
+import { FavoritesPage } from './pages/FavoritesPage'
 import { SettingsPage } from './pages/SettingsPage'
 import * as storage from './lib/storage'
 import { computeStudyStreak, computeMasteryProgress } from './lib/stats'
@@ -15,6 +16,7 @@ const NAV_ITEMS = [
   { key: 'test', label: 'Test', icon: '&#128221;' },
   { key: 'analytics', label: 'Analytics', icon: '&#128202;' },
   { key: 'weak', label: 'Weak Areas', icon: '&#127919;' },
+  { key: 'favorites', label: 'Favorites', icon: '&#9733;' },
   { key: 'settings', label: 'Settings', icon: '&#9881;' },
 ]
 
@@ -56,6 +58,7 @@ export default function App() {
       case 'test': return <TestSimulationPage />
       case 'analytics': return <AnalyticsDashboard onNavigate={navigate} />
       case 'weak': return <WeakAreasPage />
+      case 'favorites': return <FavoritesPage />
       case 'settings': return <SettingsPage darkMode={darkMode} setDarkMode={setDarkMode} />
       default: return <StudyPage />
     }
@@ -102,7 +105,7 @@ export default function App() {
 
       {/* Mobile bottom nav */}
       <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 flex z-40">
-        {NAV_ITEMS.slice(0, 5).map(item => (
+        {NAV_ITEMS.filter(i => ['study', 'categories', 'test', 'favorites', 'analytics'].includes(i.key)).map(item => (
           <button
             key={item.key}
             className={`flex-1 py-3 flex flex-col items-center gap-0.5 text-xs font-medium transition ${

@@ -17,6 +17,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 - Google Search grounding in Gemini API calls for regulation lookups ([src/lib/gemini.js](src/lib/gemini.js))
 - Explain button in test results review ([src/components/test/TestSimulation.jsx](src/components/test/TestSimulation.jsx))
 - Numbered option labels (1/2/3/4) instead of A/B/C/D ([src/components/question/OptionList.jsx](src/components/question/OptionList.jsx))
+- Favorites feature: save questions with good explanations, browse/review/remove them ([src/pages/FavoritesPage.jsx](src/pages/FavoritesPage.jsx), [src/components/question/ExplanationPanel.jsx](src/components/question/ExplanationPanel.jsx))
 
 ## [2026-03-07]
 
