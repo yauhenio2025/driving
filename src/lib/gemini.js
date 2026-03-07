@@ -9,7 +9,7 @@ function buildPrompt(question, userAnswer, correctAnswer) {
     ? `\nRELEVANT LAW ARTICLES FROM CHINA'S ROAD TRAFFIC SAFETY LAW (2003):\n${relevantChapters.slice(0, 10).join('\n')}`
     : ''
 
-  return `You are a Chinese driving test tutor. A student answered incorrectly on a Subject 1 (科目一) question.
+  return `You are a Chinese driving test tutor. A student answered incorrectly on a Subject 1 (科目一) question. IMPORTANT: Respond entirely in English.
 
 QUESTION: ${question.text}
 OPTIONS: ${question.options.map((o, i) => `${i + 1}) ${o}`).join(' | ')}
@@ -24,7 +24,7 @@ Search for the relevant Chinese road traffic regulations if needed. Then provide
 3) A memorable tip or mnemonic to remember this
 4) The key principle being tested
 
-Keep the response under 250 words. Be clear and direct.`
+Keep the response under 250 words. Be clear and direct. Write ONLY in English.`
 }
 
 export async function getExplanation(question, userAnswer, correctAnswer) {
