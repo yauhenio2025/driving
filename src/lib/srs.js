@@ -42,7 +42,7 @@ export function processReview(card, quality) {
 export function getDueCards(cards, limit = 50) {
   const now = Date.now()
   return Object.values(cards)
-    .filter(c => c.dueDate <= now && c.repetitions > 0)
+    .filter(c => c.dueDate <= now && c.lastReview !== null)
     .sort((a, b) => a.dueDate - b.dueDate)
     .slice(0, limit)
 }

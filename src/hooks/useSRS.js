@@ -30,10 +30,15 @@ export function useSRS() {
 
   const buildSession = useCallback((maxNew = 10, maxTotal = 20) => {
     const due = srs.getDueCards(cards, maxTotal)
-    const remaining = maxTotal - due.length
+    const dueIds = new Set(due.map(c => c.questionId))
+    // Include recently-failed cards (interval=0, repetitions=0) even if not yet due
+    const failed = Object.values(cards)
+      .filter(c => c.lastReview !== null && c.repetitions === 0 && !dueIds.has(c.questionId))
+    const allDue = [...due, ...failed].slice(0, maxTotal)
+    const remaining = maxTotal - allDue.length
     const newCount = Math.min(remaining, maxNew)
     const newIds = srs.getNewCards(cards, shuffleArray(allIds), newCount)
-    return [...due.map(c => c.questionId), ...newIds]
+    return [...allDue.map(c => c.questionId), ...newIds]
   }, [cards, allIds])
 
   const buildWeakSession = useCallback((weakCategoryNames, maxTotal = 20) => {
