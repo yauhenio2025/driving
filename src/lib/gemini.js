@@ -40,7 +40,8 @@ Search for the relevant Chinese road traffic regulations if needed. Then provide
 3) A memorable tip or mnemonic to remember this
 4) The key principle being tested
 
-Keep the response under 250 words. Be clear and direct. Write ONLY in English.`
+Keep the response under 250 words. Be clear and direct. Write ONLY in English.
+If the image contains any Chinese characters, TRANSLATE every single one into English (e.g. "王平 = Wangping, 新屿 = Xinyu").`
 }
 
 export async function getExplanation(question, userAnswer, correctAnswer) {
