@@ -17,6 +17,7 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
   const [finished, setFinished] = useState(false)
   const [countdown, setCountdown] = useState(null)
   const [explaining, setExplaining] = useState(false)
+  const [savedFav, setSavedFav] = useState(false)
   const timerRef = useRef(null)
   const explanationRef = useRef(null)
   const stateRef = useRef({ currentIndex, answered, explaining, finished })
@@ -72,12 +73,30 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
     setSelected(null)
     setAnswered(false)
     setExplaining(false)
+    setSavedFav(false)
   }
 
   function handleExplain() {
     setExplaining(true)
     stopCountdown()
     explanationRef.current?.fetchExplanation()
+  }
+
+  function handleSave() {
+    if (!question || selected === null) return
+    const cachedExplanation = storage.get(`explanation_${question.id}`)
+    storage.update('favorites', (favs) => {
+      const list = favs || []
+      if (list.some(f => f.questionId === question.id)) return list
+      return [...list, {
+        questionId: question.id,
+        userAnswer: question.options[selected],
+        correctAnswer: question.correct_answer,
+        explanation: cachedExplanation || null,
+        savedAt: new Date().toISOString(),
+      }]
+    })
+    setSavedFav(true)
   }
 
   function isWrong() {
@@ -100,8 +119,10 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
           doAdvance()
         }
         if (e.key.toLowerCase() === 'e' && !s.explaining) {
-          // Check if wrong (we need selected from closure, use a different approach)
           handleExplain()
+        }
+        if (e.key.toLowerCase() === 's') {
+          handleSave()
         }
       }
     }
@@ -214,6 +235,18 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
 
       {answered && (
         <div className="flex items-center justify-end gap-3">
+          {!savedFav ? (
+            <button
+              className="px-4 py-2.5 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg hover:bg-amber-100 hover:text-amber-700 dark:hover:bg-amber-900/30 dark:hover:text-amber-300 transition font-medium text-sm"
+              onClick={handleSave}
+            >
+              &#9734; Save (S)
+            </button>
+          ) : (
+            <span className="px-4 py-2.5 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-lg font-medium text-sm">
+              &#9733; Saved
+            </span>
+          )}
           {wrong && !explaining && (
             <button
               className="px-5 py-2.5 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition font-medium"
