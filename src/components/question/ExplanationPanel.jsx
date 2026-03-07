@@ -1,6 +1,7 @@
 import { useState, useImperativeHandle, forwardRef } from 'react'
 import { getExplanation } from '../../lib/gemini'
 import * as storage from '../../lib/storage'
+import { Markdown } from '../shared/Markdown'
 
 export const ExplanationPanel = forwardRef(function ExplanationPanel({ question, userAnswer, correctAnswer }, ref) {
   const [explanation, setExplanation] = useState(null)
@@ -83,9 +84,7 @@ export const ExplanationPanel = forwardRef(function ExplanationPanel({ question,
         </div>
       )}
       {explanation && (
-        <div className="text-slate-700 dark:text-slate-300 whitespace-pre-wrap text-sm leading-relaxed">
-          {explanation}
-        </div>
+        <Markdown text={explanation} className="text-slate-700 dark:text-slate-300" />
       )}
     </div>
   )

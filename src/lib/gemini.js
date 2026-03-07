@@ -25,23 +25,25 @@ function buildPrompt(question, userAnswer, correctAnswer) {
     ? `\nRELEVANT LAW ARTICLES FROM CHINA'S ROAD TRAFFIC SAFETY LAW (2003):\n${relevantChapters.slice(0, 10).join('\n')}`
     : ''
 
-  return `You are a Chinese driving test tutor. A student answered incorrectly on a Subject 1 (科目一) question. IMPORTANT: Respond entirely in English.
-${question.image_file ? '\nAn image is attached to this question — LOOK AT IT CAREFULLY to understand the sign/situation before answering.\n' : ''}
-QUESTION: ${question.text}
-OPTIONS: ${question.options.map((o, i) => `${i + 1}) ${o}`).join(' | ')}
-STUDENT ANSWERED: ${userAnswer}
-CORRECT ANSWER: ${correctAnswer}
-CATEGORY: ${question.category}
+  return `You're helping a student studying for the Chinese driving test (Subject 1 / 科目一). They just got this question wrong. Write in English only.
+${question.image_file ? '\nAn image is attached — LOOK AT IT CAREFULLY before responding.\n' : ''}
+**Question:** ${question.text}
+**Options:** ${question.options.map((o, i) => `${i + 1}) ${o}`).join(' | ')}
+**They picked:** ${userAnswer}
+**Correct answer:** ${correctAnswer}
+**Category:** ${question.category}
 ${lawContext}
 
-Search for the relevant Chinese road traffic regulations if needed. Then provide:
-1) Why the correct answer is right (cite specific law article number if applicable)
-2) Why the student's answer is wrong
-3) A memorable tip or mnemonic to remember this
-4) The key principle being tested
+Write a natural, conversational explanation — like a knowledgeable friend explaining over coffee, not a textbook. Use markdown formatting (bold, headers, bullet points) to make it scannable.
 
-Keep the response under 250 words. Be clear and direct. Write ONLY in English.
-If the image contains any Chinese characters, TRANSLATE every single one into English (e.g. "王平 = Wangping, 新屿 = Xinyu").`
+Structure it roughly like this but DO NOT use numbered sections or mechanical headers like "1) Why the correct answer is right". Flow naturally:
+- Start by directly explaining what the right answer is and why — cite a specific law article if relevant
+- Then briefly say why their choice was wrong (be specific, not generic)
+- End with a **memorable trick, mnemonic, or vivid mental image** to lock it in — this is the most important part. Be creative. Make it stick.
+
+If the image has Chinese characters, translate ALL of them (e.g. "王平 = Wangping").
+
+Keep it under 200 words. Be concise and punchy — no filler, no "Let's review this question", no "Hello". Just go straight into the explanation.`
 }
 
 export async function getExplanation(question, userAnswer, correctAnswer) {

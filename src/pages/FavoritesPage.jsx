@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { getQuestion, getImagePath } from '../data/questions'
 import { Badge } from '../components/shared/Badge'
+import { Markdown } from '../components/shared/Markdown'
 import * as storage from '../lib/storage'
 
 export function FavoritesPage() {
@@ -78,12 +79,12 @@ export function FavoritesPage() {
                     })}
                   </div>
 
-                  <div className="p-4 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-200 dark:border-indigo-800">
-                    <h4 className="font-semibold text-indigo-800 dark:text-indigo-200 mb-2">Explanation</h4>
-                    <div className="text-slate-700 dark:text-slate-300 whitespace-pre-wrap text-sm leading-relaxed">
-                      {fav.explanation}
+                  {fav.explanation && (
+                    <div className="p-4 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-200 dark:border-indigo-800">
+                      <h4 className="font-semibold text-indigo-800 dark:text-indigo-200 mb-2">Explanation</h4>
+                      <Markdown text={fav.explanation} className="text-slate-700 dark:text-slate-300" />
                     </div>
-                  </div>
+                  )}
 
                   <div className="flex justify-end mt-3">
                     <button
