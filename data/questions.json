@@ -110,8 +110,8 @@
       "The tires can easily spin and skid",
       "The visibility become lower and blurs the field of vision"
     ],
-    "correct_answer": "The resistance to the vehicle becomes weaker",
-    "correct_index": 1
+    "correct_answer": "The tires can easily spin and skid",
+    "correct_index": 2
   },
   {
     "category": "Bad conditions and Safety",
@@ -126,8 +126,8 @@
       "It is impossible to see the hidden holes and bumps in road surface",
       "The sunshine reflection blurs the view"
     ],
-    "correct_answer": "The road grip becomes stronger",
-    "correct_index": 1
+    "correct_answer": "It is impossible to see the hidden holes and bumps in road surface",
+    "correct_index": 2
   },
   {
     "category": "Bad conditions and Safety",
@@ -254,8 +254,8 @@
       "Continuously and gently depress",
       "Intermittently and gently depress"
     ],
-    "correct_answer": "Continuously and strongly depress",
-    "correct_index": 0
+    "correct_answer": "Intermittently and gently depress",
+    "correct_index": 3
   },
   {
     "category": "Bad conditions and Safety",
@@ -284,8 +284,8 @@
       "Head",
       "Neck"
     ],
-    "correct_answer": "Waist",
-    "correct_index": 0
+    "correct_answer": "Neck",
+    "correct_index": 3
   },
   {
     "category": "Bad conditions and Safety",
@@ -314,8 +314,8 @@
       "Protect passengers neck",
       "Reduce passengers injuries"
     ],
-    "correct_answer": "Protect passengers neck",
-    "correct_index": 2
+    "correct_answer": "Reduce passengers injuries",
+    "correct_index": 3
   },
   {
     "category": "Bad conditions and Safety",
@@ -358,8 +358,8 @@
       "To automatically control the direction",
       "To reduce brake inertia"
     ],
-    "correct_answer": "To cut off the power output",
-    "correct_index": 0
+    "correct_answer": "To prevent wheel blocking",
+    "correct_index": 1
   },
   {
     "category": "Bad conditions and Safety",
@@ -374,8 +374,8 @@
       "Applying emergency braking",
       "Gently depressing the brake pedal"
     ],
-    "correct_answer": "Braking intermittently",
-    "correct_index": 1
+    "correct_answer": "Applying emergency braking",
+    "correct_index": 2
   },
   {
     "category": "Bad conditions and Safety",
@@ -460,8 +460,8 @@
       "The anti-lock braking system",
       "Passenger protection system"
     ],
-    "correct_answer": "The anti-lock braking system",
-    "correct_index": 2
+    "correct_answer": "Passenger protection system",
+    "correct_index": 3
   },
   {
     "category": "Bad conditions and Safety",
@@ -476,8 +476,8 @@
       "The anti-lock braking system",
       "The safety pillow of the chair"
     ],
-    "correct_answer": "The anti-lock braking system",
-    "correct_index": 2
+    "correct_answer": "The seat belt",
+    "correct_index": 0
   },
   {
     "category": "Basics",
@@ -492,8 +492,8 @@
       "After drinking alcohol",
       "After drinking coffee"
     ],
-    "correct_answer": "After drinking coffee",
-    "correct_index": 3
+    "correct_answer": "After drinking alcohol",
+    "correct_index": 2
   },
   {
     "category": "Basics",
@@ -508,8 +508,8 @@
       "Deliberately obscured license plate",
       "Driving backwards"
     ],
-    "correct_answer": "No stipulated license plate",
-    "correct_index": 1
+    "correct_answer": "Deliberately obscured license plate",
+    "correct_index": 2
   },
   {
     "category": "Basics",
@@ -594,8 +594,8 @@
       "Leave the scene and discuss a solution on their own",
       "Preserve the scene and then discuss a solution"
     ],
-    "correct_answer": "Refrain from moving the vehicle",
-    "correct_index": 1
+    "correct_answer": "Leave the scene and discuss a solution on their own",
+    "correct_index": 2
   },
   {
     "category": "Basics",
@@ -652,8 +652,8 @@
       "10 hours",
       "4 hours"
     ],
-    "correct_answer": "6 hours",
-    "correct_index": 1
+    "correct_answer": "4 hours",
+    "correct_index": 3
   },
   {
     "category": "Basics",
@@ -668,8 +668,8 @@
       "10 minutes",
       "20 minutes"
     ],
-    "correct_answer": "10 minutes",
-    "correct_index": 2
+    "correct_answer": "20 minutes",
+    "correct_index": 3
   },
   {
     "category": "Basics",
@@ -924,8 +924,8 @@
       "Honk",
       "Observe the conditions around the vehicles"
     ],
-    "correct_answer": "Add gas and start",
-    "correct_index": 0
+    "correct_answer": "Observe the conditions around the vehicles",
+    "correct_index": 3
   },
   {
     "category": "Breakdowns and Stopping",
@@ -954,8 +954,8 @@
       "It has not turned on the hazard warning flash lights",
       "The vehicle has not parked at the side of the road"
     ],
-    "correct_answer": "It has not turned on the hazard warning flash lights",
-    "correct_index": 2
+    "correct_answer": "It has not placed a warning sign",
+    "correct_index": 1
   },
   {
     "category": "Breakdowns and Stopping",
@@ -970,8 +970,8 @@
       "Stop on the spot to solve the problem",
       "Park the vehicle in a place where it does not obstruct the traffic"
     ],
-    "correct_answer": "Park the vehicle in the middle of the road",
-    "correct_index": 1
+    "correct_answer": "Park the vehicle in a place where it does not obstruct the traffic",
+    "correct_index": 3
   },
   {
     "category": "Breakdowns and Stopping",
@@ -1044,8 +1044,8 @@
       "Stopping in the lane for non-motorized vehicles",
       "Parking more than 30cm from the roadside"
     ],
-    "correct_answer": "Parking occupies the lane for motorized vehicle",
-    "correct_index": 0
+    "correct_answer": "Stopping in the area marked for no parking",
+    "correct_index": 1
   },
   {
     "category": "Breakdowns and Stopping",
@@ -1060,8 +1060,8 @@
       "Park in a parking berth",
       "Park the vehicle in the opposite direction on the left side of the road"
     ],
-    "correct_answer": "Park the vehicle in the opposite direction on the left side of the road",
-    "correct_index": 3
+    "correct_answer": "Park in a parking berth",
+    "correct_index": 2
   },
   {
     "category": "Breakdowns and Stopping",
@@ -1092,8 +1092,8 @@
       "It is less than 30 meters from a gas station",
       "It is more than 30 meters from the roadside"
     ],
-    "correct_answer": "It is more than 30 meters from the roadside",
-    "correct_index": 3
+    "correct_answer": "It is less than 30 meters from a gas station",
+    "correct_index": 2
   },
   {
     "category": "Breakdowns and Stopping",
@@ -1108,8 +1108,8 @@
       "Parking at a bus stop",
       "Parking where it is forbidden by road sign"
     ],
-    "correct_answer": "Parking in the lane for non-motorized vehicles",
-    "correct_index": 0
+    "correct_answer": "Parking at a bus stop",
+    "correct_index": 2
   },
   {
     "category": "Breakdowns and Stopping",
@@ -1124,8 +1124,8 @@
       "Less than 30 meters",
       "Less than 50 meters"
     ],
-    "correct_answer": "Less than 5 meters",
-    "correct_index": 0
+    "correct_answer": "Less than 50 meters",
+    "correct_index": 3
   },
   {
     "category": "Breakdowns and Stopping",
@@ -1268,8 +1268,8 @@
       "Swiftly depress the brake pedal",
       "Gently depress the brake pedal"
     ],
-    "correct_answer": "Apply emergency braking",
-    "correct_index": 1
+    "correct_answer": "Gently depress the brake pedal",
+    "correct_index": 3
   },
   {
     "category": "Breakdowns and Stopping",
@@ -1284,8 +1284,8 @@
       "Increases resistance to the vehicle",
       "Tire blowout"
     ],
-    "correct_answer": "Even lower tire pressure",
-    "correct_index": 1
+    "correct_answer": "Tire blowout",
+    "correct_index": 3
   },
   {
     "category": "Breakdowns and Stopping",
@@ -1578,8 +1578,8 @@
       "The clutch pedal",
       "The handbrake"
     ],
-    "correct_answer": "The clutch pedal",
-    "correct_index": 2
+    "correct_answer": "The brake pedal",
+    "correct_index": 1
   },
   {
     "category": "Controls and Meters",
@@ -1610,8 +1610,8 @@
       "The handbrake",
       "The clutch lever"
     ],
-    "correct_answer": "The handbrake",
-    "correct_index": 2
+    "correct_answer": "The gear lever",
+    "correct_index": 0
   },
   {
     "category": "Controls and Meters",
@@ -1642,8 +1642,8 @@
       "Wiper switch",
       "Ignition switch"
     ],
-    "correct_answer": "Air conditioning switch",
-    "correct_index": 0
+    "correct_answer": "Ignition switch",
+    "correct_index": 3
   },
   {
     "category": "Controls and Meters",
@@ -1714,8 +1714,8 @@
       "The reverse light switch",
       "Light and signal combination switch"
     ],
-    "correct_answer": "The reverse light switch",
-    "correct_index": 2
+    "correct_answer": "Light and signal combination switch",
+    "correct_index": 3
   },
   {
     "category": "Controls and Meters",
@@ -1746,8 +1746,8 @@
       "The low beam light",
       "Front and rear fog lights"
     ],
-    "correct_answer": "The low beam light",
-    "correct_index": 2
+    "correct_answer": "Front and rear fog lights",
+    "correct_index": 3
   },
   {
     "category": "Controls and Meters",
@@ -1848,8 +1848,8 @@
       "The head light switch",
       "The wiper switch"
     ],
-    "correct_answer": "The turn signal switch",
-    "correct_index": 0
+    "correct_answer": "The defogger switch",
+    "correct_index": 1
   },
   {
     "category": "Controls and Meters",
@@ -1864,8 +1864,8 @@
       "Windscreen defogger",
       "Hazard lights"
     ],
-    "correct_answer": "Windscreen defogger",
-    "correct_index": 2
+    "correct_answer": "Windscreen wipers",
+    "correct_index": 1
   },
   {
     "category": "Controls and Meters",
@@ -1908,8 +1908,8 @@
       "Low beam light open",
       "High beam light open"
     ],
-    "correct_answer": "Tail fog light open",
-    "correct_index": 1
+    "correct_answer": "Head fog light open",
+    "correct_index": 0
   },
   {
     "category": "Dashboard lights 1",
@@ -1940,8 +1940,8 @@
       "Hazard lights are turned on",
       "Sidelights are on"
     ],
-    "correct_answer": "Front and rear fog lights are on",
-    "correct_index": 0
+    "correct_answer": "Sidelights are on",
+    "correct_index": 3
   },
   {
     "category": "Dashboard lights 1",
@@ -1998,8 +1998,8 @@
       "The head fog light is on",
       "The tail fog light is on"
     ],
-    "correct_answer": "The head fog light is on",
-    "correct_index": 2
+    "correct_answer": "The high beam light is on",
+    "correct_index": 0
   },
   {
     "category": "Dashboard lights 1",
@@ -2014,8 +2014,8 @@
       "The low beam light is on",
       "The high beam light is on"
     ],
-    "correct_answer": "The tail fog light is on",
-    "correct_index": 0
+    "correct_answer": "The low beam light is on",
+    "correct_index": 2
   },
   {
     "category": "Dashboard lights 1",
@@ -2102,8 +2102,8 @@
       "The right turn signal light is flashing",
       "The front and rear parking lights are on"
     ],
-    "correct_answer": "The front and rear parking lights are on",
-    "correct_index": 3
+    "correct_answer": "The right turn signal light is flashing",
+    "correct_index": 2
   },
   {
     "category": "Dashboard lights 1",
@@ -2162,8 +2162,8 @@
       "Fuel tank cap is open",
       "Luggage compartment is open"
     ],
-    "correct_answer": "Engine compartment is open",
-    "correct_index": 1
+    "correct_answer": "Doors on both sides are open",
+    "correct_index": 0
   },
   {
     "category": "Dashboard lights 1",
@@ -2194,8 +2194,8 @@
       "Engine compartment is open",
       "Luggage compartment is open"
     ],
-    "correct_answer": "Luggage compartment is open",
-    "correct_index": 3
+    "correct_answer": "Engine compartment is open",
+    "correct_index": 2
   },
   {
     "category": "Dashboard lights 1",
@@ -2210,8 +2210,8 @@
       "The air bag is faulty",
       "Safety belt not buckled up"
     ],
-    "correct_answer": "Air bags are in working condition",
-    "correct_index": 1
+    "correct_answer": "The air bag is faulty",
+    "correct_index": 2
   },
   {
     "category": "Dashboard lights 1",
@@ -2226,8 +2226,8 @@
       "High beam light switch",
       "Low beam light switch"
     ],
-    "correct_answer": "High beam light switch",
-    "correct_index": 2
+    "correct_answer": "Car light master switch",
+    "correct_index": 0
   },
   {
     "category": "Dashboard lights 1",
@@ -2242,8 +2242,8 @@
       "Front windscreen defroster",
       "Rear windscreen defroster"
     ],
-    "correct_answer": "Front windscreen defroster",
-    "correct_index": 2
+    "correct_answer": "Front windscreen wiper",
+    "correct_index": 1
   },
   {
     "category": "Dashboard lights 1",
@@ -2258,8 +2258,8 @@
       "Rear windscreen defroster or defogger",
       "Front windscreen wiper and washer"
     ],
-    "correct_answer": "Front windscreen defroster or defogger",
-    "correct_index": 1
+    "correct_answer": "Front windscreen wiper and washer",
+    "correct_index": 3
   },
   {
     "category": "Dashboard lights 1",
@@ -2274,8 +2274,8 @@
       "Rear windscreen defroster or defogger",
       "Front windscreen defroster or defogger"
     ],
-    "correct_answer": "Front windscreen wiper and washer",
-    "correct_index": 1
+    "correct_answer": "Rear windscreen wiper and washer",
+    "correct_index": 0
   },
   {
     "category": "Dashboard lights 1",
@@ -2374,8 +2374,8 @@
       "The engine oil is too low",
       "The engine oil is too high"
     ],
-    "correct_answer": "The engine main oil route is blocked",
-    "correct_index": 0
+    "correct_answer": "The engine oil is too low",
+    "correct_index": 2
   },
   {
     "category": "Dashboard lights 2",
@@ -2418,8 +2418,8 @@
       "The handbrake is released",
       "The braking system is abnormal"
     ],
-    "correct_answer": "The handbrake is released",
-    "correct_index": 2
+    "correct_answer": "The braking system is abnormal",
+    "correct_index": 3
   },
   {
     "category": "Dashboard lights 2",
@@ -2450,8 +2450,8 @@
       "The foot brake system has failed",
       "The handbrake is in the braking position"
     ],
-    "correct_answer": "Anti-lock braking system failure",
-    "correct_index": 0
+    "correct_answer": "The handbrake is in the braking position",
+    "correct_index": 3
   },
   {
     "category": "Dashboard lights 2",
@@ -2536,8 +2536,8 @@
       "The engine ignition system is faulty",
       "The engine oil system is abnormal"
     ],
-    "correct_answer": "The fuel pump is abnormal or faulty",
-    "correct_index": 1
+    "correct_answer": "The fuel within the fuel tank is already at the minimum level",
+    "correct_index": 0
   },
   {
     "category": "Dashboard lights 2",
@@ -2654,8 +2654,8 @@
       "When leading the following vehicles",
       "When a vehicle has to stop due to a vehicle trouble"
     ],
-    "correct_answer": "When encountering traffic congestion",
-    "correct_index": 1
+    "correct_answer": "When a vehicle has to stop due to a vehicle trouble",
+    "correct_index": 3
   },
   {
     "category": "Dashboard lights 2",
@@ -2670,8 +2670,8 @@
       "Battery charging circuit problem",
       "Battery is damaged"
     ],
-    "correct_answer": "Battery is overcharged",
-    "correct_index": 0
+    "correct_answer": "Battery charging circuit problem",
+    "correct_index": 2
   },
   {
     "category": "Dashboard lights 2",
@@ -2686,8 +2686,8 @@
       "Inside air circulation",
       "Windscreen defroster"
     ],
-    "correct_answer": "Inside air circulation",
-    "correct_index": 2
+    "correct_answer": "Outside air circulation",
+    "correct_index": 0
   },
   {
     "category": "Dashboard lights 2",
@@ -2702,8 +2702,8 @@
       "Windscreen defroster",
       "Blow air at head"
     ],
-    "correct_answer": "Blow air at head",
-    "correct_index": 3
+    "correct_answer": "Inside air circulation",
+    "correct_index": 1
   },
   {
     "category": "Dashboard lights 2",
@@ -2718,8 +2718,8 @@
       "Snow start mode",
       "Air conditioning"
     ],
-    "correct_answer": "Snow start mode",
-    "correct_index": 2
+    "correct_answer": "Cold and warm air fan",
+    "correct_index": 0
   },
   {
     "category": "Dashboard lights 2",
@@ -2750,8 +2750,8 @@
       "Inside air circulation",
       "Blow air at sides"
     ],
-    "correct_answer": "Blow air at sides",
-    "correct_index": 3
+    "correct_answer": "Blow air at head",
+    "correct_index": 1
   },
   {
     "category": "Dashboard lights 2",
@@ -2766,8 +2766,8 @@
       "Electric motor door",
       "Unlock car doors"
     ],
-    "correct_answer": "Windows on both  sides",
-    "correct_index": 1
+    "correct_answer": "Unlock car doors",
+    "correct_index": 3
   },
   {
     "category": "Dashboard lights 2",
@@ -2798,8 +2798,8 @@
       "Braking oil is insufficient",
       "Coolant is insufficient"
     ],
-    "correct_answer": "Washing liquid is insufficient",
-    "correct_index": 1
+    "correct_answer": "Coolant is insufficient",
+    "correct_index": 3
   },
   {
     "category": "Dashboard lights 2",
@@ -2842,8 +2842,8 @@
       "Intersection notice",
       "Lane direction notice"
     ],
-    "correct_answer": "Lane direction notice",
-    "correct_index": 3
+    "correct_answer": "Intersection notice",
+    "correct_index": 2
   },
   {
     "category": "Directional and tourist signs",
@@ -2858,8 +2858,8 @@
       "Lane information notice",
       "Crossroad intersection alert"
     ],
-    "correct_answer": "Lane information notice",
-    "correct_index": 2
+    "correct_answer": "Crossroad intersection alert",
+    "correct_index": 3
   },
   {
     "category": "Directional and tourist signs",
@@ -2890,8 +2890,8 @@
       "Y-intersection notice",
       "Crossroad intersection alert"
     ],
-    "correct_answer": "Roundabout intersection notice",
-    "correct_index": 0
+    "correct_answer": "Y-intersection notice",
+    "correct_index": 2
   },
   {
     "category": "Directional and tourist signs",
@@ -2906,8 +2906,8 @@
       "Y-intersection notice",
       "Roundabout intersection notice"
     ],
-    "correct_answer": "Crossroad intersection alert",
-    "correct_index": 1
+    "correct_answer": "Roundabout intersection notice",
+    "correct_index": 3
   },
   {
     "category": "Directional and tourist signs",
@@ -2922,8 +2922,8 @@
       "Roundabout intersection notice",
       "Flyover interchange notice"
     ],
-    "correct_answer": "Crossroad intersection alert",
-    "correct_index": 1
+    "correct_answer": "Flyover interchange notice",
+    "correct_index": 3
   },
   {
     "category": "Directional and tourist signs",
@@ -2938,8 +2938,8 @@
       "Provincial road number",
       "Township road number"
     ],
-    "correct_answer": "Township road number",
-    "correct_index": 3
+    "correct_answer": "National highway number",
+    "correct_index": 1
   },
   {
     "category": "Directional and tourist signs",
@@ -2970,8 +2970,8 @@
       "National highway number",
       "Provincial road number"
     ],
-    "correct_answer": "Provincial road number",
-    "correct_index": 3
+    "correct_answer": "County road number",
+    "correct_index": 0
   },
   {
     "category": "Directional and tourist signs",
@@ -2986,8 +2986,8 @@
       "Township road number",
       "County road number"
     ],
-    "correct_answer": "Provincial road number",
-    "correct_index": 0
+    "correct_answer": "Township road number",
+    "correct_index": 2
   },
   {
     "category": "Directional and tourist signs",
@@ -3018,8 +3018,8 @@
       "Private car park",
       "Special purpose car park"
     ],
-    "correct_answer": "Private car park",
-    "correct_index": 2
+    "correct_answer": "Open-air car park",
+    "correct_index": 1
   },
   {
     "category": "Directional and tourist signs",
@@ -3034,8 +3034,8 @@
       "Indoor car park",
       "Special purpose car park"
     ],
-    "correct_answer": "Special purpose car park",
-    "correct_index": 3
+    "correct_answer": "Indoor car park",
+    "correct_index": 2
   },
   {
     "category": "Directional and tourist signs",
@@ -3050,8 +3050,8 @@
       "Parking space",
       "Give way lane"
     ],
-    "correct_answer": "Open-air car park",
-    "correct_index": 0
+    "correct_answer": "Give way lane",
+    "correct_index": 3
   },
   {
     "category": "Directional and tourist signs",
@@ -3114,8 +3114,8 @@
       "Road closed",
       "High vehicles detour"
     ],
-    "correct_answer": "No left turn",
-    "correct_index": 0
+    "correct_answer": "High vehicles detour",
+    "correct_index": 3
   },
   {
     "category": "Directional and tourist signs",
@@ -3130,8 +3130,8 @@
       "Slow down to pass",
       "T-intersection"
     ],
-    "correct_answer": "T-intersection",
-    "correct_index": 3
+    "correct_answer": "Road closed",
+    "correct_index": 1
   },
   {
     "category": "Directional and tourist signs",
@@ -3162,8 +3162,8 @@
       "Number of lanes increasing",
       "Change to right lane"
     ],
-    "correct_answer": "Change to right lane",
-    "correct_index": 3
+    "correct_answer": "Number of lanes increasing",
+    "correct_index": 2
   },
   {
     "category": "Directional and tourist signs",
@@ -3178,8 +3178,8 @@
       "Traffic monitoring equipment",
       "Area to slow down for photograph"
     ],
-    "correct_answer": "Traffic flow monitoring",
-    "correct_index": 1
+    "correct_answer": "Traffic monitoring equipment",
+    "correct_index": 2
   },
   {
     "category": "Directional and tourist signs",
@@ -3242,8 +3242,8 @@
       "Passing on both sides",
       "No passing"
     ],
-    "correct_answer": "Passing on both sides",
-    "correct_index": 2
+    "correct_answer": "Passing on the right side",
+    "correct_index": 1
   },
   {
     "category": "Directional and tourist signs",
@@ -3258,8 +3258,8 @@
       "No passing",
       "Passing on both sides"
     ],
-    "correct_answer": "Passing on both sides",
-    "correct_index": 3
+    "correct_answer": "Passing on the left side",
+    "correct_index": 1
   },
   {
     "category": "Directional and tourist signs",
@@ -3290,8 +3290,8 @@
       "Category of a tourist area",
       "Distance to a tourist area"
     ],
-    "correct_answer": "Distance to a tourist area",
-    "correct_index": 3
+    "correct_answer": "Direction to a tourist area",
+    "correct_index": 1
   },
   {
     "category": "Directional and tourist signs",
@@ -3350,8 +3350,8 @@
       "18 months",
       "6 months"
     ],
-    "correct_answer": "18 months",
-    "correct_index": 2
+    "correct_answer": "12 months",
+    "correct_index": 0
   },
   {
     "category": "Driving license",
@@ -3366,8 +3366,8 @@
       "Uniform probation sign",
       "Novice driver sign"
     ],
-    "correct_answer": "Avoid with car sign",
-    "correct_index": 1
+    "correct_answer": "Uniform probation sign",
+    "correct_index": 2
   },
   {
     "category": "Driving license",
@@ -3396,8 +3396,8 @@
       "18 years old ~ 60 years old",
       "21 years old ~ 50 years old"
     ],
-    "correct_answer": "18 years old ~ 60 years old",
-    "correct_index": 2
+    "correct_answer": "18 years old ~ 70 years old",
+    "correct_index": 1
   },
   {
     "category": "Driving license",
@@ -3412,8 +3412,8 @@
       "Being drunk",
       "Injecting illegal drugs"
     ],
-    "correct_answer": "Injecting insulin",
-    "correct_index": 1
+    "correct_answer": "Injecting illegal drugs",
+    "correct_index": 3
   },
   {
     "category": "Driving license",
@@ -3442,8 +3442,8 @@
       "Within 60 days",
       "Within 6 months"
     ],
-    "correct_answer": "Within 60 days",
-    "correct_index": 2
+    "correct_answer": "Within 90 days",
+    "correct_index": 0
   },
   {
     "category": "Driving license",
@@ -3472,8 +3472,8 @@
       "3 months",
       "6 months"
     ],
-    "correct_answer": "6 months",
-    "correct_index": 3
+    "correct_answer": "12 months",
+    "correct_index": 0
   },
   {
     "category": "Driving license",
@@ -3516,8 +3516,8 @@
       "5 years",
       "6 years"
     ],
-    "correct_answer": "3 years",
-    "correct_index": 1
+    "correct_answer": "6 years",
+    "correct_index": 3
   },
   {
     "category": "Driving license",
@@ -3548,8 +3548,8 @@
       "Low-speed truck",
       "Light truck with automatic transmission"
     ],
-    "correct_answer": "Low-speed truck",
-    "correct_index": 2
+    "correct_answer": "Light truck with automatic transmission",
+    "correct_index": 3
   },
   {
     "category": "Driving license",
@@ -3648,8 +3648,8 @@
       "Large bus",
       "Ordinary motor tricycle"
     ],
-    "correct_answer": "Midsize bus",
-    "correct_index": 1
+    "correct_answer": "Ordinary motor tricycle",
+    "correct_index": 3
   },
   {
     "category": "Driving license",
@@ -3722,8 +3722,8 @@
       "4",
       "6"
     ],
-    "correct_answer": "3",
-    "correct_index": 1
+    "correct_answer": "5",
+    "correct_index": 0
   },
   {
     "category": "Driving license",
@@ -3738,8 +3738,8 @@
       "2 years",
       "1 year"
     ],
-    "correct_answer": "1 year",
-    "correct_index": 3
+    "correct_answer": "3 years",
+    "correct_index": 1
   },
   {
     "category": "Driving license",
@@ -3768,8 +3768,8 @@
       "2 years",
       "3 years"
     ],
-    "correct_answer": "6 months",
-    "correct_index": 1
+    "correct_answer": "3 years",
+    "correct_index": 3
   },
   {
     "category": "Driving license",
@@ -3798,8 +3798,8 @@
       "Maintain more than 60 meters",
       "Maintain more than 80 meters"
     ],
-    "correct_answer": "Maintain more than 50 meters",
-    "correct_index": 1
+    "correct_answer": "Maintain more than 100 meters",
+    "correct_index": 0
   },
   {
     "category": "Expressways 1",
@@ -3886,8 +3886,8 @@
       "Expressway destination name",
       "Expressway place distance notice"
     ],
-    "correct_answer": "Expressway destination name",
-    "correct_index": 2
+    "correct_answer": "Expressway place distance notice",
+    "correct_index": 3
   },
   {
     "category": "Expressways 1",
@@ -3902,8 +3902,8 @@
       "Expressway right side exit notice",
       "Expressway destination notice"
     ],
-    "correct_answer": "Expressway left side exit notice",
-    "correct_index": 0
+    "correct_answer": "Expressway next exit notice",
+    "correct_index": 1
   },
   {
     "category": "Expressways 1",
@@ -3918,8 +3918,8 @@
       "Expressway destination notice",
       "Expressway left side exit notice"
     ],
-    "correct_answer": "Expressway next exit notice",
-    "correct_index": 0
+    "correct_answer": "Expressway left side exit notice",
+    "correct_index": 3
   },
   {
     "category": "Expressways 1",
@@ -3934,8 +3934,8 @@
       "Expressway exit ahead",
       "Expressway end point notice"
     ],
-    "correct_answer": "Expressway exit ahead",
-    "correct_index": 2
+    "correct_answer": "Expressway end point notice",
+    "correct_index": 3
   },
   {
     "category": "Expressways 1",
@@ -3966,8 +3966,8 @@
       "Expressway fee paying lane",
       "Expressway inspection lane"
     ],
-    "correct_answer": "Expressway fee paying lane",
-    "correct_index": 2
+    "correct_answer": "Expressway ETC lane",
+    "correct_index": 1
   },
   {
     "category": "Expressways 1",
@@ -3982,8 +3982,8 @@
       "Expressway rescue telephone",
       "Expressway public telephone"
     ],
-    "correct_answer": "Expressway public telephone",
-    "correct_index": 3
+    "correct_answer": "Expressway emergency telephone",
+    "correct_index": 1
   },
   {
     "category": "Expressways 1",
@@ -4014,8 +4014,8 @@
       "Expressway bus station notice",
       "Expressway toll station notice"
     ],
-    "correct_answer": "Expressway bus station notice",
-    "correct_index": 2
+    "correct_answer": "Expressway service area notice",
+    "correct_index": 1
   },
   {
     "category": "Expressways 1",
@@ -4030,8 +4030,8 @@
       "Expressway service area",
       "Expressway car park notice"
     ],
-    "correct_answer": "Expressway service area",
-    "correct_index": 2
+    "correct_answer": "Expressway car park notice",
+    "correct_index": 3
   },
   {
     "category": "Expressways 1",
@@ -4046,8 +4046,8 @@
       "There are more vehicles",
       "The red light is on"
     ],
-    "correct_answer": "There are more vehicles",
-    "correct_index": 2
+    "correct_answer": "The green light is on",
+    "correct_index": 0
   },
   {
     "category": "Expressways 1",
@@ -4062,8 +4062,8 @@
       "Reverse to the original place",
       "Make a U turn from where he or she is"
     ],
-    "correct_answer": "Immediately stop",
-    "correct_index": 1
+    "correct_answer": "Continue to go ahead and find the next exit",
+    "correct_index": 0
   },
   {
     "category": "Expressways 1",
@@ -4208,8 +4208,8 @@
       "At least 50 meters",
       "At least 30 meters"
     ],
-    "correct_answer": "At least 20 meters",
-    "correct_index": 1
+    "correct_answer": "At least 50 meters",
+    "correct_index": 2
   },
   {
     "category": "Expressways 2",
@@ -4270,8 +4270,8 @@
       "Place a warning sign as stipulated",
       "Report to the police immediately"
     ],
-    "correct_answer": "Place a warning sign as stipulated",
-    "correct_index": 2
+    "correct_answer": "The persons on board cannot get off",
+    "correct_index": 0
   },
   {
     "category": "Expressways 2",
@@ -4286,8 +4286,8 @@
       "Passing car",
       "Large bus"
     ],
-    "correct_answer": "Passing car",
-    "correct_index": 2
+    "correct_answer": "Rescue vehicle",
+    "correct_index": 0
   },
   {
     "category": "Expressways 2",
@@ -4330,8 +4330,8 @@
       "Expressway left side exit notice",
       "Expressway place and direction notice"
     ],
-    "correct_answer": "Expressway right side exit notice",
-    "correct_index": 0
+    "correct_answer": "Expressway place and direction notice",
+    "correct_index": 3
   },
   {
     "category": "Expressways 2",
@@ -4346,8 +4346,8 @@
       "Expressway section number",
       "Expressway terminus number"
     ],
-    "correct_answer": "Expressway mileage number",
-    "correct_index": 1
+    "correct_answer": "Expressway name number",
+    "correct_index": 0
   },
   {
     "category": "Expressways 2",
@@ -4378,8 +4378,8 @@
       "Expressway starting point",
       "Expressway exit"
     ],
-    "correct_answer": "Expressway exit",
-    "correct_index": 3
+    "correct_answer": "Expressway starting point",
+    "correct_index": 2
   },
   {
     "category": "Expressways 2",
@@ -4394,8 +4394,8 @@
       "Expressway incident report phone number",
       "Expressway service phone number"
     ],
-    "correct_answer": "Expressway rescue phone number",
-    "correct_index": 1
+    "correct_answer": "Expressway traffic radio frequency",
+    "correct_index": 0
   },
   {
     "category": "Expressways 2",
@@ -4410,8 +4410,8 @@
       "Expressway card receipt point",
       "Incorporating ETC toll station"
     ],
-    "correct_answer": "Expressway toll office",
-    "correct_index": 1
+    "correct_answer": "Incorporating ETC toll station",
+    "correct_index": 3
   },
   {
     "category": "Expressways 2",
@@ -4442,8 +4442,8 @@
       "Expressway rescue telephone",
       "Expressway public telephone"
     ],
-    "correct_answer": "Expressway incident report telephone",
-    "correct_index": 0
+    "correct_answer": "Expressway rescue telephone",
+    "correct_index": 2
   },
   {
     "category": "Expressways 2",
@@ -4458,8 +4458,8 @@
       "Expressway rest area",
       "Expressway bus station"
     ],
-    "correct_answer": "Expressway bus station",
-    "correct_index": 3
+    "correct_answer": "Expressway gas station",
+    "correct_index": 0
   },
   {
     "category": "Expressways 2",
@@ -4682,8 +4682,8 @@
       "Not impact the normal running of other vehicles",
       "Enter the lane on the left side and properly reduce speed"
     ],
-    "correct_answer": "Turn on the turn signal and quickly turn left",
-    "correct_index": 1
+    "correct_answer": "Not impact the normal running of other vehicles",
+    "correct_index": 2
   },
   {
     "category": "General driving 1",
@@ -4698,8 +4698,8 @@
       "The vehicle in front took braking measures too fast",
       "The following vehicle was overtaking too close to the vehicle in front"
     ],
-    "correct_answer": "The vehicle in front did not look in the rear-view mirror when taking braking measures",
-    "correct_index": 1
+    "correct_answer": "The following vehicle did not maintain a safe distance from the vehicle in front",
+    "correct_index": 0
   },
   {
     "category": "General driving 1",
@@ -4730,8 +4730,8 @@
       "Pass by using the lane for non-motorized vehicles",
       "Reduce speed and pass on the right side"
     ],
-    "correct_answer": "Pass close to the roadside",
-    "correct_index": 1
+    "correct_answer": "Reduce speed and pass on the right side",
+    "correct_index": 3
   },
   {
     "category": "General driving 1",
@@ -4746,8 +4746,8 @@
       "Stop to look and make sure it is safe to pass",
       "Properly reduce the speed and pass through"
     ],
-    "correct_answer": "Properly reduce the speed and pass through",
-    "correct_index": 3
+    "correct_answer": "Stop to look and make sure it is safe to pass",
+    "correct_index": 2
   },
   {
     "category": "General driving 1",
@@ -4762,8 +4762,8 @@
       "Move to another lane and overtake",
       "Cut in the waiting vehicles"
     ],
-    "correct_answer": "Move to another lane and overtake",
-    "correct_index": 2
+    "correct_answer": "Go forward alternately",
+    "correct_index": 0
   },
   {
     "category": "General driving 1",
@@ -4778,8 +4778,8 @@
       "Yield in a timely manner",
       "Turn on the hazard lights"
     ],
-    "correct_answer": "Drive normally",
-    "correct_index": 1
+    "correct_answer": "Yield in a timely manner",
+    "correct_index": 2
   },
   {
     "category": "General driving 1",
@@ -4794,8 +4794,8 @@
       "Maintain the original speed",
       "Speed up and go forward"
     ],
-    "correct_answer": "Obstruct the way of that vehicle",
-    "correct_index": 1
+    "correct_answer": "Reduce speed and avoid as much as possible until stopped",
+    "correct_index": 0
   },
   {
     "category": "General driving 1",
@@ -4810,8 +4810,8 @@
       "Bypass to dodge it as much as possible",
       "Immediately report to the police, stop and look on"
     ],
-    "correct_answer": "Bypass to dodge it as much as possible",
-    "correct_index": 2
+    "correct_answer": "Help to preserve the scene and immediately report to the police",
+    "correct_index": 1
   },
   {
     "category": "General driving 1",
@@ -4842,8 +4842,8 @@
       "Voluntarily yield to the other side",
       "Force the other side to drive by the right side"
     ],
-    "correct_answer": "Force the other side to drive by the right side",
-    "correct_index": 3
+    "correct_answer": "Voluntarily yield to the other side",
+    "correct_index": 2
   },
   {
     "category": "General driving 1",
@@ -4858,8 +4858,8 @@
       "Reduce speed, stop and wait in line",
       "Honk to urge"
     ],
-    "correct_answer": "Find a chance to overtake the vehicle in front",
-    "correct_index": 0
+    "correct_answer": "Reduce speed, stop and wait in line",
+    "correct_index": 2
   },
   {
     "category": "General driving 1",
@@ -4874,8 +4874,8 @@
       "Yield to the other side as much as possible",
       "Speed up and go forward by the right side"
     ],
-    "correct_answer": "Speed up and go forward by the right side",
-    "correct_index": 3
+    "correct_answer": "Yield to the other side as much as possible",
+    "correct_index": 2
   },
   {
     "category": "General driving 1",
@@ -4890,8 +4890,8 @@
       "Reduce speed and go slowly with special care",
       "Maintain the normal speed and pass"
     ],
-    "correct_answer": "Maintain the normal speed and pass",
-    "correct_index": 3
+    "correct_answer": "Reduce speed and go slowly with special care",
+    "correct_index": 2
   },
   {
     "category": "General driving 1",
@@ -4922,8 +4922,8 @@
       "Squeeze the cutting-in vehicle to force it to leave",
       "Voluntarily yield to ensure safe driving"
     ],
-    "correct_answer": "Honk to warn it against cutting in",
-    "correct_index": 0
+    "correct_answer": "Voluntarily yield to ensure safe driving",
+    "correct_index": 3
   },
   {
     "category": "General driving 1",
@@ -4938,8 +4938,8 @@
       "Rapidly occupy the lane and force the vehicle coming in the opposite direction to stop and yield",
       "Reduce speed or stop and yield to the vehicle coming in the opposite direction"
     ],
-    "correct_answer": "Speed up and bypass the obstacle in advance",
-    "correct_index": 0
+    "correct_answer": "Reduce speed or stop and yield to the vehicle coming in the opposite direction",
+    "correct_index": 3
   },
   {
     "category": "General driving 1",
@@ -4954,8 +4954,8 @@
       "Continue to reverse",
       "Speed up and reverse"
     ],
-    "correct_answer": "Honk to indicate the intention",
-    "correct_index": 0
+    "correct_answer": "Voluntarily stop and yield",
+    "correct_index": 1
   },
   {
     "category": "General driving 1",
@@ -4986,8 +4986,8 @@
       "Fully reduce speed and drive on the right side",
       "Brake suddenly and go slowly"
     ],
-    "correct_answer": "Brake suddenly and go slowly",
-    "correct_index": 3
+    "correct_answer": "Fully reduce speed and drive on the right side",
+    "correct_index": 2
   },
   {
     "category": "General driving 1",
@@ -5002,8 +5002,8 @@
       "Maintain the speed and pass",
       "Reduce speed and pass"
     ],
-    "correct_answer": "Reduce speed and pass",
-    "correct_index": 3
+    "correct_answer": "Stop, look and pass",
+    "correct_index": 1
   },
   {
     "category": "General driving 1",
@@ -5034,8 +5034,8 @@
       "Maintain the normal speed",
       "Speed up and pass"
     ],
-    "correct_answer": "Speed up and pass",
-    "correct_index": 3
+    "correct_answer": "Keep a safe horizontal distance from that vehicle, reduce speed and pass",
+    "correct_index": 0
   },
   {
     "category": "General driving 1",
@@ -5066,8 +5066,8 @@
       "Honk and swiftly pass",
       "Maintain the normal speed"
     ],
-    "correct_answer": "Maintain the normal speed",
-    "correct_index": 3
+    "correct_answer": "Reduce speed in advance, observe and drive with care",
+    "correct_index": 0
   },
   {
     "category": "General driving 1",
@@ -5082,8 +5082,8 @@
       "Run slightly on the right side to ensure a safe horizontal distance",
       "Continue to speed up and run"
     ],
-    "correct_answer": "Continue to speed up and run",
-    "correct_index": 3
+    "correct_answer": "Run slightly on the right side to ensure a safe horizontal distance",
+    "correct_index": 2
   },
   {
     "category": "General driving 2",
@@ -5476,8 +5476,8 @@
       "Straight-going lane",
       "Going straight is prohibited"
     ],
-    "correct_answer": "Straight-going lane",
-    "correct_index": 2
+    "correct_answer": "Ahead only",
+    "correct_index": 1
   },
   {
     "category": "Indicative signs",
@@ -5524,8 +5524,8 @@
       "Going straight and turning right are prohibited",
       "Go straight or turn right"
     ],
-    "correct_answer": "Go straight or turn left",
-    "correct_index": 0
+    "correct_answer": "Go straight or turn right",
+    "correct_index": 3
   },
   {
     "category": "Indicative signs",
@@ -5540,8 +5540,8 @@
       "Go straight or turn left",
       "Turn right or turn left only"
     ],
-    "correct_answer": "Go straight or turn right",
-    "correct_index": 1
+    "correct_answer": "Go straight or turn left",
+    "correct_index": 2
   },
   {
     "category": "Indicative signs",
@@ -5556,8 +5556,8 @@
       "Allowed to turn left and right",
       "No left turn"
     ],
-    "correct_answer": "No left turn",
-    "correct_index": 3
+    "correct_answer": "Allowed to turn left and right",
+    "correct_index": 2
   },
   {
     "category": "Indicative signs",
@@ -5572,8 +5572,8 @@
       "Park on the right side of the road",
       "Turn right only"
     ],
-    "correct_answer": "Downhill section on the right",
-    "correct_index": 0
+    "correct_answer": "Go on the right road",
+    "correct_index": 1
   },
   {
     "category": "Indicative signs",
@@ -5588,8 +5588,8 @@
       "Downhill section on the left",
       "Turn left only"
     ],
-    "correct_answer": "Park on the left side of the road",
-    "correct_index": 0
+    "correct_answer": "Go on the left road",
+    "correct_index": 1
   },
   {
     "category": "Indicative signs",
@@ -5620,8 +5620,8 @@
       "Going straight and turning right",
       "Continue straight or turn right at interchange"
     ],
-    "correct_answer": "Going straight and turning left",
-    "correct_index": 0
+    "correct_answer": "Continue straight or turn right at interchange",
+    "correct_index": 3
   },
   {
     "category": "Indicative signs",
@@ -5636,8 +5636,8 @@
       "Passing on the right side",
       "Roundabout"
     ],
-    "correct_answer": "Passing on the right side",
-    "correct_index": 2
+    "correct_answer": "Roundabout",
+    "correct_index": 3
   },
   {
     "category": "Indicative signs",
@@ -5652,8 +5652,8 @@
       "One way only",
       "One way right"
     ],
-    "correct_answer": "Vehicles turning left should yield",
-    "correct_index": 1
+    "correct_answer": "One way left",
+    "correct_index": 0
   },
   {
     "category": "Indicative signs",
@@ -5668,8 +5668,8 @@
       "Vehicles turning right should yield",
       "One way right"
     ],
-    "correct_answer": "One way left",
-    "correct_index": 1
+    "correct_answer": "One way right",
+    "correct_index": 3
   },
   {
     "category": "Indicative signs",
@@ -5684,8 +5684,8 @@
       "Drive on the right side",
       "One way only"
     ],
-    "correct_answer": "Drive on the right side",
-    "correct_index": 2
+    "correct_answer": "One way only",
+    "correct_index": 3
   },
   {
     "category": "Indicative signs",
@@ -5700,8 +5700,8 @@
       "Pedestrians only",
       "Drive slowly"
     ],
-    "correct_answer": "Drive slowly",
-    "correct_index": 3
+    "correct_answer": "Pedestrians only",
+    "correct_index": 2
   },
   {
     "category": "Indicative signs",
@@ -5716,8 +5716,8 @@
       "Sound horn",
       "Bass sound honking is prohibited"
     ],
-    "correct_answer": "High sound honking is prohibited",
-    "correct_index": 1
+    "correct_answer": "Sound horn",
+    "correct_index": 2
   },
   {
     "category": "Indicative signs",
@@ -5764,8 +5764,8 @@
       "Main road has priority",
       "Streets on both sides"
     ],
-    "correct_answer": "Streets on both sides",
-    "correct_index": 3
+    "correct_answer": "Main road has priority",
+    "correct_index": 2
   },
   {
     "category": "Indicative signs",
@@ -5780,8 +5780,8 @@
       "One-way road",
       "Vehicle in opposite direction goes first"
     ],
-    "correct_answer": "Stop to yield",
-    "correct_index": 1
+    "correct_answer": "Going first when crossing each other",
+    "correct_index": 0
   },
   {
     "category": "Indicative signs",
@@ -5812,8 +5812,8 @@
       "Right turn lane",
       "U turn lane"
     ],
-    "correct_answer": "Right turn lane",
-    "correct_index": 2
+    "correct_answer": "Left turn lane",
+    "correct_index": 1
   },
   {
     "category": "Indicative signs",
@@ -5828,8 +5828,8 @@
       "Straight-going lane",
       "Right turn lane"
     ],
-    "correct_answer": "Right turn lane",
-    "correct_index": 3
+    "correct_answer": "Straight-going lane",
+    "correct_index": 2
   },
   {
     "category": "Indicative signs",
@@ -5844,8 +5844,8 @@
       "Lane for both going straight and turning right",
       "Lanes going in different directions"
     ],
-    "correct_answer": "Lane for going straight and turning left",
-    "correct_index": 1
+    "correct_answer": "Lane for both going straight and turning right",
+    "correct_index": 2
   },
   {
     "category": "Indicative signs",
@@ -5860,8 +5860,8 @@
       "Lane for both going straight and U turn",
       "Lane for going straight and turning right"
     ],
-    "correct_answer": "Lane for both going straight and U turn",
-    "correct_index": 2
+    "correct_answer": "Lane for both going straight and turning left",
+    "correct_index": 1
   },
   {
     "category": "Indicative signs",
@@ -5892,8 +5892,8 @@
       "Turning left and U turn prohibited lane",
       "Lanes going in different directions"
     ],
-    "correct_answer": "Lanes going in different directions",
-    "correct_index": 3
+    "correct_answer": "Lane for both U turn and turning left",
+    "correct_index": 0
   },
   {
     "category": "Indicative signs",
@@ -5908,8 +5908,8 @@
       "Straight ahead lane",
       "Right turn lane"
     ],
-    "correct_answer": "Left turn lane",
-    "correct_index": 1
+    "correct_answer": "Lanes going in different directions",
+    "correct_index": 0
   },
   {
     "category": "Indicative signs",
@@ -5924,8 +5924,8 @@
       "Special lane for urban bus",
       "A special lane for multi-occupant vehicles"
     ],
-    "correct_answer": "Special lane for large bus",
-    "correct_index": 1
+    "correct_answer": "Special lane for urban bus",
+    "correct_index": 2
   },
   {
     "category": "Indicative signs",
@@ -5940,8 +5940,8 @@
       "Only small vehicles allowed",
       "Small vehicles not allowed"
     ],
-    "correct_answer": "Small vehicles not allowed",
-    "correct_index": 3
+    "correct_answer": "Motor vehicles allowed",
+    "correct_index": 1
   },
   {
     "category": "Indicative signs",
@@ -5956,8 +5956,8 @@
       "Motorized vehicle lane",
       "Small vehicle lane"
     ],
-    "correct_answer": "Small vehicle lane",
-    "correct_index": 3
+    "correct_answer": "Motorized vehicle lane",
+    "correct_index": 2
   },
   {
     "category": "Indicative signs",
@@ -5972,8 +5972,8 @@
       "Non-motorized vehicles only",
       "Parking area for non-motorized vehicles"
     ],
-    "correct_answer": "Electric bikes only",
-    "correct_index": 1
+    "correct_answer": "Non-motorized vehicles only",
+    "correct_index": 2
   },
   {
     "category": "Indicative signs",
@@ -5988,8 +5988,8 @@
       "Lane for non-motorized vehicles",
       "Bicycle parking section"
     ],
-    "correct_answer": "No passing for bicycles",
-    "correct_index": 0
+    "correct_answer": "Lane for non-motorized vehicles",
+    "correct_index": 2
   },
   {
     "category": "Indicative signs",
@@ -6004,8 +6004,8 @@
       "Special lane for large buses",
       "Special lane for public buses"
     ],
-    "correct_answer": "Special lane for large buses",
-    "correct_index": 2
+    "correct_answer": "Special lane for BRT vehicles",
+    "correct_index": 0
   },
   {
     "category": "Indicative signs",
@@ -6020,8 +6020,8 @@
       "Special lane for small motor vehicles",
       "Special lane for taxis"
     ],
-    "correct_answer": "Special lane for small motor vehicles",
-    "correct_index": 2
+    "correct_answer": "Special lane for multi-occupant vehicles",
+    "correct_index": 0
   },
   {
     "category": "Indicative signs",
@@ -6142,8 +6142,8 @@
       "Maintain speed and pass",
       "Speed up and pass"
     ],
-    "correct_answer": "Maintain speed and pass",
-    "correct_index": 2
+    "correct_answer": "Reduce speed and go slowly",
+    "correct_index": 0
   },
   {
     "category": "Intersections",
@@ -6158,8 +6158,8 @@
       "Slow down or stop and look",
       "Speed up and pass as fast as possible"
     ],
-    "correct_answer": "Do not slow down to pass",
-    "correct_index": 1
+    "correct_answer": "Slow down or stop and look",
+    "correct_index": 2
   },
   {
     "category": "Intersections",
@@ -6190,8 +6190,8 @@
       "Turn to the left of the intersection center point",
       "Cannot turn left"
     ],
-    "correct_answer": "Turn to the right of the intersection center point",
-    "correct_index": 0
+    "correct_answer": "Turn to the left of the intersection center point",
+    "correct_index": 2
   },
   {
     "category": "Intersections",
@@ -6206,8 +6206,8 @@
       "Use the high and low beam lights alternately to remind the vehicles in the intersection to give way.",
       "Yield to the vehicles within the intersection first"
     ],
-    "correct_answer": "Honk and directly enter the intersection",
-    "correct_index": 0
+    "correct_answer": "Yield to the vehicles within the intersection first",
+    "correct_index": 3
   },
   {
     "category": "Intersections",
@@ -6238,8 +6238,8 @@
       "Let the vehicle coming in the opposite direction turn left",
       "Immediately turn right in front of the vehicle coming in the opposite direction"
     ],
-    "correct_answer": "Directly turn right",
-    "correct_index": 0
+    "correct_answer": "Let the vehicle coming in the opposite direction turn left",
+    "correct_index": 2
   },
   {
     "category": "Intersections",
@@ -6254,8 +6254,8 @@
       "Turn on the hazard lights and go forward",
       "Yield to the vehicle coming from the left side of the road first"
     ],
-    "correct_answer": "Turn on the hazard lights and go forward",
-    "correct_index": 2
+    "correct_answer": "Yield to the vehicle coming from the right side of the road first",
+    "correct_index": 1
   },
   {
     "category": "Intersections",
@@ -6370,8 +6370,8 @@
       "Stop at the intersection and wait",
       "Stop outside the intersection and wait"
     ],
-    "correct_answer": "Stop in the cross hatched marking area and wait",
-    "correct_index": 0
+    "correct_answer": "Stop outside the intersection and wait",
+    "correct_index": 3
   },
   {
     "category": "Intersections",
@@ -6386,8 +6386,8 @@
       "Enter the intersection from a gap between vehicles",
       "Enter the intersection from the road shoulder on the right side of the vehicle in front"
     ],
-    "correct_answer": "Enter the intersection from the road shoulder on the right side of the vehicle in front",
-    "correct_index": 3
+    "correct_answer": "One vehicle from each lane to alternately enter the intersection",
+    "correct_index": 1
   },
   {
     "category": "Intersections",
@@ -6402,8 +6402,8 @@
       "May pass the intersection by borrowing the opposite lane",
       "Stop outside the intersection and wait"
     ],
-    "correct_answer": "May pass the intersection by borrowing the opposite lane",
-    "correct_index": 2
+    "correct_answer": "Stop outside the intersection and wait",
+    "correct_index": 3
   },
   {
     "category": "Intersections",
@@ -6462,8 +6462,8 @@
       "Make a U turn along the lane on the left side",
       "Choose the middle lane to make a U turn"
     ],
-    "correct_answer": "Make a U turn along the lane on the left side",
-    "correct_index": 2
+    "correct_answer": "Making a U turn is prohibited at the intersection",
+    "correct_index": 1
   },
   {
     "category": "Intersections",
@@ -6520,8 +6520,8 @@
       "In the area marked by solid lines before the intersection",
       "Before the stop line at the intersection"
     ],
-    "correct_answer": "In the area marked by solid lines before the intersection",
-    "correct_index": 2
+    "correct_answer": "In the area marked by broken lines as indicated by the guide arrow",
+    "correct_index": 1
   },
   {
     "category": "Intersections",
@@ -6536,8 +6536,8 @@
       "Reduce speed and evade, or stop to yield when necessary",
       "Go forward at the normal speed according to the right of way and refuses to evade"
     ],
-    "correct_answer": "Rush to pass",
-    "correct_index": 1
+    "correct_answer": "Reduce speed and evade, or stop to yield when necessary",
+    "correct_index": 2
   },
   {
     "category": "Intersections",
@@ -6552,8 +6552,8 @@
       "Stop to evade",
       "Speed up and pass ahead of it"
     ],
-    "correct_answer": "Speed up and pass ahead of it",
-    "correct_index": 3
+    "correct_answer": "Stop to evade",
+    "correct_index": 2
   },
   {
     "category": "Intersections",
@@ -6610,8 +6610,8 @@
       "Within 5 years",
       "Lifetime"
     ],
-    "correct_answer": "Within 5 years",
-    "correct_index": 2
+    "correct_answer": "Lifetime",
+    "correct_index": 3
   },
   {
     "category": "Law and Punishment 1",
@@ -6684,8 +6684,8 @@
       "Shall be held for criminal liabilities",
       "Detention of less than 10 days"
     ],
-    "correct_answer": "The driving license should be temporarily detained",
-    "correct_index": 1
+    "correct_answer": "The driving license should be revoked",
+    "correct_index": 0
   },
   {
     "category": "Law and Punishment 1",
@@ -6700,8 +6700,8 @@
       "Driving license should be confiscated",
       "The driving license should be revoked"
     ],
-    "correct_answer": "Driving license should be confiscated",
-    "correct_index": 2
+    "correct_answer": "The driving license should be revoked",
+    "correct_index": 3
   },
   {
     "category": "Law and Punishment 1",
@@ -6716,8 +6716,8 @@
       "Detention of less than 15 days",
       "Shall be held for criminal liabilities"
     ],
-    "correct_answer": "A fine of 20 yuan ~ 200 yuan",
-    "correct_index": 0
+    "correct_answer": "The driving license should be revoked",
+    "correct_index": 1
   },
   {
     "category": "Law and Punishment 1",
@@ -6732,8 +6732,8 @@
       "Be held for criminal liabilities according to law",
       "A fine of 200 yuan ~ 2000 yuan"
     ],
-    "correct_answer": "Be held for criminal liabilities according to law",
-    "correct_index": 2
+    "correct_answer": "A fine of 200 yuan ~ 2000 yuan",
+    "correct_index": 3
   },
   {
     "category": "Law and Punishment 1",
@@ -6748,8 +6748,8 @@
       "Escaping after causing a traffic accident",
       "Violating road traffic regulations"
     ],
-    "correct_answer": "Violating road traffic regulations",
-    "correct_index": 3
+    "correct_answer": "Going 50% faster than the prescribed speed limit",
+    "correct_index": 1
   },
   {
     "category": "Law and Punishment 1",
@@ -6796,8 +6796,8 @@
       "Not having the label of environmental protection",
       "Not carrying mandatory traffic accident insurance"
     ],
-    "correct_answer": "Not carrying the vehicle registration papers",
-    "correct_index": 1
+    "correct_answer": "Not having the label of insurance",
+    "correct_index": 0
   },
   {
     "category": "Law and Punishment 1",
@@ -6970,8 +6970,8 @@
       "Driving when not buckled up",
       "Driving when exhausted"
     ],
-    "correct_answer": "Exceeding 10% of the prescribed speed limit",
-    "correct_index": 0
+    "correct_answer": "Driving after drinking",
+    "correct_index": 1
   },
   {
     "category": "Law and Punishment 1",
@@ -6986,8 +6986,8 @@
       "A driver with a driving license",
       "A driver who accumulates 6 penalty points"
     ],
-    "correct_answer": "A new driver",
-    "correct_index": 0
+    "correct_answer": "A driver whose driving license has been revoked",
+    "correct_index": 1
   },
   {
     "category": "Law and Punishment 1",
@@ -7058,8 +7058,8 @@
       "Violating regulations",
       "Negligent"
     ],
-    "correct_answer": "Negligent",
-    "correct_index": 3
+    "correct_answer": "Illegal",
+    "correct_index": 0
   },
   {
     "category": "Law and Punishment 2",
@@ -7188,8 +7188,8 @@
       "Disobeying rules",
       "Illegal"
     ],
-    "correct_answer": "Violating regulations",
-    "correct_index": 0
+    "correct_answer": "Illegal",
+    "correct_index": 3
   },
   {
     "category": "Law and Punishment 2",
@@ -7204,8 +7204,8 @@
       "Mandatory write-off system",
       "Accumulated penalty points system"
     ],
-    "correct_answer": "Illegal registration system",
-    "correct_index": 0
+    "correct_answer": "Accumulated penalty points system",
+    "correct_index": 3
   },
   {
     "category": "Law and Punishment 2",
@@ -7220,8 +7220,8 @@
       "Be held for criminal liabilities according to law",
       "Educate him on the law and regulations and re-test."
     ],
-    "correct_answer": "Detention of less than 15 days",
-    "correct_index": 0
+    "correct_answer": "Educate him on the law and regulations and re-test.",
+    "correct_index": 3
   },
   {
     "category": "Law and Punishment 2",
@@ -7266,8 +7266,8 @@
       "A prison term of less than 3 years or a criminal detention",
       "A prison term of 3 years ~ 7 years"
     ],
-    "correct_answer": "A prison term of more than 5 years",
-    "correct_index": 1
+    "correct_answer": "A prison term of less than 3 years or a criminal detention",
+    "correct_index": 2
   },
   {
     "category": "Law and Punishment 2",
@@ -7324,8 +7324,8 @@
       "3 years ~ 7 years",
       "Less than 3 years"
     ],
-    "correct_answer": "More than 7 years",
-    "correct_index": 1
+    "correct_answer": "3 years ~ 7 years",
+    "correct_index": 2
   },
   {
     "category": "Law and Punishment 2",
@@ -7340,8 +7340,8 @@
       "More than 7 years",
       "Less than 7 years"
     ],
-    "correct_answer": "Less than 2 years",
-    "correct_index": 0
+    "correct_answer": "More than 7 years",
+    "correct_index": 2
   },
   {
     "category": "Law and Punishment 2",
@@ -7384,8 +7384,8 @@
       "More than 1 year in prison",
       "Detention and a fine"
     ],
-    "correct_answer": "6 months in prison",
-    "correct_index": 0
+    "correct_answer": "Detention and a fine",
+    "correct_index": 3
   },
   {
     "category": "Law and Punishment 2",
@@ -7414,8 +7414,8 @@
       "Less than 2 years in prison",
       "More than 2 years in prison"
     ],
-    "correct_answer": "Control and a fine",
-    "correct_index": 1
+    "correct_answer": "Detention and a fine",
+    "correct_index": 0
   },
   {
     "category": "Law and Punishment 2",
@@ -7514,8 +7514,8 @@
       "Cannot re-apply for driving license with 1 year.",
       "Cannot re-apply for driving license with 2 years."
     ],
-    "correct_answer": "A fine of 20 yuan ~ 200 yuan.",
-    "correct_index": 0
+    "correct_answer": "Cannot re-apply for driving license with 1 year.",
+    "correct_index": 2
   },
   {
     "category": "Law and Punishment 2",
@@ -7558,8 +7558,8 @@
       "Illegal",
       "Violating regulations"
     ],
-    "correct_answer": "Violating regulations",
-    "correct_index": 3
+    "correct_answer": "Illegal",
+    "correct_index": 2
   },
   {
     "category": "Mountains and hills",
@@ -7632,8 +7632,8 @@
       "Go through slowly",
       "Maintain a constant speed and go through"
     ],
-    "correct_answer": "Maintain a constant speed and go through",
-    "correct_index": 3
+    "correct_answer": "Stop and look at the situation",
+    "correct_index": 1
   },
   {
     "category": "Mountains and hills",
@@ -7706,8 +7706,8 @@
       "The slopes are long, the curves are sharp and visibility is reduced",
       "The traffic conditions are boring"
     ],
-    "correct_answer": "The traffic conditions are boring",
-    "correct_index": 3
+    "correct_answer": "The slopes are long, the curves are sharp and visibility is reduced",
+    "correct_index": 2
   },
   {
     "category": "Mountains and hills",
@@ -7722,8 +7722,8 @@
       "May speed up and pass along the tangent line of the curve",
       "May briefly borrow the opposite lane"
     ],
-    "correct_answer": "Should drive along the outer side of the curve",
-    "correct_index": 0
+    "correct_answer": "Should reduce speed, honk and drive on the right side",
+    "correct_index": 1
   },
   {
     "category": "Mountains and hills",
@@ -7738,8 +7738,8 @@
       "Speed up and dash over under inertia",
       "Pass slowly and steadily"
     ],
-    "correct_answer": "Speed up and dash over under inertia",
-    "correct_index": 2
+    "correct_answer": "Pass slowly and steadily",
+    "correct_index": 3
   },
   {
     "category": "Mountains and hills",
@@ -7784,8 +7784,8 @@
       "By selecting a fairly long downhill section",
       "By selecting a relatively gentle downhill section"
     ],
-    "correct_answer": "By taking every possible chance",
-    "correct_index": 0
+    "correct_answer": "By selecting a wide gentle uphill section",
+    "correct_index": 1
   },
   {
     "category": "Mountains and hills",
@@ -7800,8 +7800,8 @@
       "Not reduce speed",
       "Reduce speed or stop to yield"
     ],
-    "correct_answer": "Stick to the center of the road",
-    "correct_index": 0
+    "correct_answer": "Reduce speed or stop to yield",
+    "correct_index": 3
   },
   {
     "category": "Mountains and hills",
@@ -7816,8 +7816,8 @@
       "Shift to the neutral gear and slide",
       "Use the engine to brake"
     ],
-    "correct_answer": "Shift to the neutral gear and slide",
-    "correct_index": 2
+    "correct_answer": "Use the engine to brake",
+    "correct_index": 3
   },
   {
     "category": "Mountains and hills",
@@ -7832,8 +7832,8 @@
       "Can drastically reduce the braking efficiency due to the rising temperature of the brake",
       "Can shorten the engine's service life"
     ],
-    "correct_answer": "Can shorten the engine's service life",
-    "correct_index": 3
+    "correct_answer": "Can drastically reduce the braking efficiency due to the rising temperature of the brake",
+    "correct_index": 2
   },
   {
     "category": "Mountains and hills",
@@ -7848,8 +7848,8 @@
       "Reduce speed or stop and yield",
       "Maintain the normal speed"
     ],
-    "correct_answer": "Honk to urge the other party to yield",
-    "correct_index": 1
+    "correct_answer": "Reduce speed or stop and yield",
+    "correct_index": 2
   },
   {
     "category": "Mountains and hills",
@@ -7992,8 +7992,8 @@
       "Closely follow and climb",
       "Climb slowly"
     ],
-    "correct_answer": "Climb slowly",
-    "correct_index": 3
+    "correct_answer": "Select a proper place to stop and climb after the vehicle in front has passed",
+    "correct_index": 1
   },
   {
     "category": "Mountains and hills",
@@ -8022,8 +8022,8 @@
       "Use the high beam light",
       "Use the hazard lights"
     ],
-    "correct_answer": "Turn off the high beam light",
-    "correct_index": 1
+    "correct_answer": "Use the high and low beam lights alternately",
+    "correct_index": 0
   },
   {
     "category": "Night driving",
@@ -8038,8 +8038,8 @@
       "Honk to indicate intention and speed up and pass",
       "Reduce speed and honk to indicate intention"
     ],
-    "correct_answer": "Occupy the other side of the road and turn",
-    "correct_index": 1
+    "correct_answer": "Reduce speed and honk to indicate intention",
+    "correct_index": 3
   },
   {
     "category": "Night driving",
@@ -8096,8 +8096,8 @@
       "Turn off the head light",
       "Turn on the high beam light"
     ],
-    "correct_answer": "Turn off the head light",
-    "correct_index": 2
+    "correct_answer": "Change the high and low beam lights",
+    "correct_index": 1
   },
   {
     "category": "Night driving",
@@ -8112,8 +8112,8 @@
       "Less than 50 meters",
       "It is not necessary to switch lights"
     ],
-    "correct_answer": "Less than 100 meters",
-    "correct_index": 1
+    "correct_answer": "More than 150 meters",
+    "correct_index": 0
   },
   {
     "category": "Night driving",
@@ -8128,8 +8128,8 @@
       "Turn on the high beam light",
       "Turn off all lights"
     ],
-    "correct_answer": "Turn off all lights",
-    "correct_index": 3
+    "correct_answer": "Turn on the low beam light",
+    "correct_index": 0
   },
   {
     "category": "Night driving",
@@ -8172,8 +8172,8 @@
       "The driver can easily have impulse and illusion",
       "The road surface is complex and changing"
     ],
-    "correct_answer": "The physical strength of the driver decreases",
-    "correct_index": 1
+    "correct_answer": "The visibility is low and unfavorable for observing road traffic conditions",
+    "correct_index": 0
   },
   {
     "category": "Night driving",
@@ -8188,8 +8188,8 @@
       "It is unchanged",
       "It is longer"
     ],
-    "correct_answer": "It is unchanged",
-    "correct_index": 2
+    "correct_answer": "It is shorter",
+    "correct_index": 1
   },
   {
     "category": "Night driving",
@@ -8218,8 +8218,8 @@
       "The high beam light",
       "The hazard lights"
     ],
-    "correct_answer": "The hazard lights",
-    "correct_index": 3
+    "correct_answer": "The low beam light",
+    "correct_index": 1
   },
   {
     "category": "Night driving",
@@ -8234,8 +8234,8 @@
       "Leave the road surface",
       "Moves from the center of the road to the roadside"
     ],
-    "correct_answer": "Leave the road surface",
-    "correct_index": 2
+    "correct_answer": "Moves from the center of the road to the roadside",
+    "correct_index": 3
   },
   {
     "category": "Night driving",
@@ -8404,8 +8404,8 @@
       "The vehicle in front is turning right",
       "The vehicle in front is slowing down to yield"
     ],
-    "correct_answer": "The vehicle in front is slowing down to yield",
-    "correct_index": 3
+    "correct_answer": "The vehicle in front is turning left",
+    "correct_index": 0
   },
   {
     "category": "Overtaking",
@@ -8420,8 +8420,8 @@
       "Maintain the original speed",
       "Speed up and pass"
     ],
-    "correct_answer": "Maintain the original speed",
-    "correct_index": 2
+    "correct_answer": "Reduce speed, move to the right side and yield",
+    "correct_index": 0
   },
   {
     "category": "Overtaking",
@@ -8436,8 +8436,8 @@
       "Should overtake from the side of the vehicle in front with no obstacles",
       "Should overtake from the right side of the vehicle in front"
     ],
-    "correct_answer": "May overtake from both sides of the vehicle in front",
-    "correct_index": 1
+    "correct_answer": "Should overtake from the left side of the vehicle in front",
+    "correct_index": 0
   },
   {
     "category": "Overtaking",
@@ -8452,8 +8452,8 @@
       "Parking",
       "Slowing down and yielding"
     ],
-    "correct_answer": "Slowing down and yielding",
-    "correct_index": 3
+    "correct_answer": "Overtaking",
+    "correct_index": 1
   },
   {
     "category": "Overtaking",
@@ -8468,8 +8468,8 @@
       "Going forward normally",
       "Making a U turn"
     ],
-    "correct_answer": "Parking",
-    "correct_index": 1
+    "correct_answer": "Making a U turn",
+    "correct_index": 3
   },
   {
     "category": "Overtaking",
@@ -8484,8 +8484,8 @@
       "Public bus",
       "Large van"
     ],
-    "correct_answer": "Public bus",
-    "correct_index": 2
+    "correct_answer": "Police car performing a task",
+    "correct_index": 1
   },
   {
     "category": "Overtaking",
@@ -8500,8 +8500,8 @@
       "Bus",
       "Large van"
     ],
-    "correct_answer": "Large van",
-    "correct_index": 3
+    "correct_answer": "Ambulance performing a task",
+    "correct_index": 0
   },
   {
     "category": "Overtaking",
@@ -8532,8 +8532,8 @@
       "Two-way carriageway",
       "One-way section"
     ],
-    "correct_answer": "Main street",
-    "correct_index": 0
+    "correct_answer": "Section with heavy traffic flow",
+    "correct_index": 1
   },
   {
     "category": "Overtaking",
@@ -8548,8 +8548,8 @@
       "Main street",
       "Crosswalk"
     ],
-    "correct_answer": "Main street",
-    "correct_index": 2
+    "correct_answer": "Crosswalk",
+    "correct_index": 3
   },
   {
     "category": "Overtaking",
@@ -8564,8 +8564,8 @@
       "Intersection",
       "Center street"
     ],
-    "correct_answer": "Elevated road",
-    "correct_index": 0
+    "correct_answer": "Intersection",
+    "correct_index": 2
   },
   {
     "category": "Overtaking",
@@ -8580,8 +8580,8 @@
       "Mountain road",
       "Urban expressway"
     ],
-    "correct_answer": "Mountain road",
-    "correct_index": 2
+    "correct_answer": "Narrow bridge or curve",
+    "correct_index": 0
   },
   {
     "category": "Overtaking",
@@ -8694,8 +8694,8 @@
       "Use the right side to overtake",
       "Use the left side across the sold line to overtake"
     ],
-    "correct_answer": "Use the left side across the sold line to overtake",
-    "correct_index": 3
+    "correct_answer": "Stop and wait in line",
+    "correct_index": 0
   },
   {
     "category": "Overtaking",
@@ -8726,8 +8726,8 @@
       "Reduce speed, move to the right side and yield in a timely manner",
       "Speed up and go ahead by the right side"
     ],
-    "correct_answer": "Maintain the original speed",
-    "correct_index": 0
+    "correct_answer": "Reduce speed, move to the right side and yield in a timely manner",
+    "correct_index": 2
   },
   {
     "category": "Overtaking",
@@ -8742,8 +8742,8 @@
       "Continuously honk and speed up to overtake",
       "Speed up and continue to overtake"
     ],
-    "correct_answer": "Follow closely and find chance to overtake again",
-    "correct_index": 1
+    "correct_answer": "Stop overtaking",
+    "correct_index": 0
   },
   {
     "category": "Overtaking",
@@ -8772,8 +8772,8 @@
       "Speed up and overtake",
       "Overtake with care"
     ],
-    "correct_answer": "Overtake with care",
-    "correct_index": 3
+    "correct_answer": "Give up overtaking",
+    "correct_index": 0
   },
   {
     "category": "Overtaking",
@@ -8788,8 +8788,8 @@
       "Continue to speed up and run",
       "Reduce speed and run on the right side"
     ],
-    "correct_answer": "Run by the central line of the road",
-    "correct_index": 0
+    "correct_answer": "Reduce speed and run on the right side",
+    "correct_index": 3
   },
   {
     "category": "Overtaking",
@@ -8804,8 +8804,8 @@
       "Reduce speed rapidly or apply an emergency braking",
       "Yield a proper space and speed up"
     ],
-    "correct_answer": "Move to the right side and speed up",
-    "correct_index": 1
+    "correct_answer": "Voluntarily reduce speed and drive on the right side",
+    "correct_index": 0
   },
   {
     "category": "Overtaking",
@@ -8906,8 +8906,8 @@
       "They like to get together and look on",
       "They walk around at will and can easily change directions"
     ],
-    "correct_answer": "They like to get together and look on",
-    "correct_index": 2
+    "correct_answer": "They walk around at will and can easily change directions",
+    "correct_index": 3
   },
   {
     "category": "Pedestrians and bikes",
@@ -8922,8 +8922,8 @@
       "Continuously honk",
       "Go forward normally"
     ],
-    "correct_answer": "Speed up and pass",
-    "correct_index": 0
+    "correct_answer": "Reduce speed and go slowly",
+    "correct_index": 1
   },
   {
     "category": "Pedestrians and bikes",
@@ -8954,8 +8954,8 @@
       "Speed up and pass",
       "Honk to indicate the pedestrians to yield"
     ],
-    "correct_answer": "Speed up and pass",
-    "correct_index": 2
+    "correct_answer": "Reduce speed and observe the movement of pedestrians and non-motorized vehicles then make sure it is safe before passing",
+    "correct_index": 1
   },
   {
     "category": "Pedestrians and bikes",
@@ -8970,8 +8970,8 @@
       "Start up and bypass before the pedestrians",
       "Start up after the pedestrians have passed"
     ],
-    "correct_answer": "Directly start up and pass",
-    "correct_index": 0
+    "correct_answer": "Start up after the pedestrians have passed",
+    "correct_index": 3
   },
   {
     "category": "Pedestrians and bikes",
@@ -9002,8 +9002,8 @@
       "Yield to them",
       "Follow them closely and honk"
     ],
-    "correct_answer": "Honk to indicate them to yield",
-    "correct_index": 0
+    "correct_answer": "Yield to them",
+    "correct_index": 2
   },
   {
     "category": "Pedestrians and bikes",
@@ -9018,8 +9018,8 @@
       "Reduce speed and yield",
       "Honk to warn"
     ],
-    "correct_answer": "Speed up and pass",
-    "correct_index": 1
+    "correct_answer": "Reduce speed and yield",
+    "correct_index": 2
   },
   {
     "category": "Pedestrians and bikes",
@@ -9050,8 +9050,8 @@
       "Speed up in advance and pass forcefully",
       "Stop to yield"
     ],
-    "correct_answer": "Speed up in advance and pass forcefully",
-    "correct_index": 2
+    "correct_answer": "Stop to yield",
+    "correct_index": 3
   },
   {
     "category": "Pedestrians and bikes",
@@ -9066,8 +9066,8 @@
       "Yield to the bike riders",
       "Continuously honk to remind them to yield"
     ],
-    "correct_answer": "Continuously honk to remind them to yield",
-    "correct_index": 3
+    "correct_answer": "Observe them, reduce speed and go slowly, while keeping a sufficient safe distance",
+    "correct_index": 0
   },
   {
     "category": "Pedestrians and bikes",
@@ -9082,8 +9082,8 @@
       "Use the high beam light",
       "Continuously change the high and low bean lights"
     ],
-    "correct_answer": "Continuously change the high and low bean lights",
-    "correct_index": 3
+    "correct_answer": "Use the low beam light, reduce speed or stop to evade",
+    "correct_index": 1
   },
   {
     "category": "Pedestrians and bikes",
@@ -9098,8 +9098,8 @@
       "Speed up and pass",
       "Make a detour"
     ],
-    "correct_answer": "Speed up and pass",
-    "correct_index": 2
+    "correct_answer": "Carefully select a speed",
+    "correct_index": 1
   },
   {
     "category": "Pedestrians and bikes",
@@ -9130,8 +9130,8 @@
       "Drive at the normal speed",
       "Continuously honk to indicate him to yield"
     ],
-    "correct_answer": "Continuously honk to indicate him to yield",
-    "correct_index": 3
+    "correct_answer": "Honk in advance and properly reduce speed",
+    "correct_index": 1
   },
   {
     "category": "Pedestrians and bikes",
@@ -9274,8 +9274,8 @@
       "Making or receiving a phone call",
       "Driver has falsified the license plate"
     ],
-    "correct_answer": "Violation of traffic lights",
-    "correct_index": 0
+    "correct_answer": "Driver has falsified the license plate",
+    "correct_index": 3
   },
   {
     "category": "Penalty points",
@@ -9290,8 +9290,8 @@
       "3 points",
       "6 points"
     ],
-    "correct_answer": "2 points",
-    "correct_index": 0
+    "correct_answer": "12 points",
+    "correct_index": 1
   },
   {
     "category": "Penalty points",
@@ -9306,8 +9306,8 @@
       "3 points",
       "6 points"
     ],
-    "correct_answer": "3 points",
-    "correct_index": 2
+    "correct_answer": "12 points",
+    "correct_index": 1
   },
   {
     "category": "Penalty points",
@@ -9322,8 +9322,8 @@
       "12 points",
       "2 points"
     ],
-    "correct_answer": "3 points",
-    "correct_index": 1
+    "correct_answer": "12 points",
+    "correct_index": 2
   },
   {
     "category": "Penalty points",
@@ -9338,8 +9338,8 @@
       "3 points",
       "12 points"
     ],
-    "correct_answer": "6 points",
-    "correct_index": 0
+    "correct_answer": "12 points",
+    "correct_index": 3
   },
   {
     "category": "Penalty points",
@@ -9354,8 +9354,8 @@
       "3 points",
       "12 points"
     ],
-    "correct_answer": "2 points",
-    "correct_index": 0
+    "correct_answer": "12 points",
+    "correct_index": 3
   },
   {
     "category": "Penalty points",
@@ -9370,8 +9370,8 @@
       "2 points",
       "3 points"
     ],
-    "correct_answer": "2 points",
-    "correct_index": 2
+    "correct_answer": "12 points",
+    "correct_index": 0
   },
   {
     "category": "Penalty points",
@@ -9386,8 +9386,8 @@
       "12 points",
       "2 points"
     ],
-    "correct_answer": "6 points",
-    "correct_index": 0
+    "correct_answer": "12 points",
+    "correct_index": 2
   },
   {
     "category": "Penalty points",
@@ -9402,8 +9402,8 @@
       "Driving after drinking alcohol",
       "Running 50% faster than the prescribed speed limit"
     ],
-    "correct_answer": "Using the license of another vehicle",
-    "correct_index": 1
+    "correct_answer": "Illegal use of the emergency lane",
+    "correct_index": 0
   },
   {
     "category": "Penalty points",
@@ -9418,8 +9418,8 @@
       "6 points",
       "2 points"
     ],
-    "correct_answer": "2 points",
-    "correct_index": 3
+    "correct_answer": "6 points",
+    "correct_index": 2
   },
   {
     "category": "Penalty points",
@@ -9450,8 +9450,8 @@
       "Driving a motorized vehicle when driving license is temporarily detained",
       "Driving a motor vehicle but not giving way to a school bus as prescribed"
     ],
-    "correct_answer": "Driving a motorized vehicle when driving license is temporarily detained",
-    "correct_index": 2
+    "correct_answer": "Driving a motor vehicle with a deliberately stained number plate",
+    "correct_index": 1
   },
   {
     "category": "Penalty points",
@@ -9636,8 +9636,8 @@
       "Yield when crossing each other",
       "Stop to yield"
     ],
-    "correct_answer": "Yielding prohibited",
-    "correct_index": 1
+    "correct_answer": "Reduce speed and yield",
+    "correct_index": 0
   },
   {
     "category": "Prohibitive signs",
@@ -9652,8 +9652,8 @@
       "Two-way traffic section ahead",
       "Yield to traffic on the right side"
     ],
-    "correct_answer": "Yield to traffic on the right side",
-    "correct_index": 3
+    "correct_answer": "Yield to oncoming traffic",
+    "correct_index": 1
   },
   {
     "category": "Prohibitive signs",
@@ -9684,8 +9684,8 @@
       "Minibus",
       "Midsize bus"
     ],
-    "correct_answer": "Every kind of vehicle",
-    "correct_index": 0
+    "correct_answer": "Minibus",
+    "correct_index": 2
   },
   {
     "category": "Prohibitive signs",
@@ -9700,8 +9700,8 @@
       "Entry to left lane prohibited",
       "Change to left lane prohibited"
     ],
-    "correct_answer": "No U turn",
-    "correct_index": 0
+    "correct_answer": "No left turn",
+    "correct_index": 1
   },
   {
     "category": "Prohibitive signs",
@@ -9716,8 +9716,8 @@
       "Entry to intersection prohibited",
       "No U-turn"
     ],
-    "correct_answer": "Entry to intersection prohibited",
-    "correct_index": 2
+    "correct_answer": "No right turn",
+    "correct_index": 1
   },
   {
     "category": "Prohibitive signs",
@@ -9732,8 +9732,8 @@
       "No U turn",
       "No right turn"
     ],
-    "correct_answer": "No right turn",
-    "correct_index": 3
+    "correct_answer": "Going straight is prohibited",
+    "correct_index": 0
   },
   {
     "category": "Prohibitive signs",
@@ -9748,8 +9748,8 @@
       "Changing to left lane or right lane prohibited",
       "U turn prohibited at intersection"
     ],
-    "correct_answer": "U turn prohibited at intersection",
-    "correct_index": 3
+    "correct_answer": "No left or right turn",
+    "correct_index": 0
   },
   {
     "category": "Prohibitive signs",
@@ -9764,8 +9764,8 @@
       "Going straight and turning left are prohibited",
       "Going straight and changing to left lane are allowed"
     ],
-    "correct_answer": "Going straight and changing to left lane are prohibited",
-    "correct_index": 0
+    "correct_answer": "Going straight and turning left are prohibited",
+    "correct_index": 2
   },
   {
     "category": "Prohibitive signs",
@@ -9780,8 +9780,8 @@
       "Going straight and changing to left lane are prohibited",
       "Going straight and turning right are prohibited"
     ],
-    "correct_answer": "Going straight and changing to left lane are prohibited",
-    "correct_index": 2
+    "correct_answer": "Going straight and turning right are prohibited",
+    "correct_index": 3
   },
   {
     "category": "Prohibitive signs",
@@ -9796,8 +9796,8 @@
       "Changing lane prohibited",
       "No left turn"
     ],
-    "correct_answer": "Changing lane prohibited",
-    "correct_index": 2
+    "correct_answer": "No U turn",
+    "correct_index": 0
   },
   {
     "category": "Prohibitive signs",
@@ -9812,8 +9812,8 @@
       "No U turn",
       "No lane borrowing"
     ],
-    "correct_answer": "No lane borrowing",
-    "correct_index": 3
+    "correct_answer": "No overtaking",
+    "correct_index": 1
   },
   {
     "category": "Prohibitive signs",
@@ -9844,8 +9844,8 @@
       "No stopping",
       "Long stopping is prohibited"
     ],
-    "correct_answer": "Temporary stopping is allowed",
-    "correct_index": 1
+    "correct_answer": "No stopping",
+    "correct_index": 2
   },
   {
     "category": "Prohibitive signs",
@@ -9860,8 +9860,8 @@
       "Temporary stopping is prohibited",
       "Long stopping is allowed"
     ],
-    "correct_answer": "Temporary stopping is prohibited",
-    "correct_index": 2
+    "correct_answer": "Long stopping prohibited",
+    "correct_index": 0
   },
   {
     "category": "Prohibitive signs",
@@ -9876,8 +9876,8 @@
       "Reduce speed and honk",
       "Honk intermittently"
     ],
-    "correct_answer": "Continuous honking prohibited",
-    "correct_index": 1
+    "correct_answer": "Honking is prohibited",
+    "correct_index": 0
   },
   {
     "category": "Prohibitive signs",
@@ -9892,8 +9892,8 @@
       "3 meter width alert",
       "Width is limited to 3 meters"
     ],
-    "correct_answer": "3 meter width alert",
-    "correct_index": 2
+    "correct_answer": "Width is limited to 3 meters",
+    "correct_index": 3
   },
   {
     "category": "Prohibitive signs",
@@ -9908,8 +9908,8 @@
       "Vehicle distance limit of 3.5 meters",
       "Width is limited to 3.5 meters"
     ],
-    "correct_answer": "Width is limited to 3.5 meters",
-    "correct_index": 3
+    "correct_answer": "Height limit of 3.5 meters",
+    "correct_index": 0
   },
   {
     "category": "Prohibitive signs",
@@ -9924,8 +9924,8 @@
       "Minimum speed is limited to 40 km/hour",
       "Maximum speed is limited to 40 km/hour"
     ],
-    "correct_answer": "Reduce speed 40 meters ahead",
-    "correct_index": 1
+    "correct_answer": "Maximum speed is limited to 40 km/hour",
+    "correct_index": 3
   },
   {
     "category": "Prohibitive signs",
@@ -9940,8 +9940,8 @@
       "Minimum speed is limited to 40 km/hour",
       "Drive at reduced speed for 40 meters section"
     ],
-    "correct_answer": "Drive at reduced speed for 40 meters section",
-    "correct_index": 3
+    "correct_answer": "End of 40 km/hour speed limit",
+    "correct_index": 0
   },
   {
     "category": "Prohibitive signs",
@@ -9956,8 +9956,8 @@
       "Passing is prohibited",
       "Border inspection"
     ],
-    "correct_answer": "Customs inspection",
-    "correct_index": 0
+    "correct_answer": "Stop for inspection",
+    "correct_index": 1
   },
   {
     "category": "Prohibitive signs",
@@ -9972,8 +9972,8 @@
       "National boundary",
       "Border"
     ],
-    "correct_answer": "National boundary",
-    "correct_index": 2
+    "correct_answer": "Customs",
+    "correct_index": 0
   },
   {
     "category": "Prohibitive signs",
@@ -10032,8 +10032,8 @@
       "Central line prohibits vehicles crossing to borrow the opposite lane",
       "Central line limits vehicles crossing to borrow the opposite lane"
     ],
-    "correct_answer": "Central line prohibits vehicles crossing to borrow the opposite lane",
-    "correct_index": 2
+    "correct_answer": "Vehicles going in the same direction may cross the central line",
+    "correct_index": 0
   },
   {
     "category": "Road markings 1",
@@ -10048,8 +10048,8 @@
       "To separate the traffic flow in opposite directions",
       "To prohibit crossing over to the opposite lane"
     ],
-    "correct_answer": "To allow driving in the left lane",
-    "correct_index": 1
+    "correct_answer": "To separate the traffic flow in opposite directions",
+    "correct_index": 2
   },
   {
     "category": "Road markings 1",
@@ -10064,8 +10064,8 @@
       "One-way lane separation lines",
       "Lane separation lines that can be crossed"
     ],
-    "correct_answer": "Two-way lane separation lines",
-    "correct_index": 1
+    "correct_answer": "Tidal lane lines",
+    "correct_index": 0
   },
   {
     "category": "Road markings 1",
@@ -10080,8 +10080,8 @@
       "Non-motorized vehicles may temporarily cross",
       "Prohibit the vehicles from crossing"
     ],
-    "correct_answer": "Vehicles may temporarily cross",
-    "correct_index": 1
+    "correct_answer": "Prohibit the vehicles from crossing",
+    "correct_index": 3
   },
   {
     "category": "Road markings 1",
@@ -10112,8 +10112,8 @@
       "Small vehicle turning lines",
       "Intersection stop lines"
     ],
-    "correct_answer": "Intersection stop lines",
-    "correct_index": 3
+    "correct_answer": "Left-turn waiting area lines",
+    "correct_index": 1
   },
   {
     "category": "Road markings 1",
@@ -10128,8 +10128,8 @@
       "Intersection guide lines",
       "Small vehicle turning lines"
     ],
-    "correct_answer": "Small vehicle turning lines",
-    "correct_index": 3
+    "correct_answer": "Intersection guide lines",
+    "correct_index": 2
   },
   {
     "category": "Road markings 1",
@@ -10144,8 +10144,8 @@
       "Small vehicle turning lines",
       "Intersection guide lines"
     ],
-    "correct_answer": "Non-motorized vehicles guide lines",
-    "correct_index": 0
+    "correct_answer": "Intersection guide lines",
+    "correct_index": 3
   },
   {
     "category": "Road markings 1",
@@ -10176,8 +10176,8 @@
       "Fixed guide lane lines",
       "Variable guide lane lines"
     ],
-    "correct_answer": "Fixed guide lane lines",
-    "correct_index": 2
+    "correct_answer": "Variable guide lane lines",
+    "correct_index": 3
   },
   {
     "category": "Road markings 1",
@@ -10208,8 +10208,8 @@
       "Lines for ascertaining the distance between the vehicles",
       "Drive at reduced speed markings"
     ],
-    "correct_answer": "Drive at reduced speed markings",
-    "correct_index": 3
+    "correct_answer": "Lines for ascertaining the distance between the vehicles",
+    "correct_index": 2
   },
   {
     "category": "Road markings 1",
@@ -10224,8 +10224,8 @@
       "Road exit speed reduction markings",
       "Road entrance markings"
     ],
-    "correct_answer": "Road entrance markings",
-    "correct_index": 3
+    "correct_answer": "Road exit markings",
+    "correct_index": 1
   },
   {
     "category": "Road markings 1",
@@ -10256,8 +10256,8 @@
       "Taxi passenger pickup and let-off parking spaces",
       "Diagonal parking spaces"
     ],
-    "correct_answer": "Taxi passenger pickup and let-off parking spaces",
-    "correct_index": 2
+    "correct_answer": "Parallel parking spaces",
+    "correct_index": 1
   },
   {
     "category": "Road markings 1",
@@ -10272,8 +10272,8 @@
       "An auxiliary marking",
       "An indicative marking"
     ],
-    "correct_answer": "An auxiliary marking",
-    "correct_index": 2
+    "correct_answer": "A prohibitive marking",
+    "correct_index": 0
   },
   {
     "category": "Road markings 1",
@@ -10304,8 +10304,8 @@
       "The solid line prohibits crossing the line",
       "Both side can cross the lane dividing line"
     ],
-    "correct_answer": "The broken line prohibits crossing the line",
-    "correct_index": 1
+    "correct_answer": "The solid line prohibits crossing the line",
+    "correct_index": 2
   },
   {
     "category": "Road markings 1",
@@ -10320,8 +10320,8 @@
       "One-way lane-dividing lane",
       "Same direction lane-dividing lane that both sides can cross over"
     ],
-    "correct_answer": "One-way lane-dividing lane",
-    "correct_index": 2
+    "correct_answer": "Crossing over the lane-dividing line to the opposide lane is prohibited",
+    "correct_index": 1
   },
   {
     "category": "Road markings 1",
@@ -10336,8 +10336,8 @@
       "Same direction lane-dividing lane that both sides can cross over",
       "Same direction lane-dividing lane that one side can cross over"
     ],
-    "correct_answer": "Same direction lane-dividing lane that one side can cross over",
-    "correct_index": 3
+    "correct_answer": "Crossing over the lane-dividing line to the same direction lane is prohibited",
+    "correct_index": 1
   },
   {
     "category": "Road markings 1",
@@ -10352,8 +10352,8 @@
       "Reduce speed line",
       "Yield line"
     ],
-    "correct_answer": "Turn waiting line",
-    "correct_index": 1
+    "correct_answer": "Stop line",
+    "correct_index": 0
   },
   {
     "category": "Road markings 1",
@@ -10384,8 +10384,8 @@
       "Left-turn waiting line",
       "Waiting to go"
     ],
-    "correct_answer": "Waiting to go",
-    "correct_index": 3
+    "correct_answer": "Slowdown and yield",
+    "correct_index": 1
   },
   {
     "category": "Road markings 1",
@@ -10400,8 +10400,8 @@
       "A stop line",
       "Reduce speed line"
     ],
-    "correct_answer": "A stop line",
-    "correct_index": 2
+    "correct_answer": "A guide line",
+    "correct_index": 0
   },
   {
     "category": "Road markings 1",
@@ -10416,8 +10416,8 @@
       "A cross-hatched marking",
       "A central circle"
     ],
-    "correct_answer": "A central circle",
-    "correct_index": 3
+    "correct_answer": "A cross-hatched marking",
+    "correct_index": 2
   },
   {
     "category": "Road markings 1",
@@ -10432,8 +10432,8 @@
       "Special lane for large buses",
       "Special lane for taxis"
     ],
-    "correct_answer": "Special lane for commercial buses",
-    "correct_index": 1
+    "correct_answer": "Special lane for public buses",
+    "correct_index": 0
   },
   {
     "category": "Road markings 1",
@@ -10464,8 +10464,8 @@
       "Lane reduction indication markings",
       "Road work indication marking"
     ],
-    "correct_answer": "Road work indication marking",
-    "correct_index": 3
+    "correct_answer": "Carriageway horizontal speed-reducing markings",
+    "correct_index": 1
   },
   {
     "category": "Road markings 1",
@@ -10512,8 +10512,8 @@
       "Lane reduction indication markings",
       "Road work indication marking"
     ],
-    "correct_answer": "Road work indication marking",
-    "correct_index": 3
+    "correct_answer": "Carriageway vertical speed-reducing markings",
+    "correct_index": 0
   },
   {
     "category": "Road markings 1",
@@ -10584,8 +10584,8 @@
       "To limit passage",
       "To warn and remind"
     ],
-    "correct_answer": "To prohibit passage",
-    "correct_index": 0
+    "correct_answer": "To indicate passage",
+    "correct_index": 1
   },
   {
     "category": "Road markings 2",
@@ -10632,8 +10632,8 @@
       "Limited time motor vehicle parking spaces",
       "Special visitor waiting spaces"
     ],
-    "correct_answer": "Special visitor waiting spaces",
-    "correct_index": 3
+    "correct_answer": "Fixed direction parking spaces",
+    "correct_index": 1
   },
   {
     "category": "Road markings 2",
@@ -10648,8 +10648,8 @@
       "Long time parking",
       "Limited time parking"
     ],
-    "correct_answer": "Long time parking",
-    "correct_index": 2
+    "correct_answer": "Limited time parking",
+    "correct_index": 3
   },
   {
     "category": "Road markings 2",
@@ -10664,8 +10664,8 @@
       "Bay style stopping area",
       "Temporary stopping area"
     ],
-    "correct_answer": "Temporary stopping area",
-    "correct_index": 3
+    "correct_answer": "Bay style stopping area",
+    "correct_index": 2
   },
   {
     "category": "Road markings 2",
@@ -10680,8 +10680,8 @@
       "Large bus stopping area",
       "Public bus stopping area"
     ],
-    "correct_answer": "Temporary stopping area",
-    "correct_index": 1
+    "correct_answer": "Public bus stopping area",
+    "correct_index": 3
   },
   {
     "category": "Road markings 2",
@@ -10696,8 +10696,8 @@
       "Lane indication",
       "Go straight"
     ],
-    "correct_answer": "No passing",
-    "correct_index": 1
+    "correct_answer": "Go straight",
+    "correct_index": 3
   },
   {
     "category": "Road markings 2",
@@ -10712,8 +10712,8 @@
       "Go straight or change to left lane",
       "Go straight or make a U turn"
     ],
-    "correct_answer": "Go straight or make a U turn",
-    "correct_index": 3
+    "correct_answer": "Go straight or turn left",
+    "correct_index": 0
   },
   {
     "category": "Road markings 2",
@@ -10744,8 +10744,8 @@
       "Turn right ahead",
       "Turn left ahead"
     ],
-    "correct_answer": "Change to left lane",
-    "correct_index": 1
+    "correct_answer": "Turn left ahead",
+    "correct_index": 3
   },
   {
     "category": "Road markings 2",
@@ -10760,8 +10760,8 @@
       "Turn right ahead",
       "Go straight ahead"
     ],
-    "correct_answer": "Change to left lane",
-    "correct_index": 1
+    "correct_answer": "Turn right ahead",
+    "correct_index": 2
   },
   {
     "category": "Road markings 2",
@@ -10776,8 +10776,8 @@
       "Turn right ahead",
       "Make a U turn ahead"
     ],
-    "correct_answer": "Change to left lane",
-    "correct_index": 1
+    "correct_answer": "Make a U turn ahead",
+    "correct_index": 3
   },
   {
     "category": "Road markings 2",
@@ -10792,8 +10792,8 @@
       "Vehicles can turn left or make a U turn ahead",
       "Go straight and change to left lane ahead"
     ],
-    "correct_answer": "Vehicles can turn left or make a U turn ahead",
-    "correct_index": 2
+    "correct_answer": "Vehicles can go straight or make a U turn ahead",
+    "correct_index": 0
   },
   {
     "category": "Road markings 2",
@@ -10840,8 +10840,8 @@
       "Left turn or merge left ahead",
       "Left turn or left detour ahead"
     ],
-    "correct_answer": "Left turn or left detour ahead",
-    "correct_index": 3
+    "correct_answer": "Right turn or merge right ahead",
+    "correct_index": 0
   },
   {
     "category": "Road markings 2",
@@ -10856,8 +10856,8 @@
       "Can only turn left or right on the road ahead",
       "Y-intersection ahead"
     ],
-    "correct_answer": "Y-intersection ahead",
-    "correct_index": 3
+    "correct_answer": "Can only turn left or right on the road ahead",
+    "correct_index": 2
   },
   {
     "category": "Road markings 2",
@@ -10872,8 +10872,8 @@
       "Road number",
       "Maintain vehicle distance"
     ],
-    "correct_answer": "Maintain vehicle distance",
-    "correct_index": 3
+    "correct_answer": "Speed limit",
+    "correct_index": 1
   },
   {
     "category": "Road markings 2",
@@ -10888,8 +10888,8 @@
       "Maximum speed limit is 100 km/hour",
       "Average speed is 100 km/hour"
     ],
-    "correct_answer": "Average speed is 100 km/hour",
-    "correct_index": 3
+    "correct_answer": "Maximum speed limit is 100 km/hour",
+    "correct_index": 2
   },
   {
     "category": "Road markings 2",
@@ -10936,8 +10936,8 @@
       "Long stopping is prohibited",
       "Temporary stopping is prohibited"
     ],
-    "correct_answer": "Temporary stopping is prohibited",
-    "correct_index": 3
+    "correct_answer": "Long stopping is prohibited",
+    "correct_index": 2
   },
   {
     "category": "Road markings 2",
@@ -10952,8 +10952,8 @@
       "No stopping",
       "Only loading and unloading cargos is allowed"
     ],
-    "correct_answer": "Only letting passengers on and off is allowed",
-    "correct_index": 1
+    "correct_answer": "No stopping",
+    "correct_index": 2
   },
   {
     "category": "Road markings 2",
@@ -10968,8 +10968,8 @@
       "A central circle",
       "A prohibitive area"
     ],
-    "correct_answer": "A cross-hatched marking",
-    "correct_index": 1
+    "correct_answer": "A central circle",
+    "correct_index": 2
   },
   {
     "category": "Road markings 2",
@@ -10984,8 +10984,8 @@
       "A cross-hatched marking",
       "A central circle"
     ],
-    "correct_answer": "A prohibitive area",
-    "correct_index": 0
+    "correct_answer": "A central circle",
+    "correct_index": 3
   },
   {
     "category": "Road markings 2",
@@ -11000,8 +11000,8 @@
       "U turn prohibited",
       "Going straight is prohibited"
     ],
-    "correct_answer": "Going straight is prohibited",
-    "correct_index": 3
+    "correct_answer": "U turn prohibited",
+    "correct_index": 2
   },
   {
     "category": "Road markings 2",
@@ -11016,8 +11016,8 @@
       "Going straight is prohibited",
       "U turn prohibited"
     ],
-    "correct_answer": "U turn prohibited",
-    "correct_index": 3
+    "correct_answer": "Right turn prohibited",
+    "correct_index": 0
   },
   {
     "category": "Road markings 2",
@@ -11032,8 +11032,8 @@
       "Three-dimensional mark",
       "Protruding object marking"
     ],
-    "correct_answer": "Solid object marking",
-    "correct_index": 0
+    "correct_answer": "Three-dimensional mark",
+    "correct_index": 2
   },
   {
     "category": "Road markings 2",
@@ -11062,8 +11062,8 @@
       "ID card",
       "Worker ID card"
     ],
-    "correct_answer": "Vocational qualifications certificate",
-    "correct_index": 0
+    "correct_answer": "Driving license",
+    "correct_index": 1
   },
   {
     "category": "Rules",
@@ -11092,8 +11092,8 @@
       "The vehicle license",
       "Vehicle registration papers"
     ],
-    "correct_answer": "The vehicle insurance policy",
-    "correct_index": 0
+    "correct_answer": "The vehicle license",
+    "correct_index": 2
   },
   {
     "category": "Rules",
@@ -11124,8 +11124,8 @@
       "Reaching 6 penalty points",
       "Reaching 10 penalty points"
     ],
-    "correct_answer": "Reaching 10 penalty points",
-    "correct_index": 3
+    "correct_answer": "Driving license is lost or destroyed",
+    "correct_index": 0
   },
   {
     "category": "Rules",
@@ -11196,8 +11196,8 @@
       "The driving posture is incorrect",
       "Has not buckled up"
     ],
-    "correct_answer": "Not holding the steering wheel according to regulations",
-    "correct_index": 0
+    "correct_answer": "Has not buckled up",
+    "correct_index": 3
   },
   {
     "category": "Rules",
@@ -11212,8 +11212,8 @@
       "Moved out place",
       "At the residential place"
     ],
-    "correct_answer": "Moved out place",
-    "correct_index": 2
+    "correct_answer": "At the new place of his or her household register",
+    "correct_index": 1
   },
   {
     "category": "Rules",
@@ -11258,8 +11258,8 @@
       "14 months",
       "6 months"
     ],
-    "correct_answer": "14 months",
-    "correct_index": 2
+    "correct_answer": "12 months",
+    "correct_index": 0
   },
   {
     "category": "Rules",
@@ -11274,8 +11274,8 @@
       "After the expiration of the driving license",
       "At the end of a scoring cycle"
     ],
-    "correct_answer": "At the end of a scoring cycle",
-    "correct_index": 3
+    "correct_answer": "After the expiration of the driving license",
+    "correct_index": 2
   },
   {
     "category": "Rules",
@@ -11334,8 +11334,8 @@
       "Every 3 years",
       "Every year"
     ],
-    "correct_answer": "Every 3 years",
-    "correct_index": 2
+    "correct_answer": "Every year",
+    "correct_index": 3
   },
   {
     "category": "Rules",
@@ -11350,8 +11350,8 @@
       "The vehicle changes the chassis",
       "The vehicle changes the color of the body"
     ],
-    "correct_answer": "The vehicle changes the engine",
-    "correct_index": 1
+    "correct_answer": "Installing front or rear bumpers",
+    "correct_index": 0
   },
   {
     "category": "Rules",
@@ -11450,8 +11450,8 @@
       "The traffic police detachment of the vehicle management station",
       "The vehicle management station that registered  the motor vehicle"
     ],
-    "correct_answer": "The traffic police detachment of the vehicle management station",
-    "correct_index": 2
+    "correct_answer": "The vehicle management station that registered  the motor vehicle",
+    "correct_index": 3
   },
   {
     "category": "Rules",
@@ -11480,8 +11480,8 @@
       "Lawyers certificate of the working unit",
       "Borrowed license plate"
     ],
-    "correct_answer": "Certificate of legal origin",
-    "correct_index": 0
+    "correct_answer": "Temporary driving license plate",
+    "correct_index": 1
   },
   {
     "category": "Signaling Signs and Police signals",
@@ -11538,8 +11538,8 @@
       "Turn on the right-turn signal in advance",
       "Turn on the left-turn signal in advance"
     ],
-    "correct_answer": "Turn on the right-turn signal in advance",
-    "correct_index": 2
+    "correct_answer": "Turn on the left-turn signal in advance",
+    "correct_index": 3
   },
   {
     "category": "Signaling Signs and Police signals",
@@ -11554,8 +11554,8 @@
       "Do not use signal lights",
       "Use the high and low beam lights alternately"
     ],
-    "correct_answer": "Turn on the hazard lights",
-    "correct_index": 0
+    "correct_answer": "Turn on the right-turn signal in advance",
+    "correct_index": 1
   },
   {
     "category": "Signaling Signs and Police signals",
@@ -11598,8 +11598,8 @@
       "Turn on the left-turn signal",
       "Turn on the right-turn signal"
     ],
-    "correct_answer": "Turn on the right-turn signal",
-    "correct_index": 3
+    "correct_answer": "Turn on the left-turn signal",
+    "correct_index": 2
   },
   {
     "category": "Signaling Signs and Police signals",
@@ -11614,8 +11614,8 @@
       "Turn on the left-turn signal",
       "Turn on the hazard lights"
     ],
-    "correct_answer": "Turn on the hazard lights",
-    "correct_index": 3
+    "correct_answer": "Turn on the right-turn signal",
+    "correct_index": 1
   },
   {
     "category": "Signaling Signs and Police signals",
@@ -11630,8 +11630,8 @@
       "An indicative sign",
       "A prohibitive sign"
     ],
-    "correct_answer": "An indicative sign",
-    "correct_index": 2
+    "correct_answer": "A warning sign",
+    "correct_index": 1
   },
   {
     "category": "Signaling Signs and Police signals",
@@ -11662,8 +11662,8 @@
       "Give information about direction",
       "Prohibit or restrict passing"
     ],
-    "correct_answer": "Instruct vehicles to go ahead",
-    "correct_index": 0
+    "correct_answer": "Prohibit or restrict passing",
+    "correct_index": 3
   },
   {
     "category": "Signaling Signs and Police signals",
@@ -11678,8 +11678,8 @@
       "A prohibitive sign",
       "A warning sign"
     ],
-    "correct_answer": "A directional sign",
-    "correct_index": 0
+    "correct_answer": "An indicative sign",
+    "correct_index": 1
   },
   {
     "category": "Signaling Signs and Police signals",
@@ -11694,8 +11694,8 @@
       "Indicate the vehicles and pedestrians to go ahead",
       "Restrict the vehicles and pedestrians from passing"
     ],
-    "correct_answer": "Give information about direction",
-    "correct_index": 0
+    "correct_answer": "Indicate the vehicles and pedestrians to go ahead",
+    "correct_index": 2
   },
   {
     "category": "Signaling Signs and Police signals",
@@ -11726,8 +11726,8 @@
       "Warn about danger ahead",
       "Restrict vehicle access"
     ],
-    "correct_answer": "Restrict vehicle access",
-    "correct_index": 3
+    "correct_answer": "Give direction information",
+    "correct_index": 0
   },
   {
     "category": "Signaling Signs and Police signals",
@@ -11742,8 +11742,8 @@
       "A tourist zone sign",
       "An expressway notice sign"
     ],
-    "correct_answer": "A work area sign",
-    "correct_index": 1
+    "correct_answer": "A tourist zone sign",
+    "correct_index": 2
   },
   {
     "category": "Signaling Signs and Police signals",
@@ -11758,8 +11758,8 @@
       "A signal for turning right",
       "A signal for stopping"
     ],
-    "correct_answer": "A signal for turning right",
-    "correct_index": 2
+    "correct_answer": "A signal for stopping",
+    "correct_index": 3
   },
   {
     "category": "Signaling Signs and Police signals",
@@ -11790,8 +11790,8 @@
       "A signal for turning right",
       "A signal for waiting to turn left"
     ],
-    "correct_answer": "A signal for waiting to turn left",
-    "correct_index": 3
+    "correct_answer": "A signal for turning left",
+    "correct_index": 1
   },
   {
     "category": "Signaling Signs and Police signals",
@@ -11806,8 +11806,8 @@
       "A signal for slowing down",
       "A signal for waiting to turn left"
     ],
-    "correct_answer": "A signal for waiting to turn left",
-    "correct_index": 3
+    "correct_answer": "A signal for turning left",
+    "correct_index": 1
   },
   {
     "category": "Signaling Signs and Police signals",
@@ -11822,8 +11822,8 @@
       "A signal for slowing down",
       "A signal for turning right"
     ],
-    "correct_answer": "A signal for turning left",
-    "correct_index": 1
+    "correct_answer": "A signal for waiting to turn left",
+    "correct_index": 0
   },
   {
     "category": "Signaling Signs and Police signals",
@@ -11838,8 +11838,8 @@
       "A signal for turning right",
       "A signal for a rule-breaking vehicle to pull over"
     ],
-    "correct_answer": "A signal for slowing down",
-    "correct_index": 1
+    "correct_answer": "A signal for turning right",
+    "correct_index": 2
   },
   {
     "category": "Signaling Signs and Police signals",
@@ -11854,8 +11854,8 @@
       "A signal for a rule-breaking vehicle to pull over",
       "A signal for slowing down"
     ],
-    "correct_answer": "A signal for waiting to turn left",
-    "correct_index": 1
+    "correct_answer": "A signal for turning right",
+    "correct_index": 0
   },
   {
     "category": "Signaling Signs and Police signals",
@@ -11870,8 +11870,8 @@
       "A change lane signal",
       "A signal for a rule-breaking vehicle to pull over"
     ],
-    "correct_answer": "A signal for turning right",
-    "correct_index": 0
+    "correct_answer": "A change lane signal",
+    "correct_index": 2
   },
   {
     "category": "Signaling Signs and Police signals",
@@ -11886,8 +11886,8 @@
       "A change lane signal",
       "A signal for turning right"
     ],
-    "correct_answer": "A signal for turning right",
-    "correct_index": 3
+    "correct_answer": "A signal for slowing down",
+    "correct_index": 0
   },
   {
     "category": "Signaling Signs and Police signals",
@@ -12002,8 +12002,8 @@
       "70 km/hour",
       "30 km/hour"
     ],
-    "correct_answer": "40 km/hour",
-    "correct_index": 1
+    "correct_answer": "30 km/hour",
+    "correct_index": 3
   },
   {
     "category": "Speed limits",
@@ -12018,8 +12018,8 @@
       "70 km/hour",
       "50 km/hour"
     ],
-    "correct_answer": "70 km/hour",
-    "correct_index": 2
+    "correct_answer": "40 km/hour",
+    "correct_index": 1
   },
   {
     "category": "Speed limits",
@@ -12034,8 +12034,8 @@
       "50 km/hour",
       "40 km/hour"
     ],
-    "correct_answer": "30 km/hour",
-    "correct_index": 1
+    "correct_answer": "50 km/hour",
+    "correct_index": 2
   },
   {
     "category": "Speed limits",
@@ -12050,8 +12050,8 @@
       "50 km/hour",
       "30 km/hour"
     ],
-    "correct_answer": "30 km/hour",
-    "correct_index": 3
+    "correct_answer": "70 km/hour",
+    "correct_index": 0
   },
   {
     "category": "Speed limits",
@@ -12066,8 +12066,8 @@
       "30 km/hour",
       "70 km/hour"
     ],
-    "correct_answer": "40 km/hour",
-    "correct_index": 0
+    "correct_answer": "30 km/hour",
+    "correct_index": 2
   },
   {
     "category": "Speed limits",
@@ -12082,8 +12082,8 @@
       "50 km/hour",
       "40 km/hour"
     ],
-    "correct_answer": "70 km/hour",
-    "correct_index": 0
+    "correct_answer": "30 km/hour",
+    "correct_index": 1
   },
   {
     "category": "Speed limits",
@@ -12098,8 +12098,8 @@
       "30 km/hour",
       "60 km/hour"
     ],
-    "correct_answer": "40 km/hour",
-    "correct_index": 1
+    "correct_answer": "30 km/hour",
+    "correct_index": 2
   },
   {
     "category": "Speed limits",
@@ -12114,8 +12114,8 @@
       "20 km/hour",
       "30 km/hour"
     ],
-    "correct_answer": "15 km/hour",
-    "correct_index": 1
+    "correct_answer": "30 km/hour",
+    "correct_index": 3
   },
   {
     "category": "Speed limits",
@@ -12130,8 +12130,8 @@
       "40 km/hour",
       "50 km/hour"
     ],
-    "correct_answer": "20 km/hour",
-    "correct_index": 1
+    "correct_answer": "30 km/hour",
+    "correct_index": 0
   },
   {
     "category": "Speed limits",
@@ -12146,8 +12146,8 @@
       "50 km/hour",
       "40 km/hour"
     ],
-    "correct_answer": "50 km/hour",
-    "correct_index": 2
+    "correct_answer": "30 km/hour",
+    "correct_index": 0
   },
   {
     "category": "Speed limits",
@@ -12162,8 +12162,8 @@
       "40 km/hour",
       "60 km/hour"
     ],
-    "correct_answer": "50 km/hour",
-    "correct_index": 0
+    "correct_answer": "30 km/hour",
+    "correct_index": 1
   },
   {
     "category": "Speed limits",
@@ -12178,8 +12178,8 @@
       "30 km/hour",
       "20 km/hour"
     ],
-    "correct_answer": "50 km/hour",
-    "correct_index": 1
+    "correct_answer": "30 km/hour",
+    "correct_index": 2
   },
   {
     "category": "Speed limits",
@@ -12194,8 +12194,8 @@
       "20 km/hour",
       "40 km/hour"
     ],
-    "correct_answer": "15 km/hour",
-    "correct_index": 0
+    "correct_answer": "30 km/hour",
+    "correct_index": 1
   },
   {
     "category": "Speed limits",
@@ -12294,8 +12294,8 @@
       "90 km/hour",
       "120 km/hour"
     ],
-    "correct_answer": "60 km/hour",
-    "correct_index": 1
+    "correct_answer": "120 km/hour",
+    "correct_index": 3
   },
   {
     "category": "Speed limits",
@@ -12310,8 +12310,8 @@
       "60 km/hour",
       "100 km/hour"
     ],
-    "correct_answer": "100 km/hour",
-    "correct_index": 3
+    "correct_answer": "60 km/hour",
+    "correct_index": 2
   },
   {
     "category": "Speed limits",
@@ -12326,8 +12326,8 @@
       "100 km/hour",
       "90 km/hour"
     ],
-    "correct_answer": "60 km/hour",
-    "correct_index": 0
+    "correct_answer": "100 km/hour",
+    "correct_index": 2
   },
   {
     "category": "Speed limits",
@@ -12342,8 +12342,8 @@
       "90 km/hour",
       "110 km/hour"
     ],
-    "correct_answer": "100 km/hour",
-    "correct_index": 1
+    "correct_answer": "90 km/hour",
+    "correct_index": 2
   },
   {
     "category": "Speed limits",
@@ -12358,8 +12358,8 @@
       "90 km/hour",
       "100 km/hour"
     ],
-    "correct_answer": "100 km/hour",
-    "correct_index": 3
+    "correct_answer": "90 km/hour",
+    "correct_index": 2
   },
   {
     "category": "Speed limits",
@@ -12402,8 +12402,8 @@
       "Should not exceed 60 km/hour",
       "Should not exceed 90 km/hour"
     ],
-    "correct_answer": "Should not exceed 100 km/hour",
-    "correct_index": 1
+    "correct_answer": "Should not exceed 60 km/hour",
+    "correct_index": 2
   },
   {
     "category": "Speed limits",
@@ -12434,8 +12434,8 @@
       "50",
       "60"
     ],
-    "correct_answer": "50",
-    "correct_index": 2
+    "correct_answer": "60",
+    "correct_index": 3
   },
   {
     "category": "Speed limits",
@@ -12464,8 +12464,8 @@
       "Vehicles are prohibited from passing",
       "Vehicles are allowed to pass"
     ],
-    "correct_answer": "Vehicles are allowed to pass",
-    "correct_index": 3
+    "correct_answer": "Vehicles are prohibited from passing",
+    "correct_index": 2
   },
   {
     "category": "Traffic signal lights",
@@ -12480,8 +12480,8 @@
       "No right turn",
       "Intersection warning"
     ],
-    "correct_answer": "Speed up and turn left",
-    "correct_index": 1
+    "correct_answer": "Intersection warning",
+    "correct_index": 3
   },
   {
     "category": "Traffic signal lights",
@@ -12496,8 +12496,8 @@
       "Vehicles are allowed to pass",
       "Vehicles are prohibited from passing"
     ],
-    "correct_answer": "Intersection warning",
-    "correct_index": 0
+    "correct_answer": "Vehicles are allowed to pass",
+    "correct_index": 2
   },
   {
     "category": "Traffic signal lights",
@@ -12526,8 +12526,8 @@
       "Drive on and turn left",
       "Do not cross the stop line"
     ],
-    "correct_answer": "Enter the intersection and wait",
-    "correct_index": 1
+    "correct_answer": "Do not cross the stop line",
+    "correct_index": 3
   },
   {
     "category": "Traffic signal lights",
@@ -12640,8 +12640,8 @@
       "No right turn",
       "Intersection warning"
     ],
-    "correct_answer": "No right turn",
-    "correct_index": 2
+    "correct_answer": "Intersection warning",
+    "correct_index": 3
   },
   {
     "category": "Traffic signal lights",
@@ -12698,8 +12698,8 @@
       "Enter the lane on the right side",
       "Reduce speed to enter the lanes on either side"
     ],
-    "correct_answer": "Speed up to enter the lanes on either side",
-    "correct_index": 1
+    "correct_answer": "Lanes on both sides prohibit motor vehicle passing",
+    "correct_index": 0
   },
   {
     "category": "Traffic signal lights",
@@ -12772,8 +12772,8 @@
       "Go straight",
       "Go straight or turn right"
     ],
-    "correct_answer": "Go straight or turn right",
-    "correct_index": 3
+    "correct_answer": "Turn left",
+    "correct_index": 0
   },
   {
     "category": "Traffic signal lights",
@@ -12788,8 +12788,8 @@
       "Go straight",
       "Turn right"
     ],
-    "correct_answer": "Go straight",
-    "correct_index": 2
+    "correct_answer": "Turn right",
+    "correct_index": 3
   },
   {
     "category": "Traffic signal lights",
@@ -12846,8 +12846,8 @@
       "No passing",
       "Pull over and wait"
     ],
-    "correct_answer": "Immediately speed up and pass",
-    "correct_index": 0
+    "correct_answer": "Look and make sure it is safe to pass",
+    "correct_index": 1
   },
   {
     "category": "Traffic signal lights",
@@ -12890,8 +12890,8 @@
       "Observe and go slowly",
       "Do not change gear and speed up and pass"
     ],
-    "correct_answer": "Pass before the train arrives",
-    "correct_index": 0
+    "correct_answer": "Do not cross the stop line",
+    "correct_index": 1
   },
   {
     "category": "Traffic signal lights",
@@ -12934,8 +12934,8 @@
       "Cannot enter the intersection",
       "May directly enter the intersection"
     ],
-    "correct_answer": "May directly enter the intersection",
-    "correct_index": 3
+    "correct_answer": "Cannot enter the intersection",
+    "correct_index": 2
   },
   {
     "category": "Warning signs 1",
@@ -12966,8 +12966,8 @@
       "Intersection",
       "Y-shaped intersection"
     ],
-    "correct_answer": "Y-shaped intersection",
-    "correct_index": 3
+    "correct_answer": "T-shaped intersection",
+    "correct_index": 1
   },
   {
     "category": "Warning signs 1",
@@ -12998,8 +12998,8 @@
       "Sharp right bend",
       "Sharp left bend"
     ],
-    "correct_answer": "Left detour",
-    "correct_index": 0
+    "correct_answer": "Sharp left bend",
+    "correct_index": 3
   },
   {
     "category": "Warning signs 1",
@@ -13014,8 +13014,8 @@
       "Slippery road",
       "Sharp curve"
     ],
-    "correct_answer": "Continuous curves",
-    "correct_index": 1
+    "correct_answer": "Inverse curve",
+    "correct_index": 0
   },
   {
     "category": "Warning signs 1",
@@ -13030,8 +13030,8 @@
       "Continuous curves",
       "Sharp curve"
     ],
-    "correct_answer": "Sharp curve",
-    "correct_index": 3
+    "correct_answer": "Continuous curves",
+    "correct_index": 2
   },
   {
     "category": "Warning signs 1",
@@ -13046,8 +13046,8 @@
       "Steep uphill road",
       "Continuous uphill roads"
     ],
-    "correct_answer": "Steep downhill road",
-    "correct_index": 0
+    "correct_answer": "Steep uphill road",
+    "correct_index": 2
   },
   {
     "category": "Warning signs 1",
@@ -13062,8 +13062,8 @@
       "Steep uphill road",
       "Steep downhill road"
     ],
-    "correct_answer": "Embankment road",
-    "correct_index": 1
+    "correct_answer": "Steep downhill road",
+    "correct_index": 3
   },
   {
     "category": "Warning signs 1",
@@ -13126,8 +13126,8 @@
       "Road narrows on the left side",
       "Bridge narrows"
     ],
-    "correct_answer": "Road narrows on the right side",
-    "correct_index": 1
+    "correct_answer": "Road narrows on the left side",
+    "correct_index": 2
   },
   {
     "category": "Warning signs 1",
@@ -13142,8 +13142,8 @@
       "Narrow bridge",
       "Narrow road"
     ],
-    "correct_answer": "Road narrows on the left side",
-    "correct_index": 1
+    "correct_answer": "Narrow bridge",
+    "correct_index": 2
   },
   {
     "category": "Warning signs 1",
@@ -13158,8 +13158,8 @@
       "Reduce speed and yield",
       "Two-way traffic"
     ],
-    "correct_answer": "Reduce speed and yield",
-    "correct_index": 2
+    "correct_answer": "Two-way traffic",
+    "correct_index": 3
   },
   {
     "category": "Warning signs 1",
@@ -13190,8 +13190,8 @@
       "A crosswalk",
       "Watch for pedestrians"
     ],
-    "correct_answer": "School zone",
-    "correct_index": 0
+    "correct_answer": "Watch for children",
+    "correct_index": 1
   },
   {
     "category": "Warning signs 1",
@@ -13238,8 +13238,8 @@
       "Intersection",
       "Watch for pedestrians"
     ],
-    "correct_answer": "Crosswalk lights",
-    "correct_index": 1
+    "correct_answer": "Watch for traffic lights",
+    "correct_index": 0
   },
   {
     "category": "Warning signs 1",
@@ -13254,8 +13254,8 @@
       "Watch for falling rocks",
       "Dangerous hillside road"
     ],
-    "correct_answer": "Dangerous hillside road",
-    "correct_index": 3
+    "correct_answer": "Watch for falling rocks",
+    "correct_index": 2
   },
   {
     "category": "Warning signs 1",
@@ -13270,8 +13270,8 @@
       "Mind side wind",
       "Tunnel entrance"
     ],
-    "correct_answer": "Tunnel entrance",
-    "correct_index": 3
+    "correct_answer": "Mind side wind",
+    "correct_index": 2
   },
   {
     "category": "Warning signs 1",
@@ -13302,8 +13302,8 @@
       "Temporary cliff road",
       "Falling rocks"
     ],
-    "correct_answer": "Embankment road",
-    "correct_index": 0
+    "correct_answer": "Dangerous hillside road",
+    "correct_index": 1
   },
   {
     "category": "Warning signs 1",
@@ -13334,8 +13334,8 @@
       "Primary school",
       "A crosswalk"
     ],
-    "correct_answer": "Watch for pedestrians",
-    "correct_index": 0
+    "correct_answer": "Village or town",
+    "correct_index": 1
   },
   {
     "category": "Warning signs 1",
@@ -13350,8 +13350,8 @@
       "Canal",
       "Tunnel"
     ],
-    "correct_answer": "Canal",
-    "correct_index": 2
+    "correct_answer": "Tunnel",
+    "correct_index": 3
   },
   {
     "category": "Warning signs 1",
@@ -13366,8 +13366,8 @@
       "Ferry",
       "Marine wharf"
     ],
-    "correct_answer": "Overflowing bridge",
-    "correct_index": 1
+    "correct_answer": "Ferry",
+    "correct_index": 2
   },
   {
     "category": "Warning signs 1",
@@ -13382,8 +13382,8 @@
       "To warn vehicle drivers there is a steep uphill road ahead",
       "To warn vehicle drivers there are two or more consecutive uphill roads ahead"
     ],
-    "correct_answer": "To warn vehicle drivers there is a reservoir, lake or river along the road ahead.",
-    "correct_index": 1
+    "correct_answer": "To warn vehicle drivers there is a steep uphill road ahead",
+    "correct_index": 2
   },
   {
     "category": "Warning signs 1",
@@ -13398,8 +13398,8 @@
       "To warn vehicle drivers there are two or more consecutive uphill roads ahead",
       "To warn vehicle drivers there is a steep downhill road ahead"
     ],
-    "correct_answer": "To warn vehicle drivers there is a reservoir, lake or river along the road ahead.",
-    "correct_index": 0
+    "correct_answer": "To warn vehicle drivers there is a steep downhill road ahead",
+    "correct_index": 3
   },
   {
     "category": "Warning signs 1",
@@ -13414,8 +13414,8 @@
       "To warn vehicle drivers there are two or more consecutive uphill roads ahead",
       "To warn vehicle drivers there is a steep downhill road ahead"
     ],
-    "correct_answer": "To warn vehicle drivers there are two or more consecutive uphill roads ahead",
-    "correct_index": 2
+    "correct_answer": "To warn vehicle drivers there are two or more consecutive downhill roads ahead",
+    "correct_index": 0
   },
   {
     "category": "Warning signs 2",
@@ -13446,8 +13446,8 @@
       "Hump bridge",
       "High road bumps"
     ],
-    "correct_answer": "Low-lying road",
-    "correct_index": 0
+    "correct_answer": "Bump road",
+    "correct_index": 1
   },
   {
     "category": "Warning signs 2",
@@ -13462,8 +13462,8 @@
       "Low-lying road",
       "High road bumps"
     ],
-    "correct_answer": "Bump road",
-    "correct_index": 0
+    "correct_answer": "High road bumps",
+    "correct_index": 3
   },
   {
     "category": "Warning signs 2",
@@ -13478,8 +13478,8 @@
       "High road bumps",
       "Low-lying road"
     ],
-    "correct_answer": "Bump road",
-    "correct_index": 0
+    "correct_answer": "Low-lying road",
+    "correct_index": 3
   },
   {
     "category": "Warning signs 2",
@@ -13494,8 +13494,8 @@
       "Overflowing road",
       "Muddy road"
     ],
-    "correct_answer": "Muddy road",
-    "correct_index": 3
+    "correct_answer": "Overflowing road",
+    "correct_index": 2
   },
   {
     "category": "Warning signs 2",
@@ -13526,8 +13526,8 @@
       "Level crossing without guard",
       "Note continuous honking"
     ],
-    "correct_answer": "Note continuous honking",
-    "correct_index": 3
+    "correct_answer": "Level crossing without guard",
+    "correct_index": 2
   },
   {
     "category": "Warning signs 2",
@@ -13542,8 +13542,8 @@
       "Level crossing with guard",
       "Level crossing without guard"
     ],
-    "correct_answer": "Level crossing with guard",
-    "correct_index": 2
+    "correct_answer": "Multi-track train crossing",
+    "correct_index": 1
   },
   {
     "category": "Warning signs 2",
@@ -13558,8 +13558,8 @@
       "Level crossing without guard 50m ahead",
       "Level crossing without guard 100m ahead"
     ],
-    "correct_answer": "Level crossing without guard 100m ahead",
-    "correct_index": 3
+    "correct_answer": "Level crossing without guard 50m ahead",
+    "correct_index": 2
   },
   {
     "category": "Warning signs 2",
@@ -13574,8 +13574,8 @@
       "Level crossing without guard 50m ahead",
       "Level crossing with guard 100m ahead"
     ],
-    "correct_answer": "Level crossing with guard 50m ahead",
-    "correct_index": 0
+    "correct_answer": "Level crossing without guard 100m ahead",
+    "correct_index": 1
   },
   {
     "category": "Warning signs 2",
@@ -13606,8 +13606,8 @@
       "Watch for non-motorized vehicles",
       "Lane for non-motorized vehicles"
     ],
-    "correct_answer": "Lane for non-motorized vehicles",
-    "correct_index": 3
+    "correct_answer": "Watch for non-motorized vehicles",
+    "correct_index": 2
   },
   {
     "category": "Warning signs 2",
@@ -13622,8 +13622,8 @@
       "Pay attention for disabled people",
       "Resting place for disabled people"
     ],
-    "correct_answer": "Disabled people exit and entry",
-    "correct_index": 1
+    "correct_answer": "Pay attention for disabled people",
+    "correct_index": 2
   },
   {
     "category": "Warning signs 2",
@@ -13654,8 +13654,8 @@
       "Busy section",
       "Jammed section"
     ],
-    "correct_answer": "Busy section",
-    "correct_index": 2
+    "correct_answer": "Slow passing",
+    "correct_index": 0
   },
   {
     "category": "Warning signs 2",
@@ -13670,8 +13670,8 @@
       "Bypassing from both sides",
       "Danger"
     ],
-    "correct_answer": "Men at work bypass",
-    "correct_index": 0
+    "correct_answer": "Bypassing from both sides",
+    "correct_index": 2
   },
   {
     "category": "Warning signs 2",
@@ -13686,8 +13686,8 @@
       "Bypassing from the left side",
       "One-way passing"
     ],
-    "correct_answer": "Danger",
-    "correct_index": 0
+    "correct_answer": "Bypassing from the left side",
+    "correct_index": 2
   },
   {
     "category": "Warning signs 2",
@@ -13718,8 +13718,8 @@
       "Danger",
       "Accident-prone section"
     ],
-    "correct_answer": "Reduce speed and go slowly",
-    "correct_index": 1
+    "correct_answer": "Danger",
+    "correct_index": 2
   },
   {
     "category": "Warning signs 2",
@@ -13734,8 +13734,8 @@
       "Road congestion",
       "Men at work"
     ],
-    "correct_answer": "Collapsed road",
-    "correct_index": 0
+    "correct_answer": "Men at work",
+    "correct_index": 3
   },
   {
     "category": "Warning signs 2",
@@ -13750,8 +13750,8 @@
       "Minimum speed",
       "Maximum speed"
     ],
-    "correct_answer": "Maximum speed",
-    "correct_index": 3
+    "correct_answer": "Recommended speed",
+    "correct_index": 1
   },
   {
     "category": "Warning signs 2",
@@ -13766,8 +13766,8 @@
       "Turn on width light in tunnel",
       "Turn on the high beam light in tunnel"
     ],
-    "correct_answer": "Reduce speed in tunnel",
-    "correct_index": 1
+    "correct_answer": "Turn on lights in tunnel",
+    "correct_index": 0
   },
   {
     "category": "Warning signs 2",
@@ -13782,8 +13782,8 @@
       "Watch for variable flow lane",
       "Driving on both sides"
     ],
-    "correct_answer": "Watch for two way traffic",
-    "correct_index": 1
+    "correct_answer": "Watch for variable flow lane",
+    "correct_index": 2
   },
   {
     "category": "Warning signs 2",
@@ -13798,8 +13798,8 @@
       "Keep the distance between vehicles",
       "Speed test section"
     ],
-    "correct_answer": "Road narrows on both sides",
-    "correct_index": 1
+    "correct_answer": "Keep the distance between vehicles",
+    "correct_index": 2
   },
   {
     "category": "Warning signs 2",
@@ -13814,8 +13814,8 @@
       "Level crossing intersection",
       "Watch for separation road"
     ],
-    "correct_answer": "Level crossing intersection",
-    "correct_index": 2
+    "correct_answer": "Watch for separation road",
+    "correct_index": 3
   },
   {
     "category": "Warning signs 2",
@@ -13830,8 +13830,8 @@
       "Y-shaped intersection",
       "Main road yield"
     ],
-    "correct_answer": "Y-shaped intersection",
-    "correct_index": 2
+    "correct_answer": "Watch for lane merging",
+    "correct_index": 1
   },
   {
     "category": "Warning signs 2",
@@ -14340,8 +14340,8 @@
       "Do not use lights",
       "Turn on the right-turn signal"
     ],
-    "correct_answer": "Use the low beam light",
-    "correct_index": 1
+    "correct_answer": "Use the fog lights",
+    "correct_index": 0
   },
   {
     "category": "Weather",
@@ -14356,8 +14356,8 @@
       "Do not use the low beam light",
       "Do not use the high beam light"
     ],
-    "correct_answer": "Use the fog lights",
-    "correct_index": 0
+    "correct_answer": "Do not use the high beam light",
+    "correct_index": 3
   },
   {
     "category": "Weather",
@@ -14414,8 +14414,8 @@
       "Stop at the roadside",
       "Drive at a low speed on the road shoulder"
     ],
-    "correct_answer": "Enter the emergency lane",
-    "correct_index": 1
+    "correct_answer": "Leave the expressway as soon as possible",
+    "correct_index": 0
   },
   {
     "category": "Weather",
@@ -14462,8 +14462,8 @@
       "The vehicle can easily slide sideways",
       "The resistance to the vehicle increases"
     ],
-    "correct_answer": "The engine is prone to stop",
-    "correct_index": 1
+    "correct_answer": "The visibility is low and the vision is poor",
+    "correct_index": 0
   },
   {
     "category": "Weather",
@@ -14478,8 +14478,8 @@
       "Braking performance is poorer and can easily cause side pulling",
       "The resistance to the vehicle increases"
     ],
-    "correct_answer": "The electric equipment is prone to getting wet and causing short circuit",
-    "correct_index": 0
+    "correct_answer": "Braking performance is poorer and can easily cause side pulling",
+    "correct_index": 2
   },
   {
     "category": "Weather",
@@ -14538,8 +14538,8 @@
       "The hazard lights",
       "The head and tail fog lights"
     ],
-    "correct_answer": "The head and tail fog lights",
-    "correct_index": 3
+    "correct_answer": "The hazard lights",
+    "correct_index": 2
   },
   {
     "category": "Weather",
@@ -14554,8 +14554,8 @@
       "The head and tail fog lights",
       "The reverse light"
     ],
-    "correct_answer": "The head and tail fog lights",
-    "correct_index": 2
+    "correct_answer": "The hazard lights",
+    "correct_index": 0
   },
   {
     "category": "Weather",
@@ -14600,8 +14600,8 @@
       "The fog light",
       "The high beam light"
     ],
-    "correct_answer": "The reverse light",
-    "correct_index": 0
+    "correct_answer": "The fog light",
+    "correct_index": 2
   },
   {
     "category": "Weather",
@@ -14616,8 +14616,8 @@
       "Turn on the hazard lights and continue to go ahead",
       "Turn on the hazard lights and fog lights and stop at a safe place"
     ],
-    "correct_answer": "Turn on the head light and continue to go ahead",
-    "correct_index": 0
+    "correct_answer": "Turn on the hazard lights and fog lights and stop at a safe place",
+    "correct_index": 3
   },
   {
     "category": "Weather",

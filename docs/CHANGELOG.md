@@ -6,6 +6,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Fixed
+- **CRITICAL: 419 out of 562 MC questions had wrong correct answers.** Scraper assumed scramble value 0 = correct answer, but scramble values are just display-order shuffling. Re-verified all MC questions against the live site. ([data/questions.json](data/questions.json), [scripts/fix-answers.py](scripts/fix-answers.py))
 - Auto-advance countdown bug: CategoryPage recreated questionIds array on every render, causing StudySession to remount and reset state. Fixed by storing shuffled IDs in useState ([src/pages/CategoryPage.jsx](src/pages/CategoryPage.jsx))
 - Restored React StrictMode ([src/main.jsx](src/main.jsx))
 
