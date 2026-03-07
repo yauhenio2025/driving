@@ -1,4 +1,4 @@
-const labels = ['A', 'B', 'C', 'D']
+const labels = ['1', '2', '3', '4']
 
 export function OptionList({ options, selected, correctIndex, answered, onSelect, isTrueFalse }) {
   return (

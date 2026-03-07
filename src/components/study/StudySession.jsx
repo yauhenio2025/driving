@@ -15,6 +15,7 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
   const [startTime, setStartTime] = useState(Date.now())
   const [results, setResults] = useState([])
   const [finished, setFinished] = useState(false)
+  const [countdown, setCountdown] = useState(null)
 
   const question = questionIds[currentIndex] ? getQuestion(questionIds[currentIndex]) : null
   const hasApiKey = !!storage.get('settings')?.apiKey
@@ -23,20 +24,31 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
     setStartTime(Date.now())
   }, [currentIndex])
 
+  // Auto-advance countdown after answering
+  useEffect(() => {
+    if (!answered || finished) return
+    setCountdown(5)
+    const interval = setInterval(() => {
+      setCountdown(prev => {
+        if (prev <= 1) {
+          clearInterval(interval)
+          handleNext()
+          return null
+        }
+        return prev - 1
+      })
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [answered])
+
   // Keyboard shortcuts
   useEffect(() => {
     const handler = (e) => {
       if (finished) return
       if (!answered) {
         if (!question) return
-        const isTF = question.type === 'true_false'
-        if (isTF) {
-          if (e.key.toLowerCase() === 'r' || e.key === '1') handleSelect(0)
-          if (e.key.toLowerCase() === 'w' || e.key === '2') handleSelect(1)
-        } else {
-          const idx = { '1': 0, '2': 1, '3': 2, '4': 3 }[e.key]
-          if (idx !== undefined && idx < question.options.length) handleSelect(idx)
-        }
+        const idx = { '1': 0, '2': 1, '3': 2, '4': 3 }[e.key]
+        if (idx !== undefined && idx < question.options.length) handleSelect(idx)
       } else {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault()
@@ -159,7 +171,10 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
       </div>
 
       {answered && (
-        <div className="flex justify-end">
+        <div className="flex items-center justify-end gap-3">
+          {countdown && (
+            <span className="text-sm text-slate-400 dark:text-slate-500 tabular-nums">{countdown}s</span>
+          )}
           <button
             className="px-6 py-2.5 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition font-medium"
             onClick={handleNext}

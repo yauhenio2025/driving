@@ -244,7 +244,7 @@ export function TestSimulationPage() {
                 }`}
                 onClick={() => selectAnswer(i)}
               >
-                {q.type !== 'true_false' && `${String.fromCharCode(65 + i)}. `}{opt}
+                {q.type !== 'true_false' && `${i + 1}. `}{opt}
               </button>
             )
           })}
