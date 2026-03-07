@@ -15,14 +15,20 @@ export function CategoryPage() {
     return computeCategoryAccuracy(log)
   }, [selectedCategory]) // recompute when returning from practice
 
-  if (selectedCategory) {
-    const qs = questionsByCategory.get(selectedCategory) || []
-    const ids = shuffleArray(qs.map(q => q.id))
+  const [categoryIds, setCategoryIds] = useState(null)
+
+  const startCategory = (cat) => {
+    const qs = questionsByCategory.get(cat) || []
+    setCategoryIds(shuffleArray(qs.map(q => q.id)))
+    setSelectedCategory(cat)
+  }
+
+  if (selectedCategory && categoryIds) {
     return (
       <StudySession
-        questionIds={ids}
+        questionIds={categoryIds}
         reviewCard={reviewCard}
-        onComplete={() => setSelectedCategory(null)}
+        onComplete={() => { setSelectedCategory(null); setCategoryIds(null) }}
         title={selectedCategory}
         mode="category"
       />
@@ -43,7 +49,7 @@ export function CategoryPage() {
             <button
               key={cat}
               className="bg-white dark:bg-slate-800 rounded-xl shadow-sm p-4 text-left hover:shadow-md transition group"
-              onClick={() => setSelectedCategory(cat)}
+              onClick={() => startCategory(cat)}
             >
               <h3 className="font-semibold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition">
                 {cat}

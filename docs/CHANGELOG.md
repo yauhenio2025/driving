@@ -5,6 +5,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+### Fixed
+- Auto-advance countdown bug: CategoryPage recreated questionIds array on every render, causing StudySession to remount and reset state. Fixed by storing shuffled IDs in useState ([src/pages/CategoryPage.jsx](src/pages/CategoryPage.jsx))
+- Restored React StrictMode ([src/main.jsx](src/main.jsx))
+
+### Added
+- 5-second auto-advance countdown after answering (paused when explaining) ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
+- "Explain (E)" button on wrong answers with Gemini AI + Google Search grounding ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx), [src/components/question/ExplanationPanel.jsx](src/components/question/ExplanationPanel.jsx))
+- On-demand explanation triggering via forwardRef + useImperativeHandle ([src/components/question/ExplanationPanel.jsx](src/components/question/ExplanationPanel.jsx))
+- Google Search grounding in Gemini API calls for regulation lookups ([src/lib/gemini.js](src/lib/gemini.js))
+- Explain button in test results review ([src/components/test/TestSimulation.jsx](src/components/test/TestSimulation.jsx))
+- Numbered option labels (1/2/3/4) instead of A/B/C/D ([src/components/question/OptionList.jsx](src/components/question/OptionList.jsx))
+
 ## [2026-03-07]
 
 ### Added

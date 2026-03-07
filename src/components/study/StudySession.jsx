@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { QuestionCard } from '../question/QuestionCard'
 import { OptionList } from '../question/OptionList'
 import { AnswerFeedback } from '../question/AnswerFeedback'
@@ -16,65 +16,117 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
   const [results, setResults] = useState([])
   const [finished, setFinished] = useState(false)
   const [countdown, setCountdown] = useState(null)
+  const [explaining, setExplaining] = useState(false)
+  const timerRef = useRef(null)
+  const explanationRef = useRef(null)
+  const stateRef = useRef({ currentIndex, answered, explaining, finished })
+  stateRef.current = { currentIndex, answered, explaining, finished }
 
   const question = questionIds[currentIndex] ? getQuestion(questionIds[currentIndex]) : null
-  const hasApiKey = !!storage.get('settings')?.apiKey
 
   useEffect(() => {
     setStartTime(Date.now())
   }, [currentIndex])
 
-  // Auto-advance countdown after answering
+  // Cleanup timer on unmount
   useEffect(() => {
-    if (!answered || finished) return
-    setCountdown(5)
-    const interval = setInterval(() => {
-      setCountdown(prev => {
-        if (prev <= 1) {
-          clearInterval(interval)
-          handleNext()
-          return null
+    return () => clearInterval(timerRef.current)
+  }, [])
+
+  function startCountdown() {
+    clearInterval(timerRef.current)
+    let secs = 5
+    setCountdown(secs)
+    timerRef.current = setInterval(() => {
+      secs--
+      if (secs <= 0) {
+        clearInterval(timerRef.current)
+        timerRef.current = null
+        setCountdown(null)
+        // Only advance if we haven't already moved on
+        if (!stateRef.current.explaining) {
+          doAdvance()
         }
-        return prev - 1
-      })
+      } else {
+        setCountdown(secs)
+      }
     }, 1000)
-    return () => clearInterval(interval)
-  }, [answered])
+  }
+
+  function stopCountdown() {
+    clearInterval(timerRef.current)
+    timerRef.current = null
+    setCountdown(null)
+  }
+
+  function doAdvance() {
+    stopCountdown()
+    setCurrentIndex(prev => {
+      const next = prev + 1
+      if (next >= questionIds.length) {
+        setFinished(true)
+        return prev
+      }
+      return next
+    })
+    setSelected(null)
+    setAnswered(false)
+    setExplaining(false)
+  }
+
+  function handleExplain() {
+    setExplaining(true)
+    stopCountdown()
+    explanationRef.current?.fetchExplanation()
+  }
+
+  function isWrong() {
+    return answered && question && selected !== question.correct_index
+  }
 
   // Keyboard shortcuts
   useEffect(() => {
     const handler = (e) => {
-      if (finished) return
-      if (!answered) {
-        if (!question) return
+      const s = stateRef.current
+      if (s.finished) return
+      if (!s.answered) {
+        const q = questionIds[s.currentIndex] ? getQuestion(questionIds[s.currentIndex]) : null
+        if (!q) return
         const idx = { '1': 0, '2': 1, '3': 2, '4': 3 }[e.key]
-        if (idx !== undefined && idx < question.options.length) handleSelect(idx)
+        if (idx !== undefined && idx < q.options.length) handleSelect(idx)
       } else {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault()
-          handleNext()
+          doAdvance()
+        }
+        if (e.key.toLowerCase() === 'e' && !s.explaining) {
+          // Check if wrong (we need selected from closure, use a different approach)
+          handleExplain()
         }
       }
     }
     window.addEventListener('keydown', handler)
     return () => window.removeEventListener('keydown', handler)
-  })
+  }, [questionIds])
 
-  const handleSelect = useCallback((idx) => {
-    if (answered) return
+  function handleSelect(idx) {
+    if (stateRef.current.answered) return
+    const q = questionIds[stateRef.current.currentIndex] ? getQuestion(questionIds[stateRef.current.currentIndex]) : null
+    if (!q) return
+
     setSelected(idx)
     setAnswered(true)
+    setExplaining(false)
 
-    const correct = idx === question.correct_index
+    const correct = idx === q.correct_index
     const responseTime = Date.now() - startTime
     const quality = qualityFromAnswer(correct, responseTime)
 
-    // Log answer
     storage.update('answerLog', (log) => [
       ...(log || []),
       {
-        questionId: question.id,
-        category: question.category,
+        questionId: q.id,
+        category: q.category,
         correct,
         mode,
         responseTimeMs: responseTime,
@@ -82,23 +134,13 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
       }
     ])
 
-    // Update SRS card
     if (reviewCard) {
-      reviewCard(question.id, quality)
+      reviewCard(q.id, quality)
     }
 
-    setResults(prev => [...prev, { questionId: question.id, correct }])
-  }, [answered, question, startTime, reviewCard, mode])
-
-  const handleNext = useCallback(() => {
-    if (currentIndex + 1 >= questionIds.length) {
-      setFinished(true)
-      return
-    }
-    setCurrentIndex(prev => prev + 1)
-    setSelected(null)
-    setAnswered(false)
-  }, [currentIndex, questionIds.length])
+    setResults(prev => [...prev, { questionId: q.id, correct }])
+    startCountdown()
+  }
 
   if (!questionIds.length) {
     return (
@@ -136,7 +178,7 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
 
   if (!question) return null
 
-  const isWrong = answered && selected !== question.correct_index
+  const wrong = isWrong()
 
   return (
     <div>
@@ -158,26 +200,34 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
           />
         </div>
         {answered && (
-          <AnswerFeedback correct={!isWrong} correctAnswer={question.correct_answer} />
+          <AnswerFeedback correct={!wrong} correctAnswer={question.correct_answer} />
         )}
-        {isWrong && hasApiKey && (
+        {wrong && (
           <ExplanationPanel
+            ref={explanationRef}
             question={question}
             userAnswer={question.options[selected]}
             correctAnswer={question.correct_answer}
-            show={true}
           />
         )}
       </div>
 
       {answered && (
         <div className="flex items-center justify-end gap-3">
-          {countdown && (
+          {wrong && !explaining && (
+            <button
+              className="px-5 py-2.5 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition font-medium"
+              onClick={handleExplain}
+            >
+              Explain (E)
+            </button>
+          )}
+          {countdown > 0 && (
             <span className="text-sm text-slate-400 dark:text-slate-500 tabular-nums">{countdown}s</span>
           )}
           <button
             className="px-6 py-2.5 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition font-medium"
-            onClick={handleNext}
+            onClick={doAdvance}
           >
             {currentIndex + 1 >= questionIds.length ? 'Finish' : 'Next'}
           </button>

@@ -1,6 +1,6 @@
 # Feature Inventory
 
-> Auto-maintained by Claude Code. Last updated: 2026-03-07
+> Auto-maintained by Claude Code. Last updated: 2026-03-07 (session 2)
 
 ## Study
 
@@ -9,7 +9,7 @@
 - **Description**: Spaced repetition study sessions using SM-2 algorithm
 - **Entry Points**:
   - `src/pages/StudyPage.jsx:1-50` - Study page with session launcher
-  - `src/components/study/StudySession.jsx:1-140` - Core study loop component
+  - `src/components/study/StudySession.jsx:1-239` - Core study loop with auto-advance countdown and explain button
   - `src/lib/srs.js:1-60` - SM-2 algorithm implementation
   - `src/hooks/useSRS.js:1-55` - SRS state management hook
 - **Dependencies**: localStorage, questions.json
@@ -19,7 +19,7 @@
 - **Status**: Active
 - **Description**: Practice all questions in a specific category sequentially
 - **Entry Points**:
-  - `src/pages/CategoryPage.jsx:1-75` - Category grid with accuracy display and drill mode
+  - `src/pages/CategoryPage.jsx:1-82` - Category grid with accuracy display and drill mode (stable questionIds)
 - **Dependencies**: questions.js, StudySession component
 - **Added**: 2026-03-07
 
@@ -37,7 +37,7 @@
 - **Status**: Active
 - **Description**: Full exam simulation (100 questions, 45 min, 90% pass threshold)
 - **Entry Points**:
-  - `src/components/test/TestSimulation.jsx:1-260` - Test engine with timer, navigation, question map, results
+  - `src/components/test/TestSimulation.jsx:1-339` - Test engine with timer, navigation, question map, results, explain in review
 - **Dependencies**: useTimer hook, questions.js
 - **Added**: 2026-03-07
 
@@ -56,10 +56,10 @@
 
 ### Gemini Explanations
 - **Status**: Active
-- **Description**: AI-powered explanations citing Chinese traffic law when answering wrong
+- **Description**: On-demand AI explanations with Google Search grounding and Chinese traffic law citations
 - **Entry Points**:
-  - `src/lib/gemini.js:1-55` - Gemini API integration with caching
-  - `src/components/question/ExplanationPanel.jsx:1-55` - Explanation display component
+  - `src/lib/gemini.js:1-80` - Gemini API with Google Search grounding and caching
+  - `src/components/question/ExplanationPanel.jsx:1-54` - forwardRef explanation panel with imperative trigger
   - `src/data/trafficLaw.js:1-300` - Structured traffic law text with category mapping
 - **Dependencies**: Gemini 2.5 Pro API key, trafficLaw.js
 - **Added**: 2026-03-07
@@ -93,10 +93,10 @@
 
 ### Keyboard Shortcuts
 - **Status**: Active
-- **Description**: 1-4 for MC options, R/W for T/F, Enter/Space for next, F to flag
+- **Description**: 1-4 for MC options, R/W for T/F, Enter/Space for next, E to explain, F to flag
 - **Entry Points**:
-  - `src/components/study/StudySession.jsx:30-45` - Study mode shortcuts
-  - `src/components/test/TestSimulation.jsx:140-155` - Test mode shortcuts
+  - `src/components/study/StudySession.jsx:88-110` - Study mode shortcuts (1-4, Enter/Space, E)
+  - `src/components/test/TestSimulation.jsx:168-185` - Test mode shortcuts (1-4, arrows, F)
 - **Added**: 2026-03-07
 
 ## Settings

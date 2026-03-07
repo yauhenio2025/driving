@@ -1,33 +1,30 @@
-import { useState, useEffect } from 'react'
+import { useState, useImperativeHandle, forwardRef } from 'react'
 import { getExplanation } from '../../lib/gemini'
 
-export function ExplanationPanel({ question, userAnswer, correctAnswer, show }) {
+export const ExplanationPanel = forwardRef(function ExplanationPanel({ question, userAnswer, correctAnswer }, ref) {
   const [explanation, setExplanation] = useState(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
+  const [visible, setVisible] = useState(false)
 
-  useEffect(() => {
-    if (!show || !question) return
-    let cancelled = false
+  const fetchExplanation = () => {
+    setVisible(true)
     setLoading(true)
     setError(null)
     getExplanation(question, userAnswer, correctAnswer)
       .then(text => {
-        if (!cancelled) {
-          setExplanation(text)
-          setLoading(false)
-        }
+        setExplanation(text)
+        setLoading(false)
       })
       .catch(err => {
-        if (!cancelled) {
-          setError(err.message)
-          setLoading(false)
-        }
+        setError(err.message)
+        setLoading(false)
       })
-    return () => { cancelled = true }
-  }, [show, question, userAnswer, correctAnswer])
+  }
 
-  if (!show) return null
+  useImperativeHandle(ref, () => ({ fetchExplanation }))
+
+  if (!visible) return null
 
   return (
     <div className="mt-4 p-4 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-200 dark:border-indigo-800 slide-up">
@@ -35,16 +32,13 @@ export function ExplanationPanel({ question, userAnswer, correctAnswer, show }) 
       {loading && (
         <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-300">
           <div className="w-4 h-4 border-2 border-indigo-400 border-t-transparent rounded-full animate-spin" />
-          Generating explanation...
+          Searching regulations & generating explanation...
         </div>
       )}
       {error && (
         <div className="text-rose-600 dark:text-rose-400">
-          <p>{error}</p>
-          <button
-            className="mt-2 text-sm underline"
-            onClick={() => { setError(null); setLoading(true); getExplanation(question, userAnswer, correctAnswer).then(setExplanation).catch(e => setError(e.message)).finally(() => setLoading(false)) }}
-          >
+          <p className="text-sm">{error}</p>
+          <button className="mt-2 text-sm underline" onClick={fetchExplanation}>
             Retry
           </button>
         </div>
@@ -54,11 +48,6 @@ export function ExplanationPanel({ question, userAnswer, correctAnswer, show }) 
           {explanation}
         </div>
       )}
-      {!loading && !error && !explanation && (
-        <p className="text-slate-500 dark:text-slate-400 text-sm">
-          Set up your Gemini API key in Settings to get AI-powered explanations.
-        </p>
-      )}
     </div>
   )
-}
+})

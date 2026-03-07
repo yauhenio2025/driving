@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo } from 'react'
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { questions, getQuestion, getImagePath } from '../../data/questions'
 import { shuffleArray, formatTime } from '../../lib/utils'
 import { useTimer } from '../../hooks/useTimer'
@@ -12,12 +12,11 @@ function TestResults({ answers, testQuestions, timeUsed, onClose }) {
   const score = Math.round((correctCount / total) * 100)
   const passed = score >= 90
   const [reviewIdx, setReviewIdx] = useState(null)
+  const explanationRef = useRef(null)
 
   const wrongAnswers = testQuestions
     .map((q, i) => ({ question: q, userIdx: answers[i], idx: i }))
     .filter(x => x.userIdx !== x.question.correct_index)
-
-  const hasApiKey = !!storage.get('settings')?.apiKey
 
   // Save result
   useEffect(() => {
@@ -49,14 +48,19 @@ function TestResults({ answers, testQuestions, timeUsed, onClose }) {
               return <div key={oi} className={cls}>{opt}</div>
             })}
           </div>
-          {hasApiKey && (
-            <ExplanationPanel
-              question={item.question}
-              userAnswer={item.question.options[item.userIdx]}
-              correctAnswer={item.question.correct_answer}
-              show={true}
-            />
-          )}
+          <button
+            className="px-5 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition font-medium text-sm mb-4"
+            onClick={() => explanationRef.current?.fetchExplanation()}
+          >
+            Explain
+          </button>
+          <ExplanationPanel
+            ref={explanationRef}
+            key={reviewIdx}
+            question={item.question}
+            userAnswer={item.question.options[item.userIdx]}
+            correctAnswer={item.question.correct_answer}
+          />
           <div className="flex justify-between mt-4">
             <button className="text-sm text-slate-500 hover:text-slate-700" onClick={() => setReviewIdx(Math.max(0, reviewIdx - 1))} disabled={reviewIdx === 0}>Previous</button>
             <span className="text-sm text-slate-400">{reviewIdx + 1} / {wrongAnswers.length}</span>
