@@ -1,7 +1,23 @@
 import * as storage from './storage'
 import { categoryToChapters } from '../data/trafficLaw'
+import { getImagePath } from '../data/questions'
 
 const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent'
+
+async function fetchImageAsBase64(question) {
+  const path = getImagePath(question)
+  if (!path) return null
+  try {
+    const resp = await fetch(path)
+    const blob = await resp.blob()
+    const buffer = await blob.arrayBuffer()
+    const base64 = btoa(String.fromCharCode(...new Uint8Array(buffer)))
+    const mimeType = blob.type || 'image/png'
+    return { base64, mimeType }
+  } catch {
+    return null
+  }
+}
 
 function buildPrompt(question, userAnswer, correctAnswer) {
   const relevantChapters = categoryToChapters[question.category] || []
@@ -10,7 +26,7 @@ function buildPrompt(question, userAnswer, correctAnswer) {
     : ''
 
   return `You are a Chinese driving test tutor. A student answered incorrectly on a Subject 1 (科目一) question. IMPORTANT: Respond entirely in English.
-
+${question.image_file ? '\nAn image is attached to this question — LOOK AT IT CAREFULLY to understand the sign/situation before answering.\n' : ''}
 QUESTION: ${question.text}
 OPTIONS: ${question.options.map((o, i) => `${i + 1}) ${o}`).join(' | ')}
 STUDENT ANSWERED: ${userAnswer}
@@ -35,11 +51,17 @@ export async function getExplanation(question, userAnswer, correctAnswer) {
   const apiKey = storage.get('settings')?.apiKey
   if (!apiKey) throw new Error('No API key configured. Go to Settings to add your Gemini API key.')
 
+  const image = await fetchImageAsBase64(question)
+  const parts = [{ text: buildPrompt(question, userAnswer, correctAnswer) }]
+  if (image) {
+    parts.push({ inline_data: { mime_type: image.mimeType, data: image.base64 } })
+  }
+
   const response = await fetch(`${API_URL}?key=${apiKey}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      contents: [{ parts: [{ text: buildPrompt(question, userAnswer, correctAnswer) }] }],
+      contents: [{ parts }],
       tools: [{ google_search: {} }],
       generationConfig: {
         temperature: 0.3,
@@ -54,8 +76,8 @@ export async function getExplanation(question, userAnswer, correctAnswer) {
   }
 
   const data = await response.json()
-  const parts = data.candidates?.[0]?.content?.parts || []
-  const text = parts
+  const responseParts = data.candidates?.[0]?.content?.parts || []
+  const text = responseParts
     .filter(p => p.text && !p.thought)
     .map(p => p.text)
     .join('\n')
