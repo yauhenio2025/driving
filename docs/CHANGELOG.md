@@ -11,6 +11,8 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 - Restored React StrictMode ([src/main.jsx](src/main.jsx))
 
 ### Added
+- Previous question navigation: Left arrow key or Prev button to go back and review answered questions in their answered state, with "Back to Current" to return to the frontier ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
+- Right arrow key as additional shortcut for advancing to next question ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
 - 5-second auto-advance countdown after answering (paused when explaining) ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
 - "Explain (E)" button on wrong answers with Gemini AI + Google Search grounding ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx), [src/components/question/ExplanationPanel.jsx](src/components/question/ExplanationPanel.jsx))
 - On-demand explanation triggering via forwardRef + useImperativeHandle ([src/components/question/ExplanationPanel.jsx](src/components/question/ExplanationPanel.jsx))

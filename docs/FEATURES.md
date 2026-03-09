@@ -1,19 +1,19 @@
 # Feature Inventory
 
-> Auto-maintained by Claude Code. Last updated: 2026-03-07 (session 2)
+> Auto-maintained by Claude Code. Last updated: 2026-03-09
 
 ## Study
 
 ### SRS Study Mode
 - **Status**: Active
-- **Description**: Spaced repetition study sessions using SM-2 algorithm
+- **Description**: Spaced repetition study sessions using SM-2 algorithm with previous question navigation
 - **Entry Points**:
   - `src/pages/StudyPage.jsx:1-50` - Study page with session launcher
-  - `src/components/study/StudySession.jsx:1-239` - Core study loop with auto-advance countdown and explain button
+  - `src/components/study/StudySession.jsx:1-349` - Core study loop with auto-advance, explain, prev/next navigation
   - `src/lib/srs.js:1-60` - SM-2 algorithm implementation
   - `src/hooks/useSRS.js:1-55` - SRS state management hook
 - **Dependencies**: localStorage, questions.json
-- **Added**: 2026-03-07
+- **Added**: 2026-03-07 | **Modified**: 2026-03-09
 
 ### Category Practice
 - **Status**: Active
@@ -102,11 +102,11 @@
 
 ### Keyboard Shortcuts
 - **Status**: Active
-- **Description**: 1-4 for MC options, R/W for T/F, Enter/Space for next, E to explain, F to flag
+- **Description**: 1-4 for MC options, R/W for T/F, Enter/Space/Right for next, Left for prev, E to explain, S to save
 - **Entry Points**:
-  - `src/components/study/StudySession.jsx:88-110` - Study mode shortcuts (1-4, Enter/Space, E)
+  - `src/components/study/StudySession.jsx:153-183` - Study mode shortcuts (1-4, Enter/Space/ArrowRight, ArrowLeft, E, S)
   - `src/components/test/TestSimulation.jsx:168-185` - Test mode shortcuts (1-4, arrows, F)
-- **Added**: 2026-03-07
+- **Added**: 2026-03-07 | **Modified**: 2026-03-09
 
 ## Settings
 

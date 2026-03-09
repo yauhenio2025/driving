@@ -18,10 +18,13 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
   const [countdown, setCountdown] = useState(null)
   const [explaining, setExplaining] = useState(false)
   const [savedFav, setSavedFav] = useState(false)
+  const [reviewingPrev, setReviewingPrev] = useState(false)
+  const answerHistoryRef = useRef({}) // idx -> { selected }
+  const frontierRef = useRef(0) // index of next unanswered question
   const timerRef = useRef(null)
   const explanationRef = useRef(null)
-  const stateRef = useRef({ currentIndex, answered, explaining, finished })
-  stateRef.current = { currentIndex, answered, explaining, finished }
+  const stateRef = useRef({ currentIndex, answered, explaining, finished, reviewingPrev })
+  stateRef.current = { currentIndex, answered, explaining, finished, reviewingPrev }
 
   const question = questionIds[currentIndex] ? getQuestion(questionIds[currentIndex]) : null
 
@@ -45,7 +48,7 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
         timerRef.current = null
         setCountdown(null)
         // Only advance if we haven't already moved on
-        if (!stateRef.current.explaining) {
+        if (!stateRef.current.explaining && !stateRef.current.reviewingPrev) {
           doAdvance()
         }
       } else {
@@ -62,6 +65,22 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
 
   function doAdvance() {
     stopCountdown()
+    const s = stateRef.current
+    // If reviewing a previous question, jump back to the frontier
+    if (s.reviewingPrev) {
+      const frontier = frontierRef.current
+      if (frontier >= questionIds.length) {
+        setFinished(true)
+        return
+      }
+      setCurrentIndex(frontier)
+      setSelected(null)
+      setAnswered(false)
+      setExplaining(false)
+      setSavedFav(false)
+      setReviewingPrev(false)
+      return
+    }
     setCurrentIndex(prev => {
       const next = prev + 1
       if (next >= questionIds.length) {
@@ -74,6 +93,28 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
     setAnswered(false)
     setExplaining(false)
     setSavedFav(false)
+  }
+
+  function goBack() {
+    const s = stateRef.current
+    if (s.finished) return
+    // Determine which index to go to
+    const targetIdx = s.currentIndex - 1
+    if (targetIdx < 0) return
+    // Must have an answer in history for that index
+    const hist = answerHistoryRef.current[targetIdx]
+    if (!hist) return
+
+    stopCountdown()
+    setCurrentIndex(targetIdx)
+    setSelected(hist.selected)
+    setAnswered(true)
+    setExplaining(false)
+    setReviewingPrev(true)
+    // Check if this question is in favorites
+    const q = getQuestion(questionIds[targetIdx])
+    const favs = storage.get('favorites') || []
+    setSavedFav(favs.some(f => f.questionId === q?.id))
   }
 
   function handleExplain() {
@@ -108,13 +149,19 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
     const handler = (e) => {
       const s = stateRef.current
       if (s.finished) return
+      // Left arrow: go back to previous question
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault()
+        goBack()
+        return
+      }
       if (!s.answered) {
         const q = questionIds[s.currentIndex] ? getQuestion(questionIds[s.currentIndex]) : null
         if (!q) return
         const idx = { '1': 0, '2': 1, '3': 2, '4': 3 }[e.key]
         if (idx !== undefined && idx < q.options.length) handleSelect(idx)
       } else {
-        if (e.key === 'Enter' || e.key === ' ') {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowRight') {
           e.preventDefault()
           doAdvance()
         }
@@ -131,7 +178,7 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
   }, [questionIds])
 
   function handleSelect(idx) {
-    if (stateRef.current.answered) return
+    if (stateRef.current.answered || stateRef.current.reviewingPrev) return
     const q = questionIds[stateRef.current.currentIndex] ? getQuestion(questionIds[stateRef.current.currentIndex]) : null
     if (!q) return
 
@@ -160,6 +207,8 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
     }
 
     setResults(prev => [...prev, { questionId: q.id, correct }])
+    answerHistoryRef.current[stateRef.current.currentIndex] = { selected: idx }
+    frontierRef.current = stateRef.current.currentIndex + 1
     startCountdown()
   }
 
@@ -234,35 +283,57 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
       </div>
 
       {answered && (
-        <div className="flex items-center justify-end gap-3">
-          {!savedFav ? (
+        <div className="flex items-center justify-between">
+          <div>
+            {currentIndex > 0 && (
+              <button
+                className="px-4 py-2.5 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg hover:bg-slate-300 dark:hover:bg-slate-600 transition font-medium text-sm"
+                onClick={goBack}
+              >
+                &larr; Prev
+              </button>
+            )}
+          </div>
+          <div className="flex items-center gap-3">
+            {!savedFav ? (
+              <button
+                className="px-4 py-2.5 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg hover:bg-amber-100 hover:text-amber-700 dark:hover:bg-amber-900/30 dark:hover:text-amber-300 transition font-medium text-sm"
+                onClick={handleSave}
+              >
+                &#9734; Save (S)
+              </button>
+            ) : (
+              <span className="px-4 py-2.5 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-lg font-medium text-sm">
+                &#9733; Saved
+              </span>
+            )}
+            {wrong && !explaining && (
+              <button
+                className="px-5 py-2.5 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition font-medium"
+                onClick={handleExplain}
+              >
+                Explain (E)
+              </button>
+            )}
+            {countdown > 0 && (
+              <span className="text-sm text-slate-400 dark:text-slate-500 tabular-nums">{countdown}s</span>
+            )}
             <button
-              className="px-4 py-2.5 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg hover:bg-amber-100 hover:text-amber-700 dark:hover:bg-amber-900/30 dark:hover:text-amber-300 transition font-medium text-sm"
-              onClick={handleSave}
+              className="px-6 py-2.5 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition font-medium"
+              onClick={doAdvance}
             >
-              &#9734; Save (S)
+              {reviewingPrev ? 'Back to Current' : currentIndex + 1 >= questionIds.length ? 'Finish' : 'Next'}
             </button>
-          ) : (
-            <span className="px-4 py-2.5 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-lg font-medium text-sm">
-              &#9733; Saved
-            </span>
-          )}
-          {wrong && !explaining && (
-            <button
-              className="px-5 py-2.5 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition font-medium"
-              onClick={handleExplain}
-            >
-              Explain (E)
-            </button>
-          )}
-          {countdown > 0 && (
-            <span className="text-sm text-slate-400 dark:text-slate-500 tabular-nums">{countdown}s</span>
-          )}
+          </div>
+        </div>
+      )}
+      {!answered && currentIndex > 0 && (
+        <div className="flex items-center">
           <button
-            className="px-6 py-2.5 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition font-medium"
-            onClick={doAdvance}
+            className="px-4 py-2.5 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg hover:bg-slate-300 dark:hover:bg-slate-600 transition font-medium text-sm"
+            onClick={goBack}
           >
-            {currentIndex + 1 >= questionIds.length ? 'Finish' : 'Next'}
+            &larr; Prev
           </button>
         </div>
       )}
