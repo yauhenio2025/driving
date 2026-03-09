@@ -2,7 +2,7 @@ import * as storage from './storage'
 import { categoryToChapters } from '../data/trafficLaw'
 import { getImagePath } from '../data/questions'
 
-const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent'
+const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent'
 const IMAGE_GEN_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image-preview:generateContent'
 
 async function fetchImageAsBase64(question) {
@@ -78,7 +78,7 @@ export async function getExplanation(question, userAnswer, correctAnswer) {
       tools: [{ google_search: {} }],
       generationConfig: {
         temperature: 0.3,
-        thinkingConfig: { thinkingBudget: -1 },
+        thinkingConfig: { thinkingLevel: 'high' },
       },
     }),
   })
@@ -181,7 +181,8 @@ export async function generateDiagram(question, correctAnswer) {
 }
 
 export async function testApiKey(apiKey) {
-  const response = await fetch(`${API_URL}?key=${apiKey}`, {
+  const testUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent'
+  const response = await fetch(`${testUrl}?key=${apiKey}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
