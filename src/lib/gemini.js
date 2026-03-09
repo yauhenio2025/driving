@@ -3,6 +3,7 @@ import { categoryToChapters } from '../data/trafficLaw'
 import { getImagePath } from '../data/questions'
 
 const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent'
+const IMAGE_GEN_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image-preview:generateContent'
 
 async function fetchImageAsBase64(question) {
   const path = getImagePath(question)
@@ -98,6 +99,85 @@ export async function getExplanation(question, userAnswer, correctAnswer) {
 
   storage.set(cacheKey, text)
   return text
+}
+
+function buildDiagramPrompt(question, correctAnswer) {
+  return `You are creating a helpful educational diagram for a Chinese driving test student who answered this question incorrectly.
+
+**Question:** ${question.text}
+**Correct answer:** ${correctAnswer}
+**Category:** ${question.category}
+${question.image_file ? '\nThe question includes a traffic sign/image (attached). Use it as reference for your diagram.' : ''}
+
+Use Google Search (including image search) to find accurate reference images of any Chinese traffic signs, road markings, or dashboard indicators mentioned in the question.
+
+Generate ONE clear, educational diagram that makes the correct answer visually obvious and easy to remember. Pick the single best format for THIS question:
+
+- **Sign comparison**: Show the correct sign next to the most commonly confused similar sign(s). Label each with its meaning. Highlight the key visual difference (color, shape, symbol) that distinguishes them.
+- **Road scenario**: Bird's-eye view showing vehicles, lanes, and arrows for correct movement. Label key distances, speeds, or rules. Show what to do vs. what NOT to do.
+- **Quick-reference infographic**: For penalties, speed limits, or distance rules — arrange the key numbers/thresholds in a clean, memorable visual hierarchy.
+- **Dashboard indicator**: Show the light/symbol large and clear with its meaning labeled.
+- **Procedure diagram**: For multi-step rules (accident handling, breakdown procedure), show a simple numbered flow.
+
+Style requirements:
+- Clean white background
+- Bold, saturated colors (use red for dangers/prohibitions, green for correct actions, yellow for warnings)
+- All text in ENGLISH, large and readable
+- Simple and uncluttered — like the best textbook illustration
+- Include a clear title at the top summarizing what the diagram teaches`
+}
+
+export async function generateDiagram(question, correctAnswer) {
+  const cacheKey = `diagram_${question.id}`
+  const cached = storage.get(cacheKey)
+  if (cached) return cached
+
+  const apiKey = storage.get('settings')?.apiKey
+  if (!apiKey) throw new Error('No API key')
+
+  const parts = [{ text: buildDiagramPrompt(question, correctAnswer) }]
+
+  const image = await fetchImageAsBase64(question)
+  if (image) {
+    parts.push({ inline_data: { mime_type: image.mimeType, data: image.base64 } })
+  }
+
+  const response = await fetch(`${IMAGE_GEN_URL}?key=${apiKey}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      contents: [{ parts }],
+      tools: [{ google_search: { searchTypes: { webSearch: {}, imageSearch: {} } } }],
+      generationConfig: {
+        responseModalities: ['TEXT', 'IMAGE'],
+        imageConfig: { imageSize: '1K' },
+      },
+    }),
+  })
+
+  if (!response.ok) {
+    throw new Error(`Diagram API error: ${response.status}`)
+  }
+
+  const data = await response.json()
+  const responseParts = data.candidates?.[0]?.content?.parts || []
+
+  let imageData = null
+  let caption = ''
+
+  for (const p of responseParts) {
+    if (p.thought) continue
+    if (p.text) caption += p.text
+    if (p.inlineData) {
+      imageData = `data:${p.inlineData.mimeType};base64,${p.inlineData.data}`
+    }
+  }
+
+  if (!imageData) throw new Error('No diagram generated')
+
+  const result = { image: imageData, caption: caption.trim() }
+  try { storage.set(cacheKey, result) } catch (e) { /* localStorage quota exceeded — skip cache */ }
+  return result
 }
 
 export async function testApiKey(apiKey) {

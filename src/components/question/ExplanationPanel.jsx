@@ -1,5 +1,5 @@
 import { useState, useImperativeHandle, forwardRef } from 'react'
-import { getExplanation } from '../../lib/gemini'
+import { getExplanation, generateDiagram } from '../../lib/gemini'
 import * as storage from '../../lib/storage'
 import { Markdown } from '../shared/Markdown'
 
@@ -12,11 +12,16 @@ export const ExplanationPanel = forwardRef(function ExplanationPanel({ question,
     const favs = storage.get('favorites') || []
     return favs.some(f => f.questionId === question.id)
   })
+  const [diagram, setDiagram] = useState(null)
+  const [diagramLoading, setDiagramLoading] = useState(false)
 
   const fetchExplanation = () => {
     setVisible(true)
     setLoading(true)
     setError(null)
+    setDiagramLoading(true)
+
+    // Run text explanation and diagram generation in parallel
     getExplanation(question, userAnswer, correctAnswer)
       .then(text => {
         setExplanation(text)
@@ -25,6 +30,16 @@ export const ExplanationPanel = forwardRef(function ExplanationPanel({ question,
       .catch(err => {
         setError(err.message)
         setLoading(false)
+      })
+
+    generateDiagram(question, correctAnswer)
+      .then(result => {
+        setDiagram(result)
+        setDiagramLoading(false)
+      })
+      .catch(() => {
+        // Diagram is a bonus — fail silently
+        setDiagramLoading(false)
       })
   }
 
@@ -85,6 +100,31 @@ export const ExplanationPanel = forwardRef(function ExplanationPanel({ question,
       )}
       {explanation && (
         <Markdown text={explanation} className="text-slate-700 dark:text-slate-300" />
+      )}
+
+      {/* Visual Aid diagram from Nano Banana 2 */}
+      {(diagramLoading || diagram) && (
+        <div className="mt-4 pt-4 border-t border-indigo-200 dark:border-indigo-700">
+          <h5 className="font-medium text-indigo-700 dark:text-indigo-300 mb-2">Visual Aid</h5>
+          {diagramLoading && !diagram && (
+            <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-300 text-sm">
+              <div className="w-3.5 h-3.5 border-2 border-indigo-400 border-t-transparent rounded-full animate-spin" />
+              Generating diagram...
+            </div>
+          )}
+          {diagram && (
+            <div>
+              <img
+                src={diagram.image}
+                alt="Visual explanation diagram"
+                className="rounded-lg max-w-full border border-slate-200 dark:border-slate-600"
+              />
+              {diagram.caption && (
+                <p className="text-xs text-slate-500 dark:text-slate-400 mt-1.5 italic">{diagram.caption}</p>
+              )}
+            </div>
+          )}
+        </div>
       )}
     </div>
   )

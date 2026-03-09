@@ -56,14 +56,16 @@
 
 ### Gemini Explanations
 - **Status**: Active
-- **Description**: Auto-triggered AI explanations on wrong answers with pedagogical structure: contrastive error diagnosis, law citation with safety rationale, vivid mnemonic, and self-test question
+- **Description**: Auto-triggered AI explanations on wrong answers with pedagogical structure (contrastive error diagnosis, law citation, mnemonic, self-test) plus Nano Banana 2 visual aid diagrams
 - **Entry Points**:
   - `src/lib/gemini.js:22-56` - Pedagogical prompt with 4-section structure (misconception diagnosis, rule + rationale, mnemonic, self-test)
-  - `src/lib/gemini.js:58-101` - Gemini API with Google Search grounding and caching
-  - `src/components/question/ExplanationPanel.jsx:1-92` - forwardRef explanation panel with save-to-favorites button
+  - `src/lib/gemini.js:58-101` - Gemini 2.5 Pro API with Google Search grounding and caching
+  - `src/lib/gemini.js:103-145` - Nano Banana 2 diagram prompt (sign comparisons, road scenarios, infographics)
+  - `src/lib/gemini.js:147-190` - Gemini 3.1 Flash Image API call with Image Search grounding
+  - `src/components/question/ExplanationPanel.jsx:1-120` - Explanation panel with parallel text + diagram generation
   - `src/components/study/StudySession.jsx:220-227` - Auto-trigger on wrong answers
   - `src/data/trafficLaw.js:1-137` - Structured traffic law text with category mapping
-- **Dependencies**: Gemini 2.5 Pro API key, trafficLaw.js
+- **Dependencies**: Gemini API key (2.5 Pro for text, 3.1 Flash Image for diagrams), trafficLaw.js
 - **Added**: 2026-03-07 | **Modified**: 2026-03-09
 
 ### Favorites
