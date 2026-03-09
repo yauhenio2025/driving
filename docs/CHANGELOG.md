@@ -10,6 +10,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 - Auto-advance countdown bug: CategoryPage recreated questionIds array on every render, causing StudySession to remount and reset state. Fixed by storing shuffled IDs in useState ([src/pages/CategoryPage.jsx](src/pages/CategoryPage.jsx))
 - Restored React StrictMode ([src/main.jsx](src/main.jsx))
 
+### Changed
+- Revamped explanation prompt with research-backed pedagogical structure: contrastive error diagnosis, safety rationale, vivid mnemonics, and self-test questions ([src/lib/gemini.js](src/lib/gemini.js))
+- Explanations now auto-trigger immediately on wrong answers instead of requiring manual "Explain (E)" click ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
+- Auto-advance countdown only starts on correct answers; wrong answers pause for reading the explanation ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
+- Navigating back to a wrong answer re-shows the cached explanation automatically ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
+
 ### Added
 - Previous question navigation: Left arrow key or Prev button to go back and review answered questions in their answered state, with "Back to Current" to return to the frontier ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
 - Right arrow key as additional shortcut for advancing to next question ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))

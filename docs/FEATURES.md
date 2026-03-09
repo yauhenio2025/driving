@@ -56,13 +56,15 @@
 
 ### Gemini Explanations
 - **Status**: Active
-- **Description**: On-demand AI explanations with Google Search grounding and Chinese traffic law citations
+- **Description**: Auto-triggered AI explanations on wrong answers with pedagogical structure: contrastive error diagnosis, law citation with safety rationale, vivid mnemonic, and self-test question
 - **Entry Points**:
-  - `src/lib/gemini.js:1-80` - Gemini API with Google Search grounding and caching
-  - `src/components/question/ExplanationPanel.jsx:1-93` - forwardRef explanation panel with save-to-favorites button
-  - `src/data/trafficLaw.js:1-300` - Structured traffic law text with category mapping
+  - `src/lib/gemini.js:22-56` - Pedagogical prompt with 4-section structure (misconception diagnosis, rule + rationale, mnemonic, self-test)
+  - `src/lib/gemini.js:58-101` - Gemini API with Google Search grounding and caching
+  - `src/components/question/ExplanationPanel.jsx:1-92` - forwardRef explanation panel with save-to-favorites button
+  - `src/components/study/StudySession.jsx:220-227` - Auto-trigger on wrong answers
+  - `src/data/trafficLaw.js:1-137` - Structured traffic law text with category mapping
 - **Dependencies**: Gemini 2.5 Pro API key, trafficLaw.js
-- **Added**: 2026-03-07 | **Modified**: 2026-03-07
+- **Added**: 2026-03-07 | **Modified**: 2026-03-09
 
 ### Favorites
 - **Status**: Active

@@ -25,25 +25,34 @@ function buildPrompt(question, userAnswer, correctAnswer) {
     ? `\nRELEVANT LAW ARTICLES FROM CHINA'S ROAD TRAFFIC SAFETY LAW (2003):\n${relevantChapters.slice(0, 10).join('\n')}`
     : ''
 
-  return `You're helping a student studying for the Chinese driving test (Subject 1 / 科目一). They just got this question wrong. Write in English only.
-${question.image_file ? '\nAn image is attached — LOOK AT IT CAREFULLY before responding.\n' : ''}
+  return `You are a driving test tutor helping a student pass the Chinese driving exam (Subject 1 / 科目一). They just answered this question WRONG. Write in English only.
+${question.image_file ? '\nAn image is attached — EXAMINE IT CAREFULLY. Describe what you see in the image and how it relates to the answer.\n' : ''}
 **Question:** ${question.text}
 **Options:** ${question.options.map((o, i) => `${i + 1}) ${o}`).join(' | ')}
-**They picked:** ${userAnswer}
+**Student chose:** ${userAnswer}
 **Correct answer:** ${correctAnswer}
 **Category:** ${question.category}
 ${lawContext}
 
-Write a natural, conversational explanation — like a knowledgeable friend explaining over coffee, not a textbook. Use markdown formatting (bold, headers, bullet points) to make it scannable.
+Use Google Search to look up the ACTUAL current Chinese traffic regulation that governs this question. Cite the specific regulation/article number if found.
 
-Structure it roughly like this but DO NOT use numbered sections or mechanical headers like "1) Why the correct answer is right". Flow naturally:
-- Start by directly explaining what the right answer is and why — cite a specific law article if relevant
-- Then briefly say why their choice was wrong (be specific, not generic)
-- End with a **memorable trick, mnemonic, or vivid mental image** to lock it in — this is the most important part. Be creative. Make it stick.
+Write a clear, punchy explanation using markdown (bold, bullets). No filler, no greetings. Go straight in. Follow this EXACT structure with these headers:
+
+**Why "${userAnswer}" seems right (but isn't)**
+Start here. Diagnose the specific trap or misconception. Name the reasoning that likely led to this wrong choice — "You probably picked this because..." Lean into the surprise of being wrong. Be specific to THIS question, not generic.
+
+**The real rule (and why it exists)**
+State the correct answer, then cite the specific Chinese traffic law article or regulation. Then explain the SAFETY RATIONALE — why does this rule exist? What accident/danger does it prevent? Connect the abstract rule to a real-world consequence. This turns a rote fact into logical understanding.
+
+**Remember it**
+Create ONE vivid, specific, slightly absurd mental image or mnemonic for THIS question. Make it visual, emotional, or funny — bizarre imagery sticks better than plain facts. Be creative and specific, not generic. Examples of good techniques: a mini-scenario ("Imagine you're..."), a visual association, a rhyme, an exaggerated comparison.
+
+**Test yourself**
+Write ONE brief follow-up question (different from the original) that tests whether the student truly understood the underlying principle, not just memorized the answer. Include the answer in parentheses.
 
 If the image has Chinese characters, translate ALL of them (e.g. "王平 = Wangping").
 
-Keep it under 200 words. Be concise and punchy — no filler, no "Let's review this question", no "Hello". Just go straight into the explanation.`
+Keep the total explanation under 250 words. Every sentence must earn its place.`
 }
 
 export async function getExplanation(question, userAnswer, correctAnswer) {

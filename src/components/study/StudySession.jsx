@@ -109,12 +109,19 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
     setCurrentIndex(targetIdx)
     setSelected(hist.selected)
     setAnswered(true)
-    setExplaining(false)
     setReviewingPrev(true)
     // Check if this question is in favorites
     const q = getQuestion(questionIds[targetIdx])
     const favs = storage.get('favorites') || []
     setSavedFav(favs.some(f => f.questionId === q?.id))
+    // If it was a wrong answer, re-show explanation (will load from cache)
+    const wasWrong = q && hist.selected !== q.correct_index
+    if (wasWrong) {
+      setExplaining(true)
+      setTimeout(() => explanationRef.current?.fetchExplanation(), 50)
+    } else {
+      setExplaining(false)
+    }
   }
 
   function handleExplain() {
@@ -209,7 +216,15 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
     setResults(prev => [...prev, { questionId: q.id, correct }])
     answerHistoryRef.current[stateRef.current.currentIndex] = { selected: idx }
     frontierRef.current = stateRef.current.currentIndex + 1
-    startCountdown()
+
+    // Auto-trigger explanation on wrong answers (immediate elaborative feedback)
+    if (!correct) {
+      setExplaining(true)
+      // Small delay to let ExplanationPanel mount before triggering fetch
+      setTimeout(() => explanationRef.current?.fetchExplanation(), 50)
+    } else {
+      startCountdown()
+    }
   }
 
   if (!questionIds.length) {
