@@ -101,33 +101,32 @@ export async function getExplanation(question, userAnswer, correctAnswer) {
   return text
 }
 
-function buildDiagramPrompt(question, correctAnswer) {
-  return `You are creating a helpful educational diagram for a Chinese driving test student who answered this question incorrectly.
+function buildDiagramPrompt(question, correctAnswer, explanationText) {
+  return `You are creating a helpful educational diagram for a Chinese driving test student. They answered this question wrong, and a tutor has already written the text explanation below. Your job is to create a VISUAL that reinforces the tutor's key points.
 
 **Question:** ${question.text}
 **Correct answer:** ${correctAnswer}
 **Category:** ${question.category}
-${question.image_file ? '\nThe question includes a traffic sign/image (attached). Use it as reference for your diagram.' : ''}
+${question.image_file ? '\nThe question includes a traffic sign/image (attached). Use it as reference.' : ''}
 
-Use Google Search (including image search) to find accurate reference images of any Chinese traffic signs, road markings, or dashboard indicators mentioned in the question.
+**TUTOR'S EXPLANATION (this is what the student is reading — your diagram must reinforce these specific points):**
+${explanationText}
 
-Generate ONE clear, educational diagram that makes the correct answer visually obvious and easy to remember. Pick the single best format for THIS question:
+Use Google Search (including image search) to find accurate reference images of any Chinese traffic signs, road markings, or dashboard indicators mentioned.
 
-- **Sign comparison**: Show the correct sign next to the most commonly confused similar sign(s). Label each with its meaning. Highlight the key visual difference (color, shape, symbol) that distinguishes them.
-- **Road scenario**: Bird's-eye view showing vehicles, lanes, and arrows for correct movement. Label key distances, speeds, or rules. Show what to do vs. what NOT to do.
-- **Quick-reference infographic**: For penalties, speed limits, or distance rules — arrange the key numbers/thresholds in a clean, memorable visual hierarchy.
-- **Dashboard indicator**: Show the light/symbol large and clear with its meaning labeled.
-- **Procedure diagram**: For multi-step rules (accident handling, breakdown procedure), show a simple numbered flow.
+Generate ONE clear diagram that visually reinforces the tutor's explanation. Read the explanation carefully and pick the format that best illustrates its KEY INSIGHT:
 
-Style requirements:
-- Clean white background
-- Bold, saturated colors (use red for dangers/prohibitions, green for correct actions, yellow for warnings)
-- All text in ENGLISH, large and readable
-- Simple and uncluttered — like the best textbook illustration
-- Include a clear title at the top summarizing what the diagram teaches`
+- **Sign comparison**: If the explanation contrasts two similar signs, show them side by side with the distinguishing feature highlighted (color, shape, symbol).
+- **Road scenario**: If the explanation describes a driving situation, show a bird's-eye view with vehicles, lanes, arrows, and labeled rules (what to do vs. NOT do).
+- **Quick-reference infographic**: If the explanation cites specific numbers (speeds, distances, fines, points), arrange them in a memorable visual hierarchy.
+- **Dashboard indicator**: If it's about a dashboard light, show it large and labeled.
+- **Procedure diagram**: If it's about a multi-step procedure, show a numbered flow.
+- **Mnemonic illustration**: If the tutor's "Remember it" mnemonic is especially vivid, you may illustrate THAT scene directly to make it even more memorable.
+
+Style: Clean white background. Bold colors (red=danger/prohibition, green=correct, yellow=warning). English text only, large and readable. Simple, uncluttered, textbook quality. Clear title at top.`
 }
 
-export async function generateDiagram(question, correctAnswer) {
+export async function generateDiagram(question, correctAnswer, explanationText) {
   const cacheKey = `diagram_${question.id}`
   const cached = storage.get(cacheKey)
   if (cached) return cached
@@ -135,7 +134,7 @@ export async function generateDiagram(question, correctAnswer) {
   const apiKey = storage.get('settings')?.apiKey
   if (!apiKey) throw new Error('No API key')
 
-  const parts = [{ text: buildDiagramPrompt(question, correctAnswer) }]
+  const parts = [{ text: buildDiagramPrompt(question, correctAnswer, explanationText) }]
 
   const image = await fetchImageAsBase64(question)
   if (image) {

@@ -15,7 +15,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 - Explanations now auto-trigger immediately on wrong answers instead of requiring manual "Explain (E)" click ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
 - Auto-advance countdown only starts on correct answers; wrong answers pause for reading the explanation ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
 - Navigating back to a wrong answer re-shows the cached explanation automatically ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
-- Added Nano Banana 2 (Gemini 3.1 Flash Image) visual aid generation alongside text explanations — generates educational diagrams (sign comparisons, road scenarios, infographics) in parallel with text explanation ([src/lib/gemini.js](src/lib/gemini.js), [src/components/question/ExplanationPanel.jsx](src/components/question/ExplanationPanel.jsx))
+- Added Nano Banana 2 (Gemini 3.1 Flash Image) visual aid generation — generates educational diagrams (sign comparisons, road scenarios, infographics) informed by the text explanation via sequential pipeline ([src/lib/gemini.js](src/lib/gemini.js), [src/components/question/ExplanationPanel.jsx](src/components/question/ExplanationPanel.jsx))
 
 ### Added
 - Previous question navigation: Left arrow key or Prev button to go back and review answered questions in their answered state, with "Back to Current" to return to the frontier ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))

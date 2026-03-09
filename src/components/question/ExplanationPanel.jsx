@@ -19,26 +19,29 @@ export const ExplanationPanel = forwardRef(function ExplanationPanel({ question,
     setVisible(true)
     setLoading(true)
     setError(null)
-    setDiagramLoading(true)
 
-    // Run text explanation and diagram generation in parallel
+    // Sequential pipeline: text explanation first, then feed it to Nano Banana 2 for the diagram
     getExplanation(question, userAnswer, correctAnswer)
       .then(text => {
         setExplanation(text)
         setLoading(false)
+        // Now generate diagram informed by the explanation text
+        setDiagramLoading(true)
+        return generateDiagram(question, correctAnswer, text)
+      })
+      .then(result => {
+        if (result) {
+          setDiagram(result)
+          setDiagramLoading(false)
+        }
       })
       .catch(err => {
-        setError(err.message)
-        setLoading(false)
-      })
-
-    generateDiagram(question, correctAnswer)
-      .then(result => {
-        setDiagram(result)
-        setDiagramLoading(false)
-      })
-      .catch(() => {
-        // Diagram is a bonus — fail silently
+        if (!explanation) {
+          // Text explanation failed
+          setError(err.message)
+          setLoading(false)
+        }
+        // Diagram failure is silent
         setDiagramLoading(false)
       })
   }
