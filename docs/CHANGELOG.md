@@ -5,6 +5,9 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+### Changed
+- Auto-advance countdown reduced from 5s to 3s; Space bar now pauses the timer to linger, Right arrow/Enter advance immediately ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
+
 ### Fixed
 - **CRITICAL: 419 out of 562 MC questions had wrong correct answers.** Scraper assumed scramble value 0 = correct answer, but scramble values are just display-order shuffling. Re-verified all MC questions against the live site. ([data/questions.json](data/questions.json), [scripts/fix-answers.py](scripts/fix-answers.py))
 - Auto-advance countdown bug: CategoryPage recreated questionIds array on every render, causing StudySession to remount and reset state. Fixed by storing shuffled IDs in useState ([src/pages/CategoryPage.jsx](src/pages/CategoryPage.jsx))
@@ -20,7 +23,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 ### Added
 - Previous question navigation: Left arrow key or Prev button to go back and review answered questions in their answered state, with "Back to Current" to return to the frontier ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
 - Right arrow key as additional shortcut for advancing to next question ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
-- 5-second auto-advance countdown after answering (paused when explaining) ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
+- 3-second auto-advance countdown after correct answer; Space to pause, Right/Enter to advance ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
 - "Explain (E)" button on wrong answers with Gemini AI + Google Search grounding ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx), [src/components/question/ExplanationPanel.jsx](src/components/question/ExplanationPanel.jsx))
 - On-demand explanation triggering via forwardRef + useImperativeHandle ([src/components/question/ExplanationPanel.jsx](src/components/question/ExplanationPanel.jsx))
 - Google Search grounding in Gemini API calls for regulation lookups ([src/lib/gemini.js](src/lib/gemini.js))

@@ -39,7 +39,7 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
 
   function startCountdown() {
     clearInterval(timerRef.current)
-    let secs = 5
+    let secs = 3
     setCountdown(secs)
     timerRef.current = setInterval(() => {
       secs--
@@ -168,9 +168,13 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
         const idx = { '1': 0, '2': 1, '3': 2, '4': 3 }[e.key]
         if (idx !== undefined && idx < q.options.length) handleSelect(idx)
       } else {
-        if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowRight') {
+        if (e.key === 'Enter' || e.key === 'ArrowRight') {
           e.preventDefault()
           doAdvance()
+        }
+        if (e.key === ' ') {
+          e.preventDefault()
+          stopCountdown()
         }
         if (e.key.toLowerCase() === 'e' && !s.explaining) {
           handleExplain()

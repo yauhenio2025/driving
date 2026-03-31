@@ -106,7 +106,7 @@
 
 ### Keyboard Shortcuts
 - **Status**: Active
-- **Description**: 1-4 for MC options, R/W for T/F, Enter/Space/Right for next, Left for prev, E to explain, S to save
+- **Description**: 1-4 for MC options, R/W for T/F, Enter/Right for next, Space to pause timer, Left for prev, E to explain, S to save
 - **Entry Points**:
   - `src/components/study/StudySession.jsx:153-183` - Study mode shortcuts (1-4, Enter/Space/ArrowRight, ArrowLeft, E, S)
   - `src/components/test/TestSimulation.jsx:168-185` - Test mode shortcuts (1-4, arrows, F)
