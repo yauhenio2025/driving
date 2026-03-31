@@ -150,6 +150,7 @@ export async function generateDiagram(question, correctAnswer, explanationText) 
       generationConfig: {
         responseModalities: ['TEXT', 'IMAGE'],
         imageConfig: { imageSize: '1K' },
+        thinkingConfig: { thinkingLevel: 'high' },
       },
     }),
   })
