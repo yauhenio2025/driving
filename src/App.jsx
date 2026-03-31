@@ -8,6 +8,7 @@ import { FavoritesPage } from './pages/FavoritesPage'
 import { GalleryPage } from './pages/GalleryPage'
 import { SettingsPage } from './pages/SettingsPage'
 import * as storage from './lib/storage'
+import { migrateFromLocalStorage } from './lib/diagramStore'
 import { computeStudyStreak, computeMasteryProgress } from './lib/stats'
 import { questions } from './data/questions'
 
@@ -43,6 +44,9 @@ export default function App() {
     document.documentElement.classList.toggle('dark', darkMode)
     storage.update('settings', (s) => ({ ...(s || {}), darkMode }))
   }, [darkMode])
+
+  // Migrate diagram storage from localStorage to IndexedDB (runs once)
+  useEffect(() => { migrateFromLocalStorage() }, [])
 
   const quickStats = useMemo(() => {
     const log = storage.get('answerLog') || []

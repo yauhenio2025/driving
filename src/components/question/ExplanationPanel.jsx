@@ -60,7 +60,6 @@ export const ExplanationPanel = forwardRef(function ExplanationPanel({ question,
         userAnswer,
         correctAnswer,
         explanation,
-        diagram: diagram || storage.get(`diagram_${question.id}`) || null,
         savedAt: new Date().toISOString(),
       }]
     })

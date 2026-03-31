@@ -42,4 +42,6 @@ export function clearAll() {
     if (k.startsWith(PREFIX)) keys.push(k)
   }
   keys.forEach(k => localStorage.removeItem(k))
+  // Also clear IndexedDB diagram store
+  indexedDB.deleteDatabase('drivingApp_diagrams')
 }

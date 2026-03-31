@@ -1,4 +1,5 @@
 import * as storage from './storage'
+import { getDiagram as getCachedDiagram, saveDiagram as cacheDiagram } from './diagramStore'
 import { categoryToChapters } from '../data/trafficLaw'
 import { getImagePath } from '../data/questions'
 
@@ -97,7 +98,7 @@ export async function getExplanation(question, userAnswer, correctAnswer) {
 
   if (!text) throw new Error('Empty response from Gemini')
 
-  storage.set(cacheKey, text)
+  try { storage.set(cacheKey, text) } catch { /* quota exceeded — skip cache */ }
   return text
 }
 
@@ -127,8 +128,8 @@ Style: Clean white background. Bold colors (red=danger/prohibition, green=correc
 }
 
 export async function generateDiagram(question, correctAnswer, explanationText) {
-  const cacheKey = `diagram_${question.id}`
-  const cached = storage.get(cacheKey)
+  // Check IndexedDB cache first (migrated from localStorage)
+  const cached = await getCachedDiagram(question.id)
   if (cached) return cached
 
   const apiKey = storage.get('settings')?.apiKey
@@ -176,7 +177,8 @@ export async function generateDiagram(question, correctAnswer, explanationText) 
   if (!imageData) throw new Error('No diagram generated')
 
   const result = { image: imageData, caption: caption.trim() }
-  try { storage.set(cacheKey, result) } catch (e) { /* localStorage quota exceeded — skip cache */ }
+  // Save to IndexedDB (no quota issues unlike localStorage)
+  await cacheDiagram(question.id, result)
   return result
 }
 

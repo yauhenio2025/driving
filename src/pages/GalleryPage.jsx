@@ -1,19 +1,45 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { getQuestion, getImagePath } from '../data/questions'
 import { Badge } from '../components/shared/Badge'
 import { Markdown } from '../components/shared/Markdown'
 import * as storage from '../lib/storage'
+import { getDiagram } from '../lib/diagramStore'
 
 export function GalleryPage() {
   const [favorites, setFavorites] = useState(() => storage.get('favorites') || [])
+  const [diagrams, setDiagrams] = useState({})
+  const [loading, setLoading] = useState(true)
   const [selected, setSelected] = useState(null)
 
-  const withDiagrams = favorites.filter(f => f.diagram?.image)
+  // Load diagrams from IndexedDB for all favorites
+  useEffect(() => {
+    async function loadDiagrams() {
+      const loaded = {}
+      for (const fav of favorites) {
+        const d = await getDiagram(fav.questionId)
+        if (d) loaded[fav.questionId] = d
+      }
+      setDiagrams(loaded)
+      setLoading(false)
+    }
+    loadDiagrams()
+  }, [favorites])
+
+  const withDiagrams = favorites.filter(f => diagrams[f.questionId])
 
   const remove = (questionId) => {
     storage.update('favorites', (favs) => (favs || []).filter(f => f.questionId !== questionId))
     setFavorites(prev => prev.filter(f => f.questionId !== questionId))
     if (selected?.questionId === questionId) setSelected(null)
+  }
+
+  if (loading) {
+    return (
+      <div className="text-center py-16">
+        <div className="w-6 h-6 border-2 border-indigo-400 border-t-transparent rounded-full animate-spin mx-auto mb-3" />
+        <p className="text-slate-500 dark:text-slate-400">Loading diagrams...</p>
+      </div>
+    )
   }
 
   if (withDiagrams.length === 0) {
@@ -32,8 +58,9 @@ export function GalleryPage() {
   // Detail view
   if (selected) {
     const fav = selected
+    const diagram = diagrams[fav.questionId]
     const q = getQuestion(fav.questionId)
-    if (!q) { setSelected(null); return null }
+    if (!q || !diagram) { setSelected(null); return null }
     const imgPath = getImagePath(q)
 
     return (
@@ -49,12 +76,12 @@ export function GalleryPage() {
           {/* Diagram */}
           <div className="p-4 bg-slate-50 dark:bg-slate-900/50">
             <img
-              src={fav.diagram.image}
+              src={diagram.image}
               alt="Visual explanation diagram"
               className="rounded-lg max-w-full mx-auto border border-slate-200 dark:border-slate-600"
             />
-            {fav.diagram.caption && (
-              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2 italic text-center">{fav.diagram.caption}</p>
+            {diagram.caption && (
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2 italic text-center">{diagram.caption}</p>
             )}
           </div>
 
@@ -116,7 +143,8 @@ export function GalleryPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {withDiagrams.map(fav => {
           const q = getQuestion(fav.questionId)
-          if (!q) return null
+          const diagram = diagrams[fav.questionId]
+          if (!q || !diagram) return null
           return (
             <button
               key={fav.questionId}
@@ -125,7 +153,7 @@ export function GalleryPage() {
             >
               <div className="aspect-[4/3] overflow-hidden bg-slate-50 dark:bg-slate-900/50">
                 <img
-                  src={fav.diagram.image}
+                  src={diagram.image}
                   alt="Visual aid diagram"
                   className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform"
                 />

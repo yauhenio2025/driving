@@ -1,12 +1,20 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { getQuestion, getImagePath } from '../data/questions'
 import { Badge } from '../components/shared/Badge'
 import { Markdown } from '../components/shared/Markdown'
 import * as storage from '../lib/storage'
+import { getDiagram } from '../lib/diagramStore'
 
 export function FavoritesPage() {
   const [favorites, setFavorites] = useState(() => storage.get('favorites') || [])
   const [expanded, setExpanded] = useState(null)
+  const [diagram, setDiagram] = useState(null)
+
+  // Load diagram from IndexedDB when a favorite is expanded
+  useEffect(() => {
+    if (!expanded) { setDiagram(null); return }
+    getDiagram(expanded).then(d => setDiagram(d))
+  }, [expanded])
 
   const remove = (questionId) => {
     storage.update('favorites', (favs) => (favs || []).filter(f => f.questionId !== questionId))
@@ -83,6 +91,20 @@ export function FavoritesPage() {
                     <div className="p-4 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-200 dark:border-indigo-800">
                       <h4 className="font-semibold text-indigo-800 dark:text-indigo-200 mb-2">Explanation</h4>
                       <Markdown text={fav.explanation} className="text-slate-700 dark:text-slate-300" />
+                    </div>
+                  )}
+
+                  {diagram && (
+                    <div className="mt-3 p-4 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700">
+                      <h4 className="font-medium text-indigo-700 dark:text-indigo-300 mb-2">Visual Aid</h4>
+                      <img
+                        src={diagram.image}
+                        alt="Visual explanation diagram"
+                        className="rounded-lg max-w-full border border-slate-200 dark:border-slate-600"
+                      />
+                      {diagram.caption && (
+                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-1.5 italic">{diagram.caption}</p>
+                      )}
                     </div>
                   )}
 

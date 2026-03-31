@@ -82,11 +82,21 @@
 - **Status**: Active
 - **Description**: Visual gallery of saved AI-generated diagrams with full question context (wrong answer, correct answer, explanation)
 - **Entry Points**:
-  - `src/pages/GalleryPage.jsx:1-136` - Grid view of diagram thumbnails with detail drill-down
+  - `src/pages/GalleryPage.jsx:1-160` - Grid view with async IndexedDB diagram loading and detail drill-down
   - `src/App.jsx:10` - Gallery page import
-  - `src/App.jsx:22` - Gallery nav item
-  - `src/App.jsx:65` - Gallery route
-- **Dependencies**: localStorage favorites key (diagram field), questions.js
+  - `src/App.jsx:23` - Gallery nav item
+  - `src/App.jsx:67` - Gallery route
+- **Dependencies**: IndexedDB diagram store, localStorage favorites key, questions.js
+- **Added**: 2026-03-31
+
+### Diagram Storage (IndexedDB)
+- **Status**: Active
+- **Description**: IndexedDB-backed storage for generated diagram images, replacing localStorage to avoid 5MB quota issues
+- **Entry Points**:
+  - `src/lib/diagramStore.js:1-112` - IndexedDB wrapper (get, save, getAllKeys, clearAll, migration)
+  - `src/lib/gemini.js:130-182` - Diagram generation with IndexedDB caching
+  - `src/App.jsx:49` - Migration on startup
+- **Dependencies**: IndexedDB API
 - **Added**: 2026-03-31
 
 ## UI

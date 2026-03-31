@@ -8,8 +8,15 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 ### Added
 - R/W keyboard shortcuts for Right/Wrong on true/false questions in study mode ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
 
+### Fixed
+- **CRITICAL: Favorites silently failing to save due to localStorage quota.** Base64 diagram images (~500KB-1MB each) were embedded in favorites, quickly exceeding the 5MB localStorage limit. Moved diagram storage to IndexedDB (hundreds of MB capacity). Favorites now store only metadata; diagrams are loaded from IndexedDB on demand. ([src/lib/diagramStore.js](src/lib/diagramStore.js), [src/lib/gemini.js](src/lib/gemini.js), [src/components/question/ExplanationPanel.jsx](src/components/question/ExplanationPanel.jsx), [src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
+- Added try/catch to explanation cache write in Gemini API to prevent quota errors from breaking the flow ([src/lib/gemini.js](src/lib/gemini.js))
+- Reset All Progress now also clears IndexedDB diagram store ([src/lib/storage.js](src/lib/storage.js))
+
 ### Changed
 - Enabled high thinking level on Nano Banana 2 diagram generation for better prompt adherence and output quality ([src/lib/gemini.js](src/lib/gemini.js))
+- Favorites page now shows diagrams from IndexedDB in expanded view ([src/pages/FavoritesPage.jsx](src/pages/FavoritesPage.jsx))
+- Gallery page loads diagrams from IndexedDB instead of favorites data ([src/pages/GalleryPage.jsx](src/pages/GalleryPage.jsx))
 - Diagram Gallery page: visual grid of saved AI-generated diagrams with full question context (wrong answer, correct answer, explanation) and detail drill-down ([src/pages/GalleryPage.jsx](src/pages/GalleryPage.jsx), [src/App.jsx](src/App.jsx))
 - Saving favorites now includes diagram data alongside text explanation ([src/components/question/ExplanationPanel.jsx](src/components/question/ExplanationPanel.jsx), [src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
 
