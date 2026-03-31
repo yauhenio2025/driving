@@ -5,6 +5,10 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+### Added
+- Diagram Gallery page: visual grid of saved AI-generated diagrams with full question context (wrong answer, correct answer, explanation) and detail drill-down ([src/pages/GalleryPage.jsx](src/pages/GalleryPage.jsx), [src/App.jsx](src/App.jsx))
+- Saving favorites now includes diagram data alongside text explanation ([src/components/question/ExplanationPanel.jsx](src/components/question/ExplanationPanel.jsx), [src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
+
 ### Changed
 - Auto-advance countdown reduced from 5s to 3s; Space bar now pauses the timer to linger, Right arrow/Enter advance immediately ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
 

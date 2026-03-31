@@ -133,6 +133,7 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
   function handleSave() {
     if (!question || selected === null) return
     const cachedExplanation = storage.get(`explanation_${question.id}`)
+    const cachedDiagram = storage.get(`diagram_${question.id}`)
     storage.update('favorites', (favs) => {
       const list = favs || []
       if (list.some(f => f.questionId === question.id)) return list
@@ -141,6 +142,7 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
         userAnswer: question.options[selected],
         correctAnswer: question.correct_answer,
         explanation: cachedExplanation || null,
+        diagram: cachedDiagram || null,
         savedAt: new Date().toISOString(),
       }]
     })

@@ -70,12 +70,24 @@
 
 ### Favorites
 - **Status**: Active
-- **Description**: Save questions with good explanations for later review
+- **Description**: Save questions with good explanations and diagrams for later review
 - **Entry Points**:
   - `src/pages/FavoritesPage.jsx:1-107` - Browse/expand/remove saved explanations
-  - `src/components/question/ExplanationPanel.jsx:33-50` - Save/unsave toggle button
+  - `src/components/question/ExplanationPanel.jsx:33-50` - Save/unsave toggle button (now includes diagram data)
+  - `src/components/study/StudySession.jsx:135-148` - Save handler with diagram cache inclusion
 - **Dependencies**: localStorage favorites key, questions.js
-- **Added**: 2026-03-07
+- **Added**: 2026-03-07 | **Modified**: 2026-03-31
+
+### Diagram Gallery
+- **Status**: Active
+- **Description**: Visual gallery of saved AI-generated diagrams with full question context (wrong answer, correct answer, explanation)
+- **Entry Points**:
+  - `src/pages/GalleryPage.jsx:1-136` - Grid view of diagram thumbnails with detail drill-down
+  - `src/App.jsx:10` - Gallery page import
+  - `src/App.jsx:22` - Gallery nav item
+  - `src/App.jsx:65` - Gallery route
+- **Dependencies**: localStorage favorites key (diagram field), questions.js
+- **Added**: 2026-03-31
 
 ## UI
 
