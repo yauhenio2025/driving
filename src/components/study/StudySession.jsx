@@ -167,7 +167,7 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
       if (!s.answered) {
         const q = questionIds[s.currentIndex] ? getQuestion(questionIds[s.currentIndex]) : null
         if (!q) return
-        const idx = { '1': 0, '2': 1, '3': 2, '4': 3 }[e.key]
+        const idx = { '1': 0, '2': 1, '3': 2, '4': 3, 'r': 0, 'w': 1 }[e.key.toLowerCase()]
         if (idx !== undefined && idx < q.options.length) handleSelect(idx)
       } else {
         if (e.key === 'Enter' || e.key === 'ArrowRight') {
