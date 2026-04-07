@@ -1476,8 +1476,8 @@
       "Water temperature meter",
       "Ammeter"
     ],
-    "correct_answer": "Pressure meter",
-    "correct_index": 0
+    "correct_answer": "Fuel gauge",
+    "correct_index": 1
   },
   {
     "category": "Controls and Meters",
@@ -1626,8 +1626,8 @@
       "The handbrake",
       "The gear lever"
     ],
-    "correct_answer": "The air throttle lever",
-    "correct_index": 1
+    "correct_answer": "The handbrake",
+    "correct_index": 2
   },
   {
     "category": "Controls and Meters",
@@ -10808,8 +10808,8 @@
       "Vehicles can turn left or make a U turn ahead",
       "Vehicles can go straight or make a U turn ahead"
     ],
-    "correct_answer": "Vehicles can go straight or make a U turn ahead",
-    "correct_index": 3
+    "correct_answer": "Vehicles can turn left or make a U turn ahead",
+    "correct_index": 2
   },
   {
     "category": "Road markings 2",
@@ -11108,8 +11108,8 @@
       "Maintain distance sign",
       "Label of test inspection"
     ],
-    "correct_answer": "Maintain distance sign",
-    "correct_index": 2
+    "correct_answer": "Label of test inspection",
+    "correct_index": 3
   },
   {
     "category": "Rules",
@@ -14584,8 +14584,8 @@
       "Drive at a reduced speed",
       "Maintain the normal speed"
     ],
-    "correct_answer": "Concentrate his or her attention and drive with care",
-    "correct_index": 1
+    "correct_answer": "Immediately reduce speed and stop at the road side",
+    "correct_index": 0
   },
   {
     "category": "Weather",
