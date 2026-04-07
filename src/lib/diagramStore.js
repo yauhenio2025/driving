@@ -1,44 +1,28 @@
-const DB_NAME = 'drivingApp_diagrams'
-const STORE_NAME = 'diagrams'
-const DB_VERSION = 1
-
-function openDB() {
-  return new Promise((resolve, reject) => {
-    const request = indexedDB.open(DB_NAME, DB_VERSION)
-    request.onupgradeneeded = (e) => {
-      const db = e.target.result
-      if (!db.objectStoreNames.contains(STORE_NAME)) {
-        db.createObjectStore(STORE_NAME)
-      }
-    }
-    request.onsuccess = () => resolve(request.result)
-    request.onerror = () => reject(request.error)
-  })
-}
+const API = '/api/diagrams'
+const memoryCache = {}
 
 export async function getDiagram(questionId) {
+  if (memoryCache[questionId]) return memoryCache[questionId]
   try {
-    const db = await openDB()
-    return new Promise((resolve) => {
-      const tx = db.transaction(STORE_NAME, 'readonly')
-      const request = tx.objectStore(STORE_NAME).get(questionId)
-      request.onsuccess = () => resolve(request.result || null)
-      request.onerror = () => resolve(null)
-    })
+    const res = await fetch(`${API}/${encodeURIComponent(questionId)}`)
+    if (!res.ok) return null
+    const data = await res.json()
+    memoryCache[questionId] = data
+    return data
   } catch {
     return null
   }
 }
 
 export async function saveDiagram(questionId, data) {
+  memoryCache[questionId] = data
   try {
-    const db = await openDB()
-    return new Promise((resolve, reject) => {
-      const tx = db.transaction(STORE_NAME, 'readwrite')
-      const request = tx.objectStore(STORE_NAME).put(data, questionId)
-      request.onsuccess = () => resolve(true)
-      request.onerror = () => reject(request.error)
+    await fetch(`${API}/${encodeURIComponent(questionId)}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
     })
+    return true
   } catch {
     return false
   }
@@ -46,79 +30,55 @@ export async function saveDiagram(questionId, data) {
 
 export async function getAllDiagramIds() {
   try {
-    const db = await openDB()
-    return new Promise((resolve) => {
-      const tx = db.transaction(STORE_NAME, 'readonly')
-      const request = tx.objectStore(STORE_NAME).getAllKeys()
-      request.onsuccess = () => resolve(request.result || [])
-      request.onerror = () => resolve([])
-    })
+    const res = await fetch(API)
+    if (!res.ok) return []
+    return res.json()
   } catch {
     return []
   }
 }
 
 export async function clearAll() {
+  Object.keys(memoryCache).forEach(k => delete memoryCache[k])
+  try { await fetch(API, { method: 'DELETE' }) } catch {}
+}
+
+// Helper for migration: get all diagrams from old IndexedDB
+export async function getAllDiagramsForMigration() {
+  const DB_NAME = 'drivingApp_diagrams'
+  const STORE_NAME = 'diagrams'
   try {
-    const db = await openDB()
-    return new Promise((resolve) => {
-      const tx = db.transaction(STORE_NAME, 'readwrite')
-      tx.objectStore(STORE_NAME).clear()
-      tx.oncomplete = () => resolve()
-      tx.onerror = () => resolve()
+    return new Promise((resolve, reject) => {
+      const request = indexedDB.open(DB_NAME, 1)
+      request.onupgradeneeded = (e) => {
+        const db = e.target.result
+        if (!db.objectStoreNames.contains(STORE_NAME)) {
+          db.createObjectStore(STORE_NAME)
+        }
+      }
+      request.onsuccess = () => {
+        const db = request.result
+        const tx = db.transaction(STORE_NAME, 'readonly')
+        const store = tx.objectStore(STORE_NAME)
+        const all = {}
+        const cursor = store.openCursor()
+        cursor.onsuccess = (e) => {
+          const c = e.target.result
+          if (c) {
+            all[c.key] = c.value
+            c.continue()
+          } else {
+            resolve(all)
+          }
+        }
+        cursor.onerror = () => resolve({})
+      }
+      request.onerror = () => resolve({})
     })
   } catch {
-    // fallback: delete entire database
-    indexedDB.deleteDatabase(DB_NAME)
+    return {}
   }
 }
 
-/**
- * One-time migration:
- * 1. Move diagram_* keys from localStorage to IndexedDB
- * 2. Extract embedded diagrams from existing favorites entries into IndexedDB
- * 3. Strip diagram field from favorites to free localStorage space
- */
-export async function migrateFromLocalStorage() {
-  const PREFIX = 'drivingApp_'
-  const FLAG = PREFIX + 'diagramMigrated'
-  if (localStorage.getItem(FLAG)) return
-
-  // 1. Migrate diagram_* cache keys
-  const keysToRemove = []
-  for (let i = 0; i < localStorage.length; i++) {
-    const key = localStorage.key(i)
-    if (key?.startsWith(PREFIX + 'diagram_')) {
-      const questionId = key.slice((PREFIX + 'diagram_').length)
-      try {
-        const data = JSON.parse(localStorage.getItem(key))
-        if (data?.image) {
-          await saveDiagram(questionId, data)
-          keysToRemove.push(key)
-        }
-      } catch { /* skip corrupted entries */ }
-    }
-  }
-  keysToRemove.forEach(k => localStorage.removeItem(k))
-
-  // 2. Extract diagrams embedded in favorites, save to IndexedDB, strip from favorites
-  try {
-    const favsRaw = localStorage.getItem(PREFIX + 'favorites')
-    if (favsRaw) {
-      const favs = JSON.parse(favsRaw)
-      let changed = false
-      for (const fav of favs) {
-        if (fav.diagram?.image) {
-          await saveDiagram(fav.questionId, fav.diagram)
-          delete fav.diagram
-          changed = true
-        }
-      }
-      if (changed) {
-        localStorage.setItem(PREFIX + 'favorites', JSON.stringify(favs))
-      }
-    }
-  } catch { /* skip if favorites are corrupted */ }
-
-  localStorage.setItem(FLAG, '1')
-}
+// Keep old migration function as no-op (called from App.jsx, will be removed)
+export async function migrateFromLocalStorage() {}

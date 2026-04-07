@@ -9,6 +9,8 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 - R/W keyboard shortcuts for Right/Wrong on true/false questions in study mode ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
 - PostgreSQL backend server with Express: kv_store and diagrams tables, full CRUD API, bulk migrate/export endpoints, SPA fallback ([server/db.js](server/db.js), [server/index.js](server/index.js))
 - `npm start` script to launch the production server ([package.json](package.json))
+- Automatic browser-to-server data migration on first load: detects localStorage/IndexedDB data and pushes to server API ([src/lib/storage.js](src/lib/storage.js))
+- Loading spinner screen while fetching data from server on app startup ([src/App.jsx](src/App.jsx))
 
 ### Fixed
 - **CRITICAL: Favorites silently failing to save due to localStorage quota.** Base64 diagram images (~500KB-1MB each) were embedded in favorites, quickly exceeding the 5MB localStorage limit. Moved diagram storage to IndexedDB (hundreds of MB capacity). Favorites now store only metadata; diagrams are loaded from IndexedDB on demand. ([src/lib/diagramStore.js](src/lib/diagramStore.js), [src/lib/gemini.js](src/lib/gemini.js), [src/components/question/ExplanationPanel.jsx](src/components/question/ExplanationPanel.jsx), [src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
@@ -16,6 +18,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 - Reset All Progress now also clears IndexedDB diagram store ([src/lib/storage.js](src/lib/storage.js))
 
 ### Changed
+- **Storage layer rewritten from localStorage/IndexedDB to server API**: `storage.js` now uses in-memory cache with fire-and-forget PUT to `/api/store`, `diagramStore.js` now uses `/api/diagrams` endpoints with memory cache. `get()`/`set()` remain synchronous via cache; `exportAll()`/`importAll()`/`clearAll()` are now async ([src/lib/storage.js](src/lib/storage.js), [src/lib/diagramStore.js](src/lib/diagramStore.js))
+- App initialization now async: fetches all data from server before rendering, with loading screen ([src/App.jsx](src/App.jsx))
+- Settings export/import/reset handlers now async to match new storage API ([src/pages/SettingsPage.jsx](src/pages/SettingsPage.jsx))
+- Vite dev server now proxies `/api` requests to `http://localhost:3000` ([vite.config.js](vite.config.js))
+- API key storage notice updated from "browser localStorage" to "server" ([src/pages/SettingsPage.jsx](src/pages/SettingsPage.jsx))
 - Enabled high thinking level on Nano Banana 2 diagram generation for better prompt adherence and output quality ([src/lib/gemini.js](src/lib/gemini.js))
 - Favorites page now shows diagrams from IndexedDB in expanded view ([src/pages/FavoritesPage.jsx](src/pages/FavoritesPage.jsx))
 - Gallery page loads diagrams from IndexedDB instead of favorites data ([src/pages/GalleryPage.jsx](src/pages/GalleryPage.jsx))

@@ -12,8 +12,8 @@
   - `src/components/study/StudySession.jsx:1-349` - Core study loop with auto-advance, explain, prev/next navigation
   - `src/lib/srs.js:1-60` - SM-2 algorithm implementation
   - `src/hooks/useSRS.js:1-55` - SRS state management hook
-- **Dependencies**: localStorage, questions.json
-- **Added**: 2026-03-07 | **Modified**: 2026-03-09
+- **Dependencies**: server API (via storage.js), questions.json
+- **Added**: 2026-03-07 | **Modified**: 2026-03-31
 
 ### Category Practice
 - **Status**: Active
@@ -49,8 +49,8 @@
 - **Entry Points**:
   - `src/components/analytics/Dashboard.jsx:1-180` - Dashboard with charts and stats
   - `src/lib/stats.js:1-75` - Statistics computation functions
-- **Dependencies**: localStorage answer log, SRS cards
-- **Added**: 2026-03-07
+- **Dependencies**: server API answer log, SRS cards
+- **Added**: 2026-03-07 | **Modified**: 2026-03-31
 
 ## AI
 
@@ -75,7 +75,7 @@
   - `src/pages/FavoritesPage.jsx:1-107` - Browse/expand/remove saved explanations
   - `src/components/question/ExplanationPanel.jsx:33-50` - Save/unsave toggle button (now includes diagram data)
   - `src/components/study/StudySession.jsx:135-148` - Save handler with diagram cache inclusion
-- **Dependencies**: localStorage favorites key, questions.js
+- **Dependencies**: server API favorites key, questions.js
 - **Added**: 2026-03-07 | **Modified**: 2026-03-31
 
 ### Diagram Gallery
@@ -86,18 +86,17 @@
   - `src/App.jsx:10` - Gallery page import
   - `src/App.jsx:23` - Gallery nav item
   - `src/App.jsx:67` - Gallery route
-- **Dependencies**: IndexedDB diagram store, localStorage favorites key, questions.js
-- **Added**: 2026-03-31
+- **Dependencies**: server API diagram store, server API favorites key, questions.js
+- **Added**: 2026-03-31 | **Modified**: 2026-03-31
 
-### Diagram Storage (IndexedDB)
+### Diagram Storage (Server API)
 - **Status**: Active
-- **Description**: IndexedDB-backed storage for generated diagram images, replacing localStorage to avoid 5MB quota issues
+- **Description**: Server-backed storage for generated diagram images via /api/diagrams endpoints with in-memory cache
 - **Entry Points**:
-  - `src/lib/diagramStore.js:1-112` - IndexedDB wrapper (get, save, getAllKeys, clearAll, migration)
-  - `src/lib/gemini.js:130-182` - Diagram generation with IndexedDB caching
-  - `src/App.jsx:49` - Migration on startup
-- **Dependencies**: IndexedDB API
-- **Added**: 2026-03-31
+  - `src/lib/diagramStore.js:1-82` - Server API wrapper with memory cache (get, save, getAllIds, clearAll, migration helper)
+  - `src/lib/gemini.js:130-182` - Diagram generation with server-backed caching
+- **Dependencies**: Express API (/api/diagrams)
+- **Added**: 2026-03-31 | **Modified**: 2026-03-31
 
 ## UI
 
@@ -114,17 +113,17 @@
 - **Status**: Active
 - **Description**: Toggle between light and dark themes
 - **Entry Points**:
-  - `src/App.jsx:42-45` - Dark mode class toggle on documentElement
+  - `src/App.jsx:56-59` - Dark mode class toggle on documentElement (after appReady)
   - `src/pages/SettingsPage.jsx:119-127` - Dark mode toggle button
   - `src/index.css:3` - Custom dark variant configuration
-- **Added**: 2026-03-07
+- **Added**: 2026-03-07 | **Modified**: 2026-03-31
 
 ### Responsive Layout
 - **Status**: Active
 - **Description**: Desktop sidebar + mobile bottom tab navigation
 - **Entry Points**:
-  - `src/App.jsx:55-105` - Sidebar (desktop) and bottom nav (mobile)
-- **Added**: 2026-03-07
+  - `src/App.jsx:85-130` - Sidebar (desktop) and bottom nav (mobile)
+- **Added**: 2026-03-07 | **Modified**: 2026-03-31
 
 ### Keyboard Shortcuts
 - **Status**: Active
@@ -140,10 +139,10 @@
 - **Status**: Active
 - **Description**: API key, session size, dark mode toggle, data export/import/reset
 - **Entry Points**:
-  - `src/pages/SettingsPage.jsx:1-145` - Full settings page
+  - `src/pages/SettingsPage.jsx:1-160` - Full settings page with async export/import/reset
   - `src/hooks/useSettings.js:1-25` - Settings state hook
-  - `src/lib/storage.js:1-45` - localStorage abstraction with export/import
-- **Added**: 2026-03-07
+  - `src/lib/storage.js:1-102` - Server API storage with in-memory cache, browser migration
+- **Added**: 2026-03-07 | **Modified**: 2026-03-31
 
 ## Data
 

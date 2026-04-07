@@ -22,8 +22,8 @@ export function SettingsPage({ darkMode, setDarkMode }) {
     setTesting(false)
   }
 
-  const handleExport = () => {
-    const data = storage.exportAll()
+  const handleExport = async () => {
+    const data = await storage.exportAll()
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
@@ -37,10 +37,10 @@ export function SettingsPage({ darkMode, setDarkMode }) {
     const file = e.target.files?.[0]
     if (!file) return
     const reader = new FileReader()
-    reader.onload = () => {
+    reader.onload = async () => {
       try {
         const data = JSON.parse(reader.result)
-        storage.importAll(data)
+        await storage.importAll(data)
         window.location.reload()
       } catch {
         alert('Invalid backup file')
@@ -49,8 +49,8 @@ export function SettingsPage({ darkMode, setDarkMode }) {
     reader.readAsText(file)
   }
 
-  const handleReset = () => {
-    storage.clearAll()
+  const handleReset = async () => {
+    await storage.clearAll()
     window.location.reload()
   }
 
@@ -81,7 +81,7 @@ export function SettingsPage({ darkMode, setDarkMode }) {
         {testResult === 'valid' && <p className="text-emerald-500 text-sm mt-2">API key is valid!</p>}
         {testResult === 'invalid' && <p className="text-rose-500 text-sm mt-2">Invalid API key</p>}
         {testResult === 'error' && <p className="text-rose-500 text-sm mt-2">Connection error</p>}
-        <p className="text-xs text-amber-600 dark:text-amber-400 mt-2">API key is stored in browser localStorage</p>
+        <p className="text-xs text-amber-600 dark:text-amber-400 mt-2">API key is stored on the server</p>
       </div>
 
       {/* Session settings */}

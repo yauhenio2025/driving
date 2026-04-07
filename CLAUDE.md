@@ -8,18 +8,21 @@ React + Vite app with 971 questions across 32 categories. Features spaced repeti
 ## Tech Stack
 - React 18 + Vite 7
 - Tailwind CSS v4 (via @tailwindcss/vite plugin)
-- localStorage for all persistence
-- Gemini 2.5 Pro API (optional, for explanations)
+- Express + PostgreSQL backend (server/index.js, server/db.js)
+- In-memory cache with server API persistence (src/lib/storage.js)
+- Gemini 3.1 Flash Lite API (optional, for explanations)
 
 ## Quick Reference
-- Dev: `npm run dev`
+- Dev: `npm run dev` (Vite proxies /api to localhost:3000)
+- Server: `npm start` (Express on port 3000, needs DATABASE_URL)
 - Build: `npm run build`
 - Preview: `npm run preview`
 
 ## Architecture Notes
 - Hash-based routing (no react-router) in App.jsx
 - SM-2 spaced repetition algorithm in src/lib/srs.js
-- All state in localStorage via src/lib/storage.js (namespaced `drivingApp_*`)
+- Storage: in-memory cache populated from server on load; get()/set() are synchronous (read/write cache), set() also fire-and-forget PUTs to /api/store; diagrams use /api/diagrams
+- On first load, auto-migrates any existing localStorage/IndexedDB data to server
 - Dark mode via Tailwind `dark:` variant with class strategy (`@custom-variant dark` in index.css)
 - Images served from data/images/ via Vite publicDir
 - Traffic law text hardcoded in src/data/trafficLaw.js (61 articles from 2003 law)

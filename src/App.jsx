@@ -8,7 +8,6 @@ import { FavoritesPage } from './pages/FavoritesPage'
 import { GalleryPage } from './pages/GalleryPage'
 import { SettingsPage } from './pages/SettingsPage'
 import * as storage from './lib/storage'
-import { migrateFromLocalStorage } from './lib/diagramStore'
 import { computeStudyStreak, computeMasteryProgress } from './lib/stats'
 import { questions } from './data/questions'
 
@@ -38,24 +37,46 @@ function useRoute() {
 
 export default function App() {
   const { route, navigate } = useRoute()
-  const [darkMode, setDarkMode] = useState(() => storage.get('settings')?.darkMode ?? false)
+  const [appReady, setAppReady] = useState(false)
+  const [darkMode, setDarkMode] = useState(false)
+
+  // Initialize: fetch data from server, migrate browser data if needed
+  useEffect(() => {
+    async function bootstrap() {
+      await storage.init()
+      await storage.migrateFromBrowser()
+      setDarkMode(storage.get('settings')?.darkMode ?? false)
+      setAppReady(true)
+    }
+    bootstrap()
+  }, [])
 
   useEffect(() => {
+    if (!appReady) return
     document.documentElement.classList.toggle('dark', darkMode)
     storage.update('settings', (s) => ({ ...(s || {}), darkMode }))
-  }, [darkMode])
-
-  // Migrate diagram storage from localStorage to IndexedDB (runs once)
-  useEffect(() => { migrateFromLocalStorage() }, [])
+  }, [darkMode, appReady])
 
   const quickStats = useMemo(() => {
+    if (!appReady) return { streak: 0, mastery: { mastered: 0 } }
     const log = storage.get('answerLog') || []
     const cards = storage.get('srsCards') || {}
     return {
       streak: computeStudyStreak(log),
       mastery: computeMasteryProgress(cards, questions.length),
     }
-  }, [route])
+  }, [route, appReady])
+
+  if (!appReady) {
+    return (
+      <div className="min-h-screen bg-slate-50 dark:bg-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-8 h-8 border-3 border-indigo-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+          <p className="text-slate-500 dark:text-slate-400">Loading your data...</p>
+        </div>
+      </div>
+    )
+  }
 
   const renderPage = () => {
     switch (route) {
