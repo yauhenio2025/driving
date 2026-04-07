@@ -24,7 +24,7 @@ export function QuestionCard({ question, index, total }) {
           <img
             src={imgPath}
             alt="Question illustration"
-            className="rounded-lg max-w-full max-h-64 cursor-pointer hover:opacity-90 transition mb-4"
+            className="rounded-lg max-w-full max-h-48 sm:max-h-64 cursor-pointer hover:opacity-90 transition mb-4"
             onClick={() => setEnlarged(true)}
           />
           {enlarged && (

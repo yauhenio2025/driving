@@ -30,7 +30,7 @@ export function StudyPage() {
         Spaced repetition helps you memorize efficiently. Cards you get wrong appear more often,
         while mastered cards appear less frequently.
       </p>
-      <div className="grid grid-cols-3 gap-4 max-w-sm mx-auto mb-8">
+      <div className="grid grid-cols-3 gap-3 sm:gap-4 mx-auto mb-8">
         <div className="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm">
           <div className="text-2xl font-bold text-rose-500">{dueCards.length}</div>
           <div className="text-xs text-slate-500 dark:text-slate-400">Due</div>

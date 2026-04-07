@@ -54,7 +54,7 @@ function CategoryChart({ catAccuracy, onCategoryClick }) {
 function ActivityChart({ daily }) {
   const maxCount = Math.max(...daily.map(d => d.count), 1)
   return (
-    <div className="flex items-end gap-0.5 h-24">
+    <div className="flex items-end gap-0.5 h-16 sm:h-24">
       {daily.map((d, i) => {
         const h = d.count > 0 ? Math.max(4, (d.count / maxCount) * 96) : 0
         const correctRate = d.count > 0 ? d.correct / d.count : 0
@@ -125,7 +125,7 @@ export function AnalyticsDashboard({ onNavigate }) {
       <h1 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Analytics</h1>
 
       {/* Summary cards */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8">
         <StatCard label="Accuracy" value={`${overallAccuracy}%`} color={overallAccuracy >= 90 ? 'text-emerald-500' : 'text-slate-900 dark:text-white'} />
         <StatCard label="Mastered" value={`${data.mastery.mastered}/${questions.length}`} color="text-indigo-600" />
         <StatCard label="Study Streak" value={`${data.streak}d`} color="text-amber-500" />

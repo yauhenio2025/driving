@@ -6,7 +6,7 @@ export function OptionList({ options, selected, correctIndex, answered, onSelect
       {options.map((opt, i) => {
         const isSelected = selected === i
         const isCorrect = i === correctIndex
-        let classes = 'w-full text-left px-4 py-3 rounded-xl border-2 font-medium transition-all '
+        let classes = 'w-full text-left px-4 py-3.5 rounded-xl border-2 font-medium transition-all '
 
         if (!answered) {
           classes += 'border-slate-200 dark:border-slate-600 hover:border-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 text-slate-700 dark:text-slate-200 cursor-pointer'

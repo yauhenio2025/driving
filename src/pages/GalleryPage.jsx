@@ -78,7 +78,7 @@ export function GalleryPage() {
             <img
               src={diagram.image}
               alt="Visual explanation diagram"
-              className="rounded-lg max-w-full mx-auto border border-slate-200 dark:border-slate-600"
+              className="rounded-lg max-w-full max-h-[70vh] mx-auto border border-slate-200 dark:border-slate-600"
             />
             {diagram.caption && (
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-2 italic text-center">{diagram.caption}</p>
@@ -91,9 +91,9 @@ export function GalleryPage() {
               <Badge color="blue">{q.category}</Badge>
             </div>
 
-            <div className="flex items-start gap-4 mb-4">
+            <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 mb-4">
               {imgPath && (
-                <img src={imgPath} alt="" className="w-20 h-20 rounded-lg object-cover flex-shrink-0" />
+                <img src={imgPath} alt="" className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover flex-shrink-0" />
               )}
               <div>
                 <h3 className="font-semibold text-slate-900 dark:text-white mb-2">{q.text}</h3>

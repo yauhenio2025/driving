@@ -132,7 +132,7 @@ export default function App() {
       </main>
 
       {/* Mobile bottom nav */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 flex z-40">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 flex z-40" style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}>
         {NAV_ITEMS.filter(i => ['study', 'categories', 'test', 'favorites', 'gallery'].includes(i.key)).map(item => (
           <button
             key={item.key}

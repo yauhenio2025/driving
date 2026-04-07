@@ -302,7 +302,7 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
       </div>
 
       {answered && (
-        <div className="flex items-center justify-between">
+        <div className="flex flex-wrap items-center justify-between gap-2">
           <div>
             {currentIndex > 0 && (
               <button
@@ -313,32 +313,32 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
               </button>
             )}
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 flex-wrap justify-end">
             {!savedFav ? (
               <button
-                className="px-4 py-2.5 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg hover:bg-amber-100 hover:text-amber-700 dark:hover:bg-amber-900/30 dark:hover:text-amber-300 transition font-medium text-sm"
+                className="px-3 sm:px-4 py-2.5 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg hover:bg-amber-100 hover:text-amber-700 dark:hover:bg-amber-900/30 dark:hover:text-amber-300 transition font-medium text-sm"
                 onClick={handleSave}
               >
-                &#9734; Save (S)
+                &#9734; Save
               </button>
             ) : (
-              <span className="px-4 py-2.5 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-lg font-medium text-sm">
+              <span className="px-3 sm:px-4 py-2.5 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-lg font-medium text-sm">
                 &#9733; Saved
               </span>
             )}
             {wrong && !explaining && (
               <button
-                className="px-5 py-2.5 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition font-medium"
+                className="px-4 sm:px-5 py-2.5 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition font-medium"
                 onClick={handleExplain}
               >
-                Explain (E)
+                Explain
               </button>
             )}
             {countdown > 0 && (
               <span className="text-sm text-slate-400 dark:text-slate-500 tabular-nums">{countdown}s</span>
             )}
             <button
-              className="px-6 py-2.5 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition font-medium"
+              className="px-5 sm:px-6 py-2.5 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition font-medium"
               onClick={doAdvance}
             >
               {reviewingPrev ? 'Back to Current' : currentIndex + 1 >= questionIds.length ? 'Finish' : 'Next'}
