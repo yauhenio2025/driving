@@ -7,6 +7,8 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 - R/W keyboard shortcuts for Right/Wrong on true/false questions in study mode ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
+- PostgreSQL backend server with Express: kv_store and diagrams tables, full CRUD API, bulk migrate/export endpoints, SPA fallback ([server/db.js](server/db.js), [server/index.js](server/index.js))
+- `npm start` script to launch the production server ([package.json](package.json))
 
 ### Fixed
 - **CRITICAL: Favorites silently failing to save due to localStorage quota.** Base64 diagram images (~500KB-1MB each) were embedded in favorites, quickly exceeding the 5MB localStorage limit. Moved diagram storage to IndexedDB (hundreds of MB capacity). Favorites now store only metadata; diagrams are loaded from IndexedDB on demand. ([src/lib/diagramStore.js](src/lib/diagramStore.js), [src/lib/gemini.js](src/lib/gemini.js), [src/components/question/ExplanationPanel.jsx](src/components/question/ExplanationPanel.jsx), [src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))

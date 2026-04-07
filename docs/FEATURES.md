@@ -1,6 +1,6 @@
 # Feature Inventory
 
-> Auto-maintained by Claude Code. Last updated: 2026-03-09
+> Auto-maintained by Claude Code. Last updated: 2026-03-31
 
 ## Study
 
@@ -155,3 +155,14 @@
   - `data/questions.json` - Raw question data
   - `data/images/` - 424 question images
 - **Added**: 2026-03-07
+
+## Server
+
+### PostgreSQL Backend
+- **Status**: Active
+- **Description**: Express server with PostgreSQL persistence (kv_store + diagrams tables), bulk migrate/export endpoints, SPA fallback
+- **Entry Points**:
+  - `server/db.js:1-31` - PostgreSQL Pool connection with SSL detection and schema initialization
+  - `server/index.js:1-182` - Express server with KV store CRUD, diagrams CRUD, migrate, export, and SPA fallback
+- **Dependencies**: pg, express, DATABASE_URL env var
+- **Added**: 2026-03-31
