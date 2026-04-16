@@ -5,6 +5,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+### Changed
+- Tablet/large-screen layout: main content max-width grows to `lg:max-w-4xl xl:max-w-5xl`, sidebar widens to `xl:w-64`, page padding scales to `lg:px-8 lg:py-8` so 14"+ tablets (e.g. Galaxy Tab S11 Ultra) and laptops use the full screen instead of a narrow centered column ([src/App.jsx](src/App.jsx))
+- Larger touch targets and type at `lg+`: nav items `py-3`, option buttons `py-4` with `text-lg`, question text `text-xl`, question images grow to `lg:max-h-80 xl:max-h-96` ([src/App.jsx](src/App.jsx), [src/components/question/OptionList.jsx](src/components/question/OptionList.jsx), [src/components/question/QuestionCard.jsx](src/components/question/QuestionCard.jsx), [src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
+- Mock test: option buttons match study mode sizing; question palette expands to `lg:grid-cols-12 xl:grid-cols-20` with larger `lg:w-10 lg:h-10` cells ([src/components/test/TestSimulation.jsx](src/components/test/TestSimulation.jsx))
+- Categories grid now `xl:grid-cols-4` ([src/pages/CategoryPage.jsx](src/pages/CategoryPage.jsx))
+
 ### Added
 - R/W keyboard shortcuts for Right/Wrong on true/false questions in study mode ([src/components/study/StudySession.jsx](src/components/study/StudySession.jsx))
 - PostgreSQL backend server with Express: kv_store and diagrams tables, full CRUD API, bulk migrate/export endpoints, SPA fallback ([server/db.js](server/db.js), [server/index.js](server/index.js))

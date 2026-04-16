@@ -231,17 +231,17 @@ export function TestSimulationPage() {
       </div>
 
       {/* Question */}
-      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm p-6 mb-4">
+      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm p-6 lg:p-8 mb-4">
         <Badge color="blue">{q.category}</Badge>
-        <p className="text-lg font-medium text-slate-900 dark:text-white mt-3 mb-4">{q.text}</p>
-        {imgPath && <img src={imgPath} alt="" className="rounded-lg max-h-48 mb-4" />}
+        <p className="text-lg lg:text-xl font-medium text-slate-900 dark:text-white mt-3 mb-4">{q.text}</p>
+        {imgPath && <img src={imgPath} alt="" className="rounded-lg max-h-48 lg:max-h-80 xl:max-h-96 mb-4" />}
         <div className="space-y-3">
           {q.options.map((opt, i) => {
             const isSelected = answers[currentIdx] === i
             return (
               <button
                 key={i}
-                className={`w-full text-left px-4 py-3.5 rounded-xl border-2 font-medium transition-all ${
+                className={`w-full text-left px-4 sm:px-5 py-3.5 lg:py-4 rounded-xl border-2 font-medium lg:text-lg transition-all ${
                   isSelected
                     ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200'
                     : 'border-slate-200 dark:border-slate-600 hover:border-indigo-300 text-slate-700 dark:text-slate-200'
@@ -288,9 +288,9 @@ export function TestSimulationPage() {
       </div>
 
       {/* Question palette */}
-      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm p-4">
+      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm p-4 lg:p-6">
         <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-3">Question Map</h3>
-        <div className="grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 gap-1.5">
+        <div className="grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 lg:grid-cols-12 xl:grid-cols-20 gap-1.5 lg:gap-2">
           {testQuestions.map((_, i) => {
             let bg = 'bg-slate-100 dark:bg-slate-700 text-slate-500'
             if (i === currentIdx) bg = 'bg-indigo-600 text-white'
@@ -299,7 +299,7 @@ export function TestSimulationPage() {
             return (
               <button
                 key={i}
-                className={`w-8 h-8 rounded text-xs font-medium ${bg} hover:opacity-80 transition`}
+                className={`w-8 h-8 lg:w-10 lg:h-10 rounded text-xs lg:text-sm font-medium ${bg} hover:opacity-80 transition`}
                 onClick={() => setCurrentIdx(i)}
               >
                 {i + 1}

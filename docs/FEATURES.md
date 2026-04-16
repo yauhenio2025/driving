@@ -1,6 +1,6 @@
 # Feature Inventory
 
-> Auto-maintained by Claude Code. Last updated: 2026-03-31
+> Auto-maintained by Claude Code. Last updated: 2026-04-16
 
 ## Study
 
@@ -120,10 +120,13 @@
 
 ### Responsive Layout
 - **Status**: Active
-- **Description**: Desktop sidebar + mobile bottom tab navigation
+- **Description**: Desktop/tablet sidebar + mobile bottom tabs; content max-width scales to `lg:max-w-4xl xl:max-w-5xl` and option/question type/touch targets grow at `lg+` for 14"+ tablets like the Galaxy Tab S11 Ultra
 - **Entry Points**:
-  - `src/App.jsx:85-130` - Sidebar (desktop) and bottom nav (mobile)
-- **Added**: 2026-03-07 | **Modified**: 2026-03-31
+  - `src/App.jsx:85-130` - Sidebar (desktop/tablet, `xl:w-64`) and mobile bottom nav, container `max-w-3xl lg:max-w-4xl xl:max-w-5xl`
+  - `src/components/question/OptionList.jsx:9` - `lg:py-4 lg:text-lg` option buttons
+  - `src/components/question/QuestionCard.jsx:19,27` - `lg:text-xl` question, `lg:max-h-80 xl:max-h-96` images
+  - `src/components/test/TestSimulation.jsx:234,293` - Test card padding + question-map grid scale at `lg/xl`
+- **Added**: 2026-03-07 | **Modified**: 2026-04-16
 
 ### Keyboard Shortcuts
 - **Status**: Active

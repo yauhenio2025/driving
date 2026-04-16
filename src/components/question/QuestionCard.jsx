@@ -16,7 +16,7 @@ export function QuestionCard({ question, index, total }) {
           </span>
         )}
       </div>
-      <p className="text-lg font-medium text-slate-900 dark:text-white mb-4 leading-relaxed">
+      <p className="text-lg lg:text-xl font-medium text-slate-900 dark:text-white mb-4 leading-relaxed">
         {question.text}
       </p>
       {imgPath && (
@@ -24,7 +24,7 @@ export function QuestionCard({ question, index, total }) {
           <img
             src={imgPath}
             alt="Question illustration"
-            className="rounded-lg max-w-full max-h-48 sm:max-h-64 cursor-pointer hover:opacity-90 transition mb-4"
+            className="rounded-lg max-w-full max-h-48 sm:max-h-64 lg:max-h-80 xl:max-h-96 cursor-pointer hover:opacity-90 transition mb-4"
             onClick={() => setEnlarged(true)}
           />
           {enlarged && (

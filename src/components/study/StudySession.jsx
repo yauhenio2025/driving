@@ -276,7 +276,7 @@ export function StudySession({ questionIds, onComplete, reviewCard, title = 'Stu
       </div>
       <ProgressBar value={currentIndex + (answered ? 1 : 0)} max={questionIds.length} className="mb-6" />
 
-      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm p-6 mb-4">
+      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm p-6 lg:p-8 mb-4">
         <QuestionCard question={question} index={currentIndex} total={questionIds.length} />
         <div className="mt-6">
           <OptionList
